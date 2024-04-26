@@ -1,6 +1,6 @@
 @extends($activeTemplate . 'layouts.main')
 @section('content')
-    <div class="container" style="padding-bottom: 100px">
+    <div class="container">
 
 
 
@@ -9,7 +9,7 @@
             <div class="card-body">
 
 
-                <table class="table table-sm table-responsive-sm">
+                <table class="table table-sm table-responsive-sm" style="padding-bottom: 500px">
                     <thead style="border-radius: 100px; background: #10113D;color: #ffffff;">
                         <tr class>
                             <th style="border-radius: 10px 0px 0px 10px;"></th>
