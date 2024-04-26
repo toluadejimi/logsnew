@@ -69,18 +69,18 @@
                     <div style="margin-right: 12px" class="col d-flex justify-content-start">
                         @if ($categories->count())
                             <div class="category-nav">
-                                <button class="category-nav__button" style="background: #d5d5d5;">
+                                <button class="category-nav__button" style="background: #10113D;">
                                      <span class="icon me-1"><img src="{{ url('') }}/assets/img/grid.png"
                                                                   alt="@lang('image')"></span><span
                                         class="search-text text-white">@lang('
                                 Category')</span>
                                     <span class="arrow"><i class="las la-angle-down"></i></span>
                                 </button>
-                                <ul class="dropdown--menu" style="background: #10113D;">
+                                <ul class="dropdown--menu" style="background: #10113D; color:#ffffff">
                                     @foreach ($categories as $category)
                                         <li class="dropdown--menu__item text-white">
                                             <a href="allcatproduct?cat_id={{$category->id}}"
-                                               class="dropdown--menu__link text-white" style="color: #ffffff">
+                                               class="dropdown--menu__link text-white">
                                                 {{$category->title}}
                                             </a>
                                         </li>
