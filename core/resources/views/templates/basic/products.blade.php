@@ -79,8 +79,7 @@
                                 <ul class="dropdown--menu" style="background: #10113D; color:#ffffff">
                                     @foreach ($categories as $category)
                                         <li class="dropdown--menu__item text-white">
-                                            <a href="allcatproduct?cat_id={{$category->id}}"
-                                               class="dropdown--menu__link text-white">
+                                            <a href="allcatproduct?cat_id={{$category->id}}">
                                                 {{$category->title}}
                                             </a>
                                         </li>
