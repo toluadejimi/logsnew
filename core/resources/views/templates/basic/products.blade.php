@@ -70,8 +70,7 @@
                         @if ($categories->count())
                             <div class="category-nav">
                                 <button class="category-nav__button" style="background: #10113D;">
-                                     <span class="icon me-1"><img src="{{ url('') }}/assets/img/grid.png"
-                                                                  alt="@lang('image')"></span><span
+                                     <span class="icon me-1"><span
                                         class="search-text text-white">@lang('
                                 Category')</span>
                                     <span class="arrow"><i class="las la-angle-down"></i></span>
