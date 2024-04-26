@@ -64,7 +64,7 @@
 
                                             <label class="my-3">Sender Name</label>
                                             <input class="form-control2 py-3" name="user_name">
-\
+
                                             <label class="my-3">Debit Screenshot</label>
                                             <input type="file" name="receipt" class="form-control" required>
 
