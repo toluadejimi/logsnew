@@ -66,7 +66,7 @@
 
                 <!-- Recomended Start -->
                 <div class="row">
-                    <div style="margin-right: 198px" class="col d-flex justify-content-start">
+                    <div style="margin-right: 12px" class="col d-flex justify-content-start">
                         @if ($categories->count())
                             <div class="category-nav">
                                 <button class="category-nav__button" style="background: #10113D;">
@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="col d-flex justify-content-end">
-                        <h2 class="">What are you buying today? {{ Auth::user()->username ?? "User"}}, </h2>
+                        <h2 class="">Hi, {{ Auth::user()->username ?? "User"}}, </h2>
                     </div>
                 </div>
 
