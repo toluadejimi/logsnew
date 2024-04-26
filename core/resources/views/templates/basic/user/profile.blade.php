@@ -96,7 +96,7 @@
 
 
             <div class="d-flex align-items-center p-3 my-3 text-black-50 bg-purple rounded box-shadow">
-                <a href="log-out">
+                <a href="logout">
                     <svg class="mr-3"  width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle opacity="0.05" cx="20" cy="20.92" r="20" fill="#555555"/>
                         <path opacity="0.4" d="M22.5133 17.0779V16.3004C22.5133 14.6046 21.1383 13.2296 19.4425 13.2296H15.38C13.685 13.2296 12.31 14.6046 12.31 16.3004V25.5754C12.31 27.2712 13.685 28.6463 15.38 28.6463H19.4508C21.1417 28.6463 22.5133 27.2754 22.5133 25.5846V24.7988" stroke="#10113D" stroke-linecap="round" stroke-linejoin="round"/>

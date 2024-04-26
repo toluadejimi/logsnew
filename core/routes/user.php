@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
+use App\Http\Controllers\User\ProfileController;
 
 
 
@@ -61,7 +62,7 @@ Route::middleware('auth')->name('user.')->group(function () {
 
             Route::controller('UserController')->group(function(){
 
-                Route::get('dashboard', [SiteController::class, 'index'])->name('home');
+                Route::get('dashboard', [ProfileController::class, 'profile_view'])->name('home');
                 //Route::get('dashboard', 'home')->name('home');
                 //Report
                 Route::any('payment/history', 'depositHistory')->name('deposit.history');
