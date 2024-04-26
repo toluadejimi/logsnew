@@ -1,7 +1,33 @@
 @extends($activeTemplate . 'layouts.main')
 @section('content')
     <div class="container">
+
+
+        
         <div class="row justify-content-center">
+
+
+            @if ($errors->any())
+                        <div class="alert alert-danger my-4">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if (session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
+                    @if (session()->has('error'))
+                        <div class="alert alert-danger mt-2">
+                            {{ session()->get('error') }}
+                        </div>
+                    @endif
+
+
             <div class="col-md-8">
                 <div class="row">
 
@@ -37,14 +63,10 @@
 
 
                                             <label class="my-3">Sender Name</label>
-                                            <input class="form-control" name="user_name">
-
-
-                                            <label class="my-3">Sender Name</label>
-                                            <input class="form-control" name="user_name">
-
+                                            <input class="form-control2 py-3" name="user_name">
+\
                                             <label class="my-3">Debit Screenshot</label>
-                                            <input type="file" name="receipt" class="form-control"
+                                            <input type="file" name="receipt" class="form-control2 py-3"
                                                 style="background: #e9e9e9; color: rgb(255, 10, 55);">
 
 
