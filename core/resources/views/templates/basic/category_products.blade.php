@@ -1,6 +1,6 @@
 @extends($activeTemplate . 'layouts.main')
 @section('content')
-    <div class="container">
+    <div class="container" style="padding-bottom: 100px">
 
 
 
