@@ -69,7 +69,7 @@
                     <div style="margin-right: 12px" class="col d-flex justify-content-start">
                         @if ($categories->count())
                             <div class="category-nav">
-                                <button class="category-nav__button" style="background: #10113D;">
+                                <button class="category-nav__button" style="background: #d5d5d5;">
                                      <span class="icon me-1"><img src="{{ url('') }}/assets/img/grid.png"
                                                                   alt="@lang('image')"></span><span
                                         class="search-text text-white">@lang('
