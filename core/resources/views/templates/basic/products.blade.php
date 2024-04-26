@@ -80,7 +80,7 @@
                                     @foreach ($categories as $category)
                                         <li class="dropdown--menu__item text-white">
                                             <a href="allcatproduct?cat_id={{$category->id}}"
-                                               class="dropdown--menu__link text-white">
+                                               class="dropdown--menu__link text-white" style="color: #ffffff">
                                                 {{$category->title}}
                                             </a>
                                         </li>
