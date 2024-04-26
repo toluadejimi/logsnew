@@ -66,7 +66,7 @@
 
                 <!-- Recomended Start -->
                 <div class="row">
-                    <div style="margin-right: 12px" class="col d-flex justify-content-start">
+                    <div style="margin-right: 126px" class="col d-flex justify-content-start">
                         @if ($categories->count())
                             <div class="category-nav">
                                 <button class="category-nav__button" style="background: #10113D;"><span
