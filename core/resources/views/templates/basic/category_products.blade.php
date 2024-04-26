@@ -1,5 +1,4 @@
-@extends($activeTemplate . 'layouts.nofooter')
-
+@extends($activeTemplate . 'layouts.main')
 @section('content')
 
     <div class="container">
