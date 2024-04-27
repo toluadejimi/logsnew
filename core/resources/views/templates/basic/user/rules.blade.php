@@ -12,10 +12,10 @@
                                 <div class="card-body">
 
                                     <div class="card-header">
-
+{{-- 
                                         <h4>
                                             Rules
-                                        </h4>
+                                        </h4> --}}
                                     </div>
 
                                     {{-- <p>Don’t use our product to harm other people , <br>
