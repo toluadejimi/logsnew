@@ -32,7 +32,7 @@
                 <div class="swiper-container demo-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><a href="#"><img
-                                    src="{{ url('') }}/assets/assets2/concept/assets/images/Logplace__11.png" class=""
+                                    src="{{ url('') }}/assets/assets2/concept/assets/images/Logplace__1.png" class=""
                                     alt="..." width="100" height="50"></a></div>
                         <div class="swiper-slide"><a href=" https://t.me/logmkp"><img
                                     src="{{ url('') }}/assets/assets2/concept/assets/images/Logplace__2.png"
