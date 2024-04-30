@@ -48,6 +48,18 @@
                 </div>
 
                 <div class="flex-fill">
+                    <button type="button" class="btn btn--success btn--gradi btn--shadow w-100 btn-lg userStatus" data-bs-toggle="modal" data-bs-target="#useraddBalanceModal">
+                        <i class="las la-wallet"></i>@lang('Fund User')
+                    </button>
+                </div>
+
+                <div class="flex-fill">
+                    <button type="button" class="btn btn--danger btn--gradi btn--shadow w-100 btn-lg userStatus" data-bs-toggle="modal" data-bs-target="#userremoveBalanceModal">
+                        <i class="las la-wallet"></i>@lang('Remove Fund')
+                    </button>
+                </div>
+
+                <div class="flex-fill">
                     <a href="{{route('admin.users.login',$user->id)}}" target="_blank" class="btn btn--primary btn--gradi btn--shadow w-100 btn-lg">
                         <i class="las la-sign-in-alt"></i>@lang('Login as User')
                     </a>
@@ -171,7 +183,7 @@
                             </div>
                         </div>
 
- 
+
                         <div class="row mt-4">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -231,6 +243,63 @@
             </div>
         </div>
     </div>
+
+
+    <div id="useraddBalanceModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                       Fund User Balance
+                    </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="las la-times"></i>
+                    </button>
+                </div>
+                <form action="{{route('admin.users.addbalance',$user->id)}}" method="POST">
+                    @csrf
+                    <div class="modal-body">
+
+                        <label>Enter amount to add</label>
+                        <input type="number" name="amount" class="form-control" required>
+
+                    </div>
+                    <div class="modal-footer">
+                            <button type="submit" class="btn btn--primary h-45 w-100">@lang('Add Balance')</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="userremoveBalanceModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Remove User Balance
+                    </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="las la-times"></i>
+                    </button>
+                </div>
+                <form action="{{route('admin.users.removebalance',$user->id)}}" method="POST">
+                    @csrf
+                    <div class="modal-body">
+
+                        <label>Enter amount to Remove</label>
+                        <input type="number" name="amount" class="form-control" required>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn--primary h-45 w-100">@lang('Add Balance')</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 @endsection
 
 
