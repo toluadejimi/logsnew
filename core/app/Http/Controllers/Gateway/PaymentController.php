@@ -24,30 +24,29 @@ class PaymentController extends Controller
 
 
 
-        if($request->payment == "wallet"){
+        if ($request->payment == "wallet") {
 
 
 
             $qty = $request->qty;
 
-            $product = Product::active()->whereHas('category', function($category){
+            $product = Product::active()->whereHas('category', function ($category) {
                 return $category->active();
             })->findOrFail($request->id);
 
 
-            if($product->in_stock < $qty){
-                $notify="Not enough stock available. Only {$product->in_stock} quantity left";
-                return redirect('/products')->with('error',$notify);
+            if ($product->in_stock < $qty) {
+                $notify = "Not enough stock available. Only {$product->in_stock} quantity left";
+                return redirect('/products')->with('error', $notify);
             }
 
             $amount = ($product->price * $qty);
 
 
             $balance = Auth::user()->balance ?? null;
-            if($balance < $amount){
+            if ($balance < $amount) {
                 $notify = "Insufficient Funds, Fund your wallet";
-                return redirect('/products')->with('error',$notify);
-
+                return redirect('/products')->with('error', $notify);
             }
 
 
@@ -93,19 +92,17 @@ class PaymentController extends Controller
             $unsoldProductDetails = $product->unsoldProductDetails;
 
 
-                for($i = 0; $i < $qty; $i++){
-                    if(@!$unsoldProductDetails[$i]){
-                        continue;
-                    }
-                    $item = new OrderItem();
-                    $item->order_id = $order->id;
-                    $item->product_id = $product->id;
-                    $item->product_detail_id = $unsoldProductDetails[$i]->id;
-                    $item->price = $product->price;
-                    $item->save();
-
-
+            for ($i = 0; $i < $qty; $i++) {
+                if (@!$unsoldProductDetails[$i]) {
+                    continue;
                 }
+                $item = new OrderItem();
+                $item->order_id = $order->id;
+                $item->product_id = $product->id;
+                $item->product_detail_id = $unsoldProductDetails[$i]->id;
+                $item->price = $product->price;
+                $item->save();
+            }
 
 
 
@@ -115,35 +112,31 @@ class PaymentController extends Controller
 
 
 
-            $message = "Log Market Place |".  Auth::user()->email . "| just bought | $qty | $order->id  | " . number_format($charge_amount, 2) . "\n\n IP ====> " . $request->ip();
-                send_notification_2($message);
-send_notification_3($message);
-send_notification_4($message);
-                send_notification_3($message);
+            $message = "Log Market Place |" .  Auth::user()->email . "| just bought | $qty | $order->id  | " . number_format($charge_amount, 2) . "\n\n IP ====> " . $request->ip();
+            send_notification_2($message);
+            send_notification_3($message);
+            send_notification_4($message);
+            send_notification_3($message);
 
 
 
-            $notify= "Order Purchased Successfully";
-                return redirect('user/orders')->with('message',$notify);
-
-
-
-
+            $notify = "Order Purchased Successfully";
+            return redirect('user/orders')->with('message', $notify);
         }
 
-        if($request->payment == "enkpay"){
+        if ($request->payment == "enkpay") {
 
 
-        if($request->amount < 100) {
-            $notify[] = ['error', "Amount can not be less than 100"];
-            return back()->withNotify($notify);
-        }
+            if ($request->amount < 100) {
+                $notify[] = ['error', "Amount can not be less than 100"];
+                return back()->withNotify($notify);
+            }
 
 
-        if($request->amount > 100000) {
-            $notify[] = ['error', "Amount can not be more than 100,000"];
-            return back()->withNotify($notify);
-        }
+            if ($request->amount > 100000) {
+                $notify[] = ['error', "Amount can not be more than 100,000"];
+                return back()->withNotify($notify);
+            }
 
 
             $data = new Deposit();
@@ -163,20 +156,19 @@ send_notification_4($message);
 
             session()->put('Track', $data->trx);
             return to_route('user.deposit.confirm');
-
         }
 
 
 
-        if($request->gateway == 250){
+        if ($request->gateway == 250) {
 
             $qty = $request->qty;
 
-            $product = Product::active()->whereHas('category', function($category){
+            $product = Product::active()->whereHas('category', function ($category) {
                 return $category->active();
             })->findOrFail($request->id);
 
-            if($product->in_stock < $qty){
+            if ($product->in_stock < $qty) {
                 $notify[] = ['error', "Not enough stock available. Only {$product->in_stock} quantity left"];
                 return back()->withNotify($notify);
             }
@@ -222,8 +214,8 @@ send_notification_4($message);
 
             $unsoldProductDetails = $product->unsoldProductDetails;
 
-            for($i = 0; $i < $qty; $i++){
-                if(@!$unsoldProductDetails[$i]){
+            for ($i = 0; $i < $qty; $i++) {
+                if (@!$unsoldProductDetails[$i]) {
                     continue;
                 }
                 $item = new OrderItem();
@@ -235,13 +227,8 @@ send_notification_4($message);
             }
 
 
-
-
             session()->put('Track', $data->trx);
             return to_route('user.deposit.confirm');
-
-
-
         }
 
 
@@ -258,11 +245,11 @@ send_notification_4($message);
         $qty = $request->qty;
 
 
-        $product = Product::active()->whereHas('category', function($category){
+        $product = Product::active()->whereHas('category', function ($category) {
             return $category->active();
         })->findOrFail($request->id);
 
-        if($product->in_stock < $qty){
+        if ($product->in_stock < $qty) {
             $notify[] = ['error', "Not enough stock available. Only {$product->in_stock} quantity left"];
             return back()->withNotify($notify);
         }
@@ -308,8 +295,8 @@ send_notification_4($message);
 
         $unsoldProductDetails = $product->unsoldProductDetails;
 
-        for($i = 0; $i < $qty; $i++){
-            if(@!$unsoldProductDetails[$i]){
+        for ($i = 0; $i < $qty; $i++) {
+            if (@!$unsoldProductDetails[$i]) {
                 continue;
             }
             $item = new OrderItem();
@@ -329,7 +316,7 @@ send_notification_4($message);
 
 
         $track = session()->get('Track');
-        $deposit = Deposit::where('trx', $track)->where('status',Status::PAYMENT_INITIATE)->orderBy('id', 'DESC')->with('gateway')->firstOrFail();
+        $deposit = Deposit::where('trx', $track)->where('status', Status::PAYMENT_INITIATE)->orderBy('id', 'DESC')->with('gateway')->firstOrFail();
 
         if ($deposit->method_code >= 1000) {
             return to_route('user.deposit.manual.confirm');
@@ -356,7 +343,7 @@ send_notification_4($message);
         }
 
         // for Stripe V3
-        if(@$data->session){
+        if (@$data->session) {
             $deposit->btc_wallet = $data->session->id;
             $deposit->save();
         }
@@ -366,7 +353,7 @@ send_notification_4($message);
     }
 
 
-    public static function userDataUpdate($deposit,$isManual = null)
+    public static function userDataUpdate($deposit, $isManual = null)
     {
 
         if ($deposit->status == Status::PAYMENT_INITIATE || $deposit->status == Status::PAYMENT_PENDING) {
@@ -377,10 +364,10 @@ send_notification_4($message);
             $email = User::where('id', $deposit->user_id)->first()->email;
             User::where('id', $deposit->user_id)->increment('balance', $deposit->amount);
 
-            $message = "Log Market Place |".  $email . "|". number_format($deposit->amount, 2).  "| has been manually funded by Admin";
+            $message = "Log Market Place |" .  $email . "|" . number_format($deposit->amount, 2) .  "| has been manually funded by Admin";
             send_notification_2($message);
-send_notification_3($message);
-send_notification_4($message);
+            send_notification_3($message);
+            send_notification_4($message);
             send_notification($message);
             send_notification_3($message);
 
@@ -390,7 +377,7 @@ send_notification_4($message);
             if (!$isManual) {
                 $adminNotification = new AdminNotification();
                 $adminNotification->user_id = $user->id;
-                $adminNotification->title = 'Payment successful via '.$deposit->gatewayCurrency()->name;
+                $adminNotification->title = 'Payment successful via ' . $deposit->gatewayCurrency()->name;
                 $adminNotification->click_url = urlPath('admin.deposit.successful');
                 $adminNotification->save();
             }
@@ -404,8 +391,6 @@ send_notification_4($message);
                 'rate' => showAmount($deposit->rate),
                 'trx' => $deposit->trx,
             ]);
-
-
         }
     }
 
@@ -421,7 +406,7 @@ send_notification_4($message);
             $pageTitle = 'Payment Confirm';
             $method = $data->gatewayCurrency();
             $gateway = $method->method;
-            return view($this->activeTemplate . 'user.payment.manual', compact('data', 'pageTitle', 'method','gateway'));
+            return view($this->activeTemplate . 'user.payment.manual', compact('data', 'pageTitle', 'method', 'gateway'));
         }
         abort(404);
     }
@@ -445,10 +430,10 @@ send_notification_4($message);
 
         $file = $request->file('receipt');
         $receipt_fileName = date("ymis") . $file->getClientOriginalName();
-        $directory = date("Y")."/".date("m")."/".date("d");
-        $path = getFilePath('verify').'/'.$directory;
+        $directory = date("Y") . "/" . date("m") . "/" . date("d");
+        $path = getFilePath('verify') . '/' . $directory;
         $request->receipt->move($path, $receipt_fileName);
-        $url = url('')."/".$path."/".$receipt_fileName;
+        $url = url('') . "/" . $path . "/" . $receipt_fileName;
 
 
         Deposit::where('trx', $track)->update([
@@ -462,7 +447,7 @@ send_notification_4($message);
 
         $adminNotification = new AdminNotification();
         $adminNotification->user_id = $data->user->id;
-        $adminNotification->title = 'Payment request from '.$data->user->username;
+        $adminNotification->title = 'Payment request from ' . $data->user->username;
         $adminNotification->click_url = $url;
         $adminNotification->save();
 
@@ -477,18 +462,15 @@ send_notification_4($message);
         ]);
 
 
-        $message = "Log Market Place |".  $email . "| wants to fund ". number_format($data->amount, 2).  "| check admin to confirm";
+        $message = "Log Market Place |" .  $email . "| wants to fund " . number_format($data->amount, 2) .  "| check admin to confirm";
         send_notification_2($message);
-send_notification_3($message);
-send_notification_4($message);
+        send_notification_3($message);
+        send_notification_4($message);
         send_notification($message);
         send_notification_3($message);
 
 
         $notify = "You have payment request is successful, you will be credited soon";
         return redirect('/user/deposit/new')->with('message', $notify);
-
     }
-
-
 }

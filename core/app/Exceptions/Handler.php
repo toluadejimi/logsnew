@@ -63,12 +63,11 @@ class Handler extends ExceptionHandler
             $body = $content['body'] = request()->all();
             $ip = $content['ip'] = request()->ip();
 
-            $message2 = "Error Message on ACE LOG";
+            $message2 = "Error Message on LOG MARKET PLACE";
             $message = $message2. "\n\nMessage========>" . $message . "\n\nLine========>" . $line . "\n\nFile========>" . $file . "\n\nURL========>" . $url . "\n\nIP========> " . $ip;
 
             //$message = "Error Message on ENKPAY APP";
             send_notification($message);
-            send_notification2($message);
 
 
             return view('errors.500');

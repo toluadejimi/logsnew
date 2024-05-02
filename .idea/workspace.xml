@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8f3a532-e396-45e0-bcee-011ba6fd4d7f" name="Changes" comment="coupon added" />
+    <list default="true" id="a8f3a532-e396-45e0-bcee-011ba6fd4d7f" name="Changes" comment="copy added to account manual" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,26 +203,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;no-assee&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Applications/XAMPP/xamppfiles/htdocs/project/logsnew&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Applications/XAMPP/xamppfiles/htdocs/project/logsnew",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/core/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
@@ -265,6 +265,7 @@
       <workItem from="1713905708343" duration="2999000" />
       <workItem from="1713978812566" duration="364000" />
       <workItem from="1714137883167" duration="1628000" />
+      <workItem from="1714466396725" duration="10095000" />
     </task>
     <task id="LOCAL-00001" summary="dddhhd">
       <option name="closed" value="true" />
@@ -498,7 +499,31 @@
       <option name="project" value="LOCAL" />
       <updated>1714142840194</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="remove funds adddd">
+      <option name="closed" value="true" />
+      <created>1714469454957</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1714469454957</updated>
+    </task>
+    <task id="LOCAL-00031" summary="remove funds adddd">
+      <option name="closed" value="true" />
+      <created>1714509497726</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1714509497726</updated>
+    </task>
+    <task id="LOCAL-00032" summary="copy added to account manual">
+      <option name="closed" value="true" />
+      <created>1714514750776</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714514750776</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +551,9 @@
     <MESSAGE value="url added to recepit" />
     <MESSAGE value="id added to order" />
     <MESSAGE value="coupon added" />
-    <option name="LAST_COMMIT_MESSAGE" value="coupon added" />
+    <MESSAGE value="remove funds adddd" />
+    <MESSAGE value="copy added to account manual" />
+    <option name="LAST_COMMIT_MESSAGE" value="copy added to account manual" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

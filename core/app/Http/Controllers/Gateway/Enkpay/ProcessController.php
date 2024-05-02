@@ -28,7 +28,7 @@ class ProcessController extends Controller
 
         $alias = $deposit->gateway->alias;
 
-        $send['view'] = 'user.payment.'.$alias;
+        $send['view'] = 'user.payment.' . $alias;
 
         return json_encode($send);
     }
@@ -39,11 +39,10 @@ class ProcessController extends Controller
         $ip = $request->ip();
         $deposit = Deposit::where('trx', $request->trans_id)->orderBy('id', 'DESC')->first();
 
-
         if ($request->status == 'failed') {
 
             Deposit::where('trx', $request->trans_id)->update(['status' => 3]);
-            $message = "Log Market Place |".  Auth::user()->email . "| canceled funding |";
+            $message = "Log Market Place |" .  Auth::user()->email . "| canceled funding |";
             send_notification($message);
             $message = 'Transaction failed, Ref: ' . $request->trans_id;
             $notify[] = ['error', $message];
@@ -59,9 +58,9 @@ class ProcessController extends Controller
         }
 
         $trxstatus = Deposit::where('trx', $request->trans_id)->first()->status ?? null;
-        if ($trxstatus == 1) {
 
-            $message = "Log Market Place |".  Auth::user()->email . "| is trying to fund  with | $request->trans_id  | " . number_format($request->amount, 2) . "\n\n IP ====> " . $request->ip();
+        if ($trxstatus == 1) {
+            $message = "Log Market Place |" .  Auth::user()->email . "| is trying to fund  with | $request->trans_id  | " . number_format($request->amount, 2) . "\n\n IP ====> " . $request->ip();
             send_notification($message);
             $message = 'Transaction already confirmed or not found';
             $notify[] = ['error', $message];
@@ -89,18 +88,16 @@ class ProcessController extends Controller
         $status1 = $var->detail ?? null;
         $amount = $var->price ?? null;
 
-        if ($status1 == "success" && $deposit->final_amo == $amount && $deposit->status == Status::PAYMENT_INITIATE) {
+        if ($status1 == "success" && $deposit->status == 0) {
             User::where('id', Auth::id())->increment('balance', $amount);
             Deposit::where('trx', $request->trans_id)->update(['status' => 1]);
 
-            $message =  "Log Market Place |". Auth::user()->email . "| funding successful |" . number_format($amount, 2) . "\n\n IP ====> $ip" . "\n\n OrderID ====> $request->trans_id";
+            $message =  "Log Market Place |" . Auth::user()->email . "| funding successful |" . number_format($amount, 2) . "\n\n IP ====> $ip" . "\n\n OrderID ====> $request->trans_id";
             send_notification($message);
             send_notification_2($message);
-send_notification_3($message);
-send_notification_4($message);
             send_notification_3($message);
-
-
+            send_notification_4($message);
+            send_notification_3($message);
 
             //PaymentController::userDataUpdate($deposit);
 
@@ -114,23 +111,13 @@ send_notification_4($message);
 
         if ($deposit->from_api) {
             return response()->json([
-                'code'=>200,
-                'status'=>'ok',
-                'message'=>['error'=>$notifyApi]
+                'code' => 200,
+                'status' => 'ok',
+                'message' => ['error' => $notifyApi]
             ]);
         }
 
 
         return to_route(gatewayRedirectUrl())->withNotify($notify);
     }
-
-
-
-
-
-
-
-
-
-
 }

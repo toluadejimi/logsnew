@@ -51,9 +51,12 @@
                             <div class="d-flex align-items-center mb-3">
                                 <div class="col-12">
                                     <select class="text-dark form-control2 p-2" name="gateway" required>
-                                        @foreach ($gateway_currency as $data)
-                                            <option value="{{ $data->method_code }}">{{ $data->name }} </option>
-                                        @endforeach
+                                      
+                                            <option value="">Select payment method</option>
+                                            <option value="250">Instant Payment</option>
+                                            <option value="1000">Manual Payment</option>
+
+                                       
                                     </select>
 
                                 </div>
