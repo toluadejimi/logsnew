@@ -171,7 +171,7 @@ class UserController extends Controller
 
 
                 $notify = "Transaction successfully Resolved, NGN $amount added to ur wallet";
-                return redirect('user/products')->with('message', $notify);
+                return redirect('products')->with('message', $notify);
             }
 
             if ($status == false) {
