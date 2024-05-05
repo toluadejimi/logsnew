@@ -70,18 +70,20 @@ class UserController extends Controller
 
             $email = Auth::user()->email;
             $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_2($message);
-            send_notification_3($message);
             send_notification_4($message);
+            send_notification_2($message);
+
 
 
             $message = "$email | LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_2($message);
-            send_notification_3($message);
             send_notification_4($message);
+            send_notification_2($message);
 
-           $notify = "This Transaction has been successful";
+
+            $notify = "This Transaction has been successful";
             return back()->with('message',$notify);
+
+
         }
 
 
@@ -89,10 +91,9 @@ class UserController extends Controller
 
             $email = Auth::user()->email;
             $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_2($message);
-            send_notification_3($message);
             send_notification_4($message);
-            send_notification_3($message);
+            send_notification_2($message);
+
 
 
             $message = "$email | LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
@@ -106,14 +107,14 @@ class UserController extends Controller
 
             $email = Auth::user()->email;
             $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_2($message);
-            send_notification_3($message);
             send_notification_4($message);
-            send_notification_3($message);
+            send_notification_2($message);
+
 
 
             $message = "$email | LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
             send_notification($message);
+
 
            $notify = "This Transaction has been successful";
             return back()->with('error',$notify);
@@ -164,10 +165,7 @@ class UserController extends Controller
                 $user_email = Auth::user()->email;
                 $message = "$user_email | $request->trx_ref | $session_id | $var->amount | just resolved deposit | LOG MARKET PLACEs";
                 send_notification($message);
-                send_notification_2($message);
-                send_notification_3($message);
                 send_notification_4($message);
-                send_notification_3($message);
 
 
                 $notify = "Transaction successfully Resolved, NGN $amount added to ur wallet";

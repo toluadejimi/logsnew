@@ -8,6 +8,7 @@ use App\Models\Gateway;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Gateway\PaymentController;
 use App\Models\ProductDetail;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DepositController extends Controller
@@ -112,19 +113,27 @@ class DepositController extends Controller
     }
 
 
-    public function approve($id) 
-    {  
+    public function approve($id)
+    {
         $deposit = Deposit::where('id',$id)->where('status',Status::PAYMENT_PENDING)->firstOrFail();
+
+        $user_email = $deposit->user_id ?? null;
+        $amount = $deposit->amount ?? null;
+
 
         PaymentController::userDataUpdate($deposit,true);
 
-        $notify[] = ['success', 'Payment request approved successfully'];
+        $message = "Log Market Place |" .  $user_email . "| has been funded  " . number_format($amount, 2) .  "| by admin";
+        send_notification_2($message);
+        send_notification_4($message);
+        send_notification($message);
 
+        $notify[] = ['success', 'Payment request approved successfully'];
         return to_route('admin.deposit.pending')->withNotify($notify);
     }
 
     public function reject(Request $request)
-    { 
+    {
         $request->validate([
             'id' => 'required|integer',
             'message' => 'required|string|max:255'
@@ -134,8 +143,13 @@ class DepositController extends Controller
         $deposit->admin_feedback = $request->message;
         $deposit->status = Status::PAYMENT_REJECT;
         $deposit->save();
-        
-       
+
+
+        $user_email = $deposit->user_id ?? null;
+        $amount = $deposit->amount ?? null;
+
+
+
         notify($deposit->user, 'DEPOSIT_REJECT', [
             'method_name' => $deposit->gatewayCurrency()->name,
             'method_currency' => $deposit->method_currency,
@@ -146,6 +160,12 @@ class DepositController extends Controller
             'trx' => $deposit->trx,
             'rejection_message' => $request->message
         ]);
+
+
+        $message = "Log Market Place |" .  $user_email . "| has rejected funding  " . number_format($amount, 2) .  "| by admin";
+        send_notification_2($message);
+        send_notification_4($message);
+        send_notification($message);
 
         $notify[] = ['success', 'Payment request rejected successfully'];
         return  to_route('admin.deposit.pending')->withNotify($notify);

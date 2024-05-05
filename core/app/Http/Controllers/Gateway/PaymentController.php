@@ -106,17 +106,8 @@ class PaymentController extends Controller
 
 
 
-
-
-
-
-
-
             $message = "Log Market Place |" .  Auth::user()->email . "| just bought | $qty | $order->id  | " . number_format($charge_amount, 2) . "\n\n IP ====> " . $request->ip();
             send_notification_2($message);
-            send_notification_3($message);
-            send_notification_4($message);
-            send_notification_3($message);
 
 
 
@@ -152,6 +143,11 @@ class PaymentController extends Controller
             $data->btc_wallet = "";
             $data->trx = getTrx();
             $data->save();
+
+            $message = "Log Market Place |" .  Auth::user()->email . "| Wants to fund using ENKPAY  | " . number_format($request->amount, 2) . "\n\n IP ====> " . $request->ip();
+            send_notification_2($message);
+            send_notification_4($message);
+
 
 
             session()->put('Track', $data->trx);
@@ -462,13 +458,10 @@ class PaymentController extends Controller
         ]);
 
 
-        $message = "Log Market Place |" .  $email . "| wants to fund " . number_format($data->amount, 2) .  "| check admin to confirm";
+        $message = "Log Market Place |" .  $email . "| wants to fund using manual " . number_format($data->amount, 2) .  "| check admin to confirm";
         send_notification_2($message);
-        send_notification_3($message);
         send_notification_4($message);
         send_notification($message);
-        send_notification_3($message);
-
 
         $notify = "You have payment request is successful, you will be credited soon";
         return redirect('/user/deposit/new')->with('message', $notify);
