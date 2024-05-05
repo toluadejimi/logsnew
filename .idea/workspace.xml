@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8f3a532-e396-45e0-bcee-011ba6fd4d7f" name="Changes" comment="copy added to account manual">
+    <list default="true" id="a8f3a532-e396-45e0-bcee-011ba6fd4d7f" name="Changes" comment="bot adjsusted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/Admin/DepositController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/Admin/DepositController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/Gateway/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/Gateway/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/User/UserController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +268,7 @@
       <workItem from="1713978812566" duration="364000" />
       <workItem from="1714137883167" duration="1628000" />
       <workItem from="1714466396725" duration="10095000" />
-      <workItem from="1714889664623" duration="2186000" />
+      <workItem from="1714889664623" duration="3744000" />
     </task>
     <task id="LOCAL-00001" summary="dddhhd">
       <option name="closed" value="true" />
@@ -529,7 +526,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714514750776</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="bot adjsusted">
+      <option name="closed" value="true" />
+      <created>1714892745960</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1714892745960</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +564,8 @@
     <MESSAGE value="coupon added" />
     <MESSAGE value="remove funds adddd" />
     <MESSAGE value="copy added to account manual" />
-    <option name="LAST_COMMIT_MESSAGE" value="copy added to account manual" />
+    <MESSAGE value="bot adjsusted" />
+    <option name="LAST_COMMIT_MESSAGE" value="bot adjsusted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -578,6 +584,11 @@
           <url>file://$PROJECT_DIR$/core/resources/views/templates/basic/product_details.blade.php</url>
           <line>16</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/core/app/Http/Controllers/Admin/DepositController.php</url>
+          <line>67</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

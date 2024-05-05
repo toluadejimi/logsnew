@@ -70,13 +70,11 @@ class UserController extends Controller
 
             $email = Auth::user()->email;
             $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_4($message);
             send_notification_2($message);
 
 
 
             $message = "$email | LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_4($message);
             send_notification_2($message);
 
 
@@ -91,7 +89,6 @@ class UserController extends Controller
 
             $email = Auth::user()->email;
             $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_4($message);
             send_notification_2($message);
 
 
@@ -107,7 +104,6 @@ class UserController extends Controller
 
             $email = Auth::user()->email;
             $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_4($message);
             send_notification_2($message);
 
 
@@ -166,6 +162,8 @@ class UserController extends Controller
                 $message = "$user_email | $request->trx_ref | $session_id | $var->amount | just resolved deposit | LOG MARKET PLACEs";
                 send_notification($message);
                 send_notification_4($message);
+                send_notification_2($message);
+
 
 
                 $notify = "Transaction successfully Resolved, NGN $amount added to ur wallet";
