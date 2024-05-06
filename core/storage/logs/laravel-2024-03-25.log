@@ -1,0 +1,434 @@
+[2024-03-25 00:53:32] development.INFO: Detected N+1 Query  
+[2024-03-25 00:53:32] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 2
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:37
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:53
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 00:53:34] development.INFO: Detected N+1 Query  
+[2024-03-25 00:53:34] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 2
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:37
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:53
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 00:53:46] development.INFO: Detected N+1 Query  
+[2024-03-25 00:53:46] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 2
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:37
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:53
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 00:54:38] development.INFO: Detected N+1 Query  
+[2024-03-25 00:54:38] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:37
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:53
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 01:52:19] development.INFO: Detected N+1 Query  
+[2024-03-25 01:52:19] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:53
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 01:56:45] development.INFO: Detected N+1 Query  
+[2024-03-25 01:56:45] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:55
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 01:57:06] development.INFO: Detected N+1 Query  
+[2024-03-25 01:57:06] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:55
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 01:59:24] development.INFO: Detected N+1 Query  
+[2024-03-25 01:59:24] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:55
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 02:00:18] development.INFO: Detected N+1 Query  
+[2024-03-25 02:00:18] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:312
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 02:00:28] development.INFO: Detected N+1 Query  
+[2024-03-25 02:00:28] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:312
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 02:01:49] development.INFO: Detected N+1 Query  
+[2024-03-25 02:01:49] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:316
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 02:02:14] development.INFO: Detected N+1 Query  
+[2024-03-25 02:02:14] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:310
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 02:03:28] development.INFO: Detected N+1 Query  
+[2024-03-25 02:03:28] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:286
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
+[2024-03-25 02:05:02] development.INFO: Detected N+1 Query  
+[2024-03-25 02:05:02] development.INFO: Model: App\Models\Product
+Relation: productDetails
+Num-Called: 5
+Call-Stack:
+#17 /app/Models/Product.php:40
+#24 /storage/framework/views/a5e79586e9ba0061f483d334582ce9e31fa84922.php:41
+#26 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#28 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#31 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#32 /storage/framework/views/b243f48f1b9b8edb552f2877d8fdf2a0f8f8e0d1.php:210
+#34 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#36 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#40 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#41 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#46 /app/Http/Middleware/MaintenanceMode.php:25
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /app/Http/Middleware/LanguageMiddleware.php:22
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  

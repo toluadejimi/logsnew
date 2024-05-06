@@ -1,0 +1,35 @@
+[2024-01-12 19:47:56] development.INFO: Detected N+1 Query  
+[2024-01-12 19:47:56] development.INFO: Model: App\Models\WalletCurrency
+Relation: App\Models\Gateway
+Num-Called: 9
+Call-Stack:
+#17 /app/View/Components/PurchaseModal.php:31
+#18 /vendor/laravel/framework/src/Illuminate/View/Component.php:135
+#19 /storage/framework/views/c7dc29fdd68648b17101541d711b7c9c0f9100e4.php:47
+#21 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#22 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#23 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#24 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#25 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#26 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#27 /vendor/laravel/framework/src/Illuminate/View/View.php:492
+#28 /vendor/spatie/backtrace/src/Arguments/Reducers/StringableArgumentReducer.php:19
+#29 /vendor/spatie/backtrace/src/Arguments/ReduceArgumentPayloadAction.php:21
+#30 /vendor/spatie/backtrace/src/Arguments/ReduceArgumentsAction.php:53
+#33 /vendor/spatie/backtrace/src/Backtrace.php:188
+#34 /vendor/spatie/backtrace/src/Backtrace.php:121
+#35 /vendor/spatie/flare-client-php/src/Report.php:319
+#36 /vendor/spatie/flare-client-php/src/Report.php:371
+#37 /vendor/spatie/ignition/src/ErrorPage/ErrorPageViewModel.php:90
+#38 /vendor/spatie/ignition/src/ErrorPage/ErrorPageViewModel.php:112
+#39 /vendor/spatie/ignition/resources/views/errorPage.php:44
+#41 /vendor/spatie/ignition/src/Ignition.php:314
+#42 /vendor/spatie/laravel-ignition/src/Renderers/ErrorPageRenderer.php:39
+#43 /vendor/spatie/laravel-ignition/src/Renderers/IgnitionExceptionRenderer.php:20
+#44 /vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php:598
+#45 /vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php:583
+#46 /vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php:567
+#47 /vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php:546
+#48 /vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php:460
+#49 /vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php:377
+  

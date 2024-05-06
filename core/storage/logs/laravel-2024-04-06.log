@@ -1,0 +1,33 @@
+[2024-04-06 08:37:02] development.INFO: Detected N+1 Query  
+[2024-04-06 08:37:02] development.INFO: Model: App\Models\AdminNotification
+Relation: App\Models\User
+Num-Called: 9
+Call-Stack:
+#17 /app/Providers/AppServiceProvider.php:67
+#20 /vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesEvents.php:177
+#21 /vendor/laravel/framework/src/Illuminate/View/View.php:176
+#22 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#23 /storage/framework/views/4577ee182d70daa32211fb6729194138a318e7ef.php:5
+#25 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#26 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#27 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#28 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#29 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#30 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#31 /storage/framework/views/c95bb2da8eec2baf116d58635ebf9811e814a07f.php:69
+#33 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#34 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#35 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#36 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#37 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#38 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#39 /vendor/laravel/framework/src/Illuminate/View/View.php:492
+#40 /vendor/spatie/backtrace/src/Arguments/Reducers/StringableArgumentReducer.php:19
+#41 /vendor/spatie/backtrace/src/Arguments/ReduceArgumentPayloadAction.php:21
+#42 /vendor/spatie/backtrace/src/Arguments/ReduceArgumentsAction.php:53
+#45 /vendor/spatie/backtrace/src/Backtrace.php:188
+#46 /vendor/spatie/backtrace/src/Backtrace.php:121
+#47 /vendor/spatie/flare-client-php/src/Report.php:319
+#48 /vendor/spatie/flare-client-php/src/Report.php:371
+#49 /vendor/spatie/ignition/src/ErrorPage/ErrorPageViewModel.php:90
+  

@@ -1,0 +1,111 @@
+[2024-01-25 14:49:50] development.INFO: Detected N+1 Query  
+[2024-01-25 14:49:50] development.INFO: Model: App\Models\Deposit
+Relation: gateway
+Num-Called: 2
+Call-Stack:
+#18 /storage/framework/views/0843d57b034f2afb66ec20c95423dc03861182c3.php:68
+#20 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#21 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#22 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#23 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#24 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#25 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#26 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#27 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#28 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#29 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#30 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#31 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#32 /app/Http/Middleware/RegistrationStep.php:32
+#33 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#34 /app/Http/Middleware/CheckStatus.php:22
+#35 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#36 /app/Http/Middleware/MaintenanceMode.php:25
+#37 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#38 /app/Http/Middleware/LanguageMiddleware.php:22
+#39 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#40 /vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php:50
+#41 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#42 /vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php:44
+#43 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#44 /vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php:78
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#46 /vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php:49
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:121
+#49 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:64
+  
+[2024-01-25 14:51:37] development.INFO: Detected N+1 Query  
+[2024-01-25 14:51:37] development.INFO: Model: App\Models\Deposit
+Relation: gateway
+Num-Called: 2
+Call-Stack:
+#18 /storage/framework/views/0843d57b034f2afb66ec20c95423dc03861182c3.php:71
+#20 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#21 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#22 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#23 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#24 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#25 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#26 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#27 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#28 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#29 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#30 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#31 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#32 /app/Http/Middleware/RegistrationStep.php:32
+#33 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#34 /app/Http/Middleware/CheckStatus.php:22
+#35 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#36 /app/Http/Middleware/MaintenanceMode.php:25
+#37 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#38 /app/Http/Middleware/LanguageMiddleware.php:22
+#39 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#40 /vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php:50
+#41 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#42 /vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php:44
+#43 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#44 /vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php:78
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#46 /vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php:49
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:121
+#49 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:64
+  
+[2024-01-25 14:51:47] development.INFO: Detected N+1 Query  
+[2024-01-25 14:51:47] development.INFO: Model: App\Models\Deposit
+Relation: gateway
+Num-Called: 2
+Call-Stack:
+#18 /storage/framework/views/0843d57b034f2afb66ec20c95423dc03861182c3.php:71
+#20 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#21 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#22 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#23 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#24 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#25 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#26 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#27 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#28 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#29 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#30 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#31 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#32 /app/Http/Middleware/RegistrationStep.php:32
+#33 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#34 /app/Http/Middleware/CheckStatus.php:22
+#35 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#36 /app/Http/Middleware/MaintenanceMode.php:25
+#37 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#38 /app/Http/Middleware/LanguageMiddleware.php:22
+#39 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#40 /vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php:50
+#41 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#42 /vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php:44
+#43 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#44 /vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php:78
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#46 /vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php:49
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:121
+#49 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:64
+  
