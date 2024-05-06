@@ -1,0 +1,15 @@
+[23-Apr-2024 17:59:17 UTC] PHP Warning:  require(/home/palashsm/v2.logmarketplace.com/assets/assets2/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php on line 34
+[23-Apr-2024 17:59:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/palashsm/v2.logmarketplace.com/assets/assets2/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php on line 34
+[23-Apr-2024 17:59:51 UTC] PHP Warning:  require(/home/palashsm/v2.logmarketplace.com/assets/assets2/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php on line 34
+[23-Apr-2024 17:59:51 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/palashsm/v2.logmarketplace.com/assets/assets2/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php on line 34
+[23-Apr-2024 21:10:52 UTC] PHP Warning:  require(/home/palashsm/v2.logmarketplace.com/assets/assets2/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php on line 34
+[23-Apr-2024 21:10:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/palashsm/v2.logmarketplace.com/assets/assets2/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/palashsm/v2.logmarketplace.com/assets/assets2/index.php on line 34
