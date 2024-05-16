@@ -54,7 +54,7 @@
 
                         <button type="submit"
                                 style="background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%); color: white;"
-                                class="btn text-start w-100 btn-rounded">
+                                class="btn text-start w-100 btn-rounded my-3">
 
                             <svg class="cart me-4" width="16" height="16" viewBox="0 0 18 18" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
