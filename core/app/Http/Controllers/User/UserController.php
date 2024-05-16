@@ -60,7 +60,7 @@ class UserController extends Controller
     public function resolve_now(request $request)
     {
 
-        if ($request->bsnk_type == "providus") {
+        if ($request->bank_type == "providus") {
 
             $trx = Deposit::where('trx', $request->trx_ref)->first()->status ?? null;
 
@@ -167,7 +167,7 @@ class UserController extends Controller
             }
         }
 
-        if ($request->bsnk_type == "opay") {
+        if ($request->bank_type == "opay") {
 
             $trx = Deposit::where('trx', $request->trx_ref)->first()->status ?? null;
 
@@ -272,7 +272,7 @@ class UserController extends Controller
             }
         }
 
-        if ($request->bsnk_type == "palmpay") {
+        if ($request->bank_type == "palmpay") {
 
             $trx = Deposit::where('trx', $request->trx_ref)->first()->status ?? null;
 
