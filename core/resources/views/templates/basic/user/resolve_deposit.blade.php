@@ -45,8 +45,7 @@
                         <div>
                             <input type="text" name="session_id" required
                                    class="form-control2 p-2 text-dark mb-3" placeholder="Enter session ID or Reference">
-
-                            <small class="text-danger">If transaction is from OPAY OR PALMPAY use the 3 letter generated as reference</small>
+                            <small class="text-danger my-2">If transaction is from OPAY OR PALMPAY use the 3 letter generated as reference</small>
                             <input hidden type="text" name="trx_ref"
                                    value="{{ $trx }}" required class="">
 
