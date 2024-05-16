@@ -33,6 +33,13 @@
                     <form action="resolve-now" method="POST">
                         @csrf
 
+                        <label class="my-3">Select Bank</label>
+                        <select class="form-control" required name="bank_type">
+                            <option value="opay">OPAY</option>
+                            <option value="palmpay">PALMPAY</option>
+                            <option value="providus">PROVIDUS</option>
+                        </select>
+
                         <label class="my-3">Enter Session ID</label>
                         <div>
                             <input type="text" name="session_id" required

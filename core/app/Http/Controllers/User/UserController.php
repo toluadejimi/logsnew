@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Models\ProductDetail;
-use App\Models\User;
-use App\Models\Order;
-use App\Models\Deposit;
 use App\Constants\Status;
-use App\Models\OrderItem;
-use Illuminate\Http\Request;
-use App\Models\SupportTicket;
-use App\Models\GatewayCurrency;
-use Illuminate\Support\Facades\Storage;
-use Stripe\Issuing\Transaction;
 use App\Http\Controllers\Controller;
+use App\Models\Deposit;
+use App\Models\GatewayCurrency;
+use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\ProductDetail;
+use App\Models\SupportTicket;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -42,14 +41,14 @@ class UserController extends Controller
         $dep = Deposit::where('trx', $request->trx)->first() ?? null;
 
         if ($dep->status == 1) {
-           $notify = "This Transaction has been successful";
-            return back()->with('error',$notify);
+            $notify = "This Transaction has been successful";
+            return back()->with('error', $notify);
         }
 
 
         if ($dep == null) {
-           $notify = "Transaction has been deleted";
-            return back()->with('error',$notify);
+            $notify = "Transaction has been deleted";
+            return back()->with('error', $notify);
         } else {
 
             $trx = $request->trx;
@@ -61,123 +60,325 @@ class UserController extends Controller
     public function resolve_now(request $request)
     {
 
+        if ($request->bsnk_type == "providus") {
 
-        $trx = Deposit::where('trx', $request->trx_ref)->first()->status ?? null;
+            $trx = Deposit::where('trx', $request->trx_ref)->first()->status ?? null;
 
-        $ck_trx = (int)$trx;
+            $ck_trx = (int)$trx;
 
-        if ($ck_trx == 1) {
+            if ($ck_trx == 1) {
 
-            $email = Auth::user()->email;
-            $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_2($message);
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification_2($message);
+                send_notification_2($message);
 
-
-
-            $message = "$email | LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_2($message);
-
-
-            $notify = "This Transaction has been successful";
-            return back()->with('message',$notify);
+                $notify = "This Transaction has been successful";
+                return back()->with('message', $notify);
 
 
-        }
-
-
-        if ($ck_trx != 0) {
-
-            $email = Auth::user()->email;
-            $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_2($message);
-
-
-
-            $message = "$email | LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification($message);
-
-           $notify = "This Transaction has been successful";
-            return back()->with('message',$notify);
-        }
-
-        if ($ck_trx == 2) {
-
-            $email = Auth::user()->email;
-            $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification_2($message);
-
-
-
-            $message = "$email | LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
-            send_notification($message);
-
-
-           $notify = "This Transaction has been successful";
-            return back()->with('error',$notify);
-        }
-
-
-        if ($ck_trx == 0) {
-            $session_id = $request->session_id;
-            if ($session_id == null) {
-               $notify = "session id or amount cant be empty";
-                return back()->with('error',$notify);
             }
 
 
-            $curl = curl_init();
-            $databody = array(
-                'session_id' => "$session_id",
-                'ref' => "$request->trx_ref"
+            if ($ck_trx != 0) {
 
-            );
-
-            curl_setopt_array($curl, array(
-                CURLOPT_URL => 'https://web.enkpay.com/api/resolve',
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => '',
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => $databody,
-            ));
-
-            $var = curl_exec($curl);
-            curl_close($curl);
-            $var = json_decode($var);
-
-            $message = $var->message ?? null;
-            $status = $var->status ?? null;
-            $trx = $var->trx ?? null;
-            $amount = $var->amount ?? null;
-
-            if ($status == true) {
-                User::where('id', Auth::id())->increment('balance', $var->amount);
-                Deposit::where('trx', $request->trx_ref)->update(['status' => 1]);
-
-
-                $user_email = Auth::user()->email;
-                $message = "$user_email | $request->trx_ref | $session_id | $var->amount | just resolved deposit | LOG MARKET PLACEs";
-                send_notification($message);
-                send_notification_4($message);
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
                 send_notification_2($message);
 
 
+                $message = "$email | LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification($message);
 
-                $notify = "Transaction successfully Resolved, NGN $amount added to ur wallet";
-                return redirect('products')->with('message', $notify);
+                $notify = "This Transaction has been successful";
+                return back()->with('message', $notify);
             }
 
-            if ($status == false) {
+            if ($ck_trx == 2) {
 
-                $notify = $message;
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification_2($message);
+                send_notification($message);
+
+                $notify = "This Transaction has been successful";
                 return back()->with('error', $notify);
             }
-           $notify = "please try again later";
-            return back()->with('error',$notify);
+
+
+            if ($ck_trx == 0) {
+                $session_id = $request->session_id;
+                if ($session_id == null) {
+                    $notify = "session id or amount cant be empty";
+                    return back()->with('error', $notify);
+                }
+
+
+                $curl = curl_init();
+                $databody = array(
+                    'session_id' => "$session_id",
+                    'ref' => "$request->trx_ref"
+
+                );
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'https://web.enkpay.com/api/resolve',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_POSTFIELDS => $databody,
+                ));
+
+                $var = curl_exec($curl);
+                curl_close($curl);
+                $var = json_decode($var);
+
+                $message = $var->message ?? null;
+                $status = $var->status ?? null;
+                $trx = $var->trx ?? null;
+                $amount = $var->amount ?? null;
+
+                if ($status == true) {
+                    User::where('id', Auth::id())->increment('balance', $var->amount);
+                    Deposit::where('trx', $request->trx_ref)->update(['status' => 1]);
+
+                    $user_email = Auth::user()->email;
+                    $message = "$user_email | $request->trx_ref | $session_id | $var->amount | just resolved deposit | LOG MARKET PLACEs";
+                    send_notification($message);
+                    send_notification_4($message);
+                    send_notification_2($message);
+
+
+                    $notify = "Transaction successfully Resolved, NGN $amount added to ur wallet";
+                    return redirect('products')->with('message', $notify);
+                }
+
+                if ($status == false) {
+
+                    $notify = $message;
+                    return back()->with('error', $notify);
+                }
+                $notify = "please try again later";
+                return back()->with('error', $notify);
+            }
         }
+
+        if ($request->bsnk_type == "opay") {
+
+            $trx = Deposit::where('trx', $request->trx_ref)->first()->status ?? null;
+
+            $ck_trx = (int)$trx;
+
+            if ($ck_trx == 1) {
+
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification_2($message);
+                send_notification_2($message);
+
+                $notify = "This Transaction has been successful";
+                return back()->with('message', $notify);
+
+
+            }
+
+
+            if ($ck_trx != 0) {
+
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification_2($message);
+                send_notification($message);
+
+                $notify = "This Transaction has been successful";
+                return back()->with('message', $notify);
+            }
+
+            if ($ck_trx == 2) {
+
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification_2($message);
+                send_notification($message);
+
+                $notify = "This Transaction has been successful";
+                return back()->with('error', $notify);
+            }
+
+
+            if ($ck_trx == 0) {
+                $session_id = $request->session_id;
+                if ($session_id == null) {
+                    $notify = "session id or amount cant be empty";
+                    return back()->with('error', $notify);
+                }
+
+
+                $curl = curl_init();
+                $databody = array(
+                    'session_id' => "$session_id",
+                    'ref' => "$request->trx_ref"
+
+                );
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'https://web.enkpay.com/api/resolve-others',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_POSTFIELDS => $databody,
+                ));
+
+                $var = curl_exec($curl);
+                curl_close($curl);
+                $var = json_decode($var);
+
+                $message = $var->message ?? null;
+                $status = $var->status ?? null;
+                $trx = $var->trx ?? null;
+                $amount = $var->amount ?? null;
+
+                if ($status == true) {
+
+                    User::where('id', Auth::id())->increment('balance', $var->amount);
+                    Deposit::where('trx', $request->trx_ref)->update(['status' => 1]);
+
+                    $user_email = Auth::user()->email;
+                    $message = "$user_email | $request->trx_ref | $session_id | $var->amount | just resolved deposit | LOG MARKET PLACEs";
+                    send_notification($message);
+                    send_notification_4($message);
+                    send_notification_2($message);
+
+
+                    $notify = "Transaction successfully Resolved, NGN $amount added to ur wallet";
+                    return redirect('products')->with('message', $notify);
+                }
+
+                if ($status == false) {
+
+                    $notify = $message;
+                    return back()->with('error', $notify);
+                }
+                $notify = "please try again later";
+                return back()->with('error', $notify);
+            }
+        }
+
+        if ($request->bsnk_type == "palmpay") {
+
+            $trx = Deposit::where('trx', $request->trx_ref)->first()->status ?? null;
+
+            $ck_trx = (int)$trx;
+
+            if ($ck_trx == 1) {
+
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification_2($message);
+                send_notification_2($message);
+
+                $notify = "This Transaction has been successful";
+                return back()->with('message', $notify);
+
+
+            }
+
+
+            if ($ck_trx != 0) {
+
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification_2($message);
+                send_notification($message);
+
+                $notify = "This Transaction has been successful";
+                return back()->with('message', $notify);
+            }
+
+            if ($ck_trx == 2) {
+
+                $email = Auth::user()->email;
+                $message = "$email |LOG MARKET PLACE | is trying to fund and a successful order with orderid $request->trx_ref";
+                send_notification_2($message);
+                send_notification($message);
+
+                $notify = "This Transaction has been successful";
+                return back()->with('error', $notify);
+            }
+
+
+            if ($ck_trx == 0) {
+                $session_id = $request->session_id;
+                if ($session_id == null) {
+                    $notify = "session id or amount cant be empty";
+                    return back()->with('error', $notify);
+                }
+
+
+                $curl = curl_init();
+                $databody = array(
+                    'session_id' => "$session_id",
+                    'ref' => "$request->trx_ref"
+
+                );
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'https://web.enkpay.com/api/resolve-others',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_POSTFIELDS => $databody,
+                ));
+
+                $var = curl_exec($curl);
+                curl_close($curl);
+                $var = json_decode($var);
+
+                $message = $var->message ?? null;
+                $status = $var->status ?? null;
+                $trx = $var->trx ?? null;
+                $amount = $var->amount ?? null;
+
+                if ($status == true) {
+
+                    User::where('id', Auth::id())->increment('balance', $var->amount);
+                    Deposit::where('trx', $request->trx_ref)->update(['status' => 1]);
+
+                    $user_email = Auth::user()->email;
+                    $message = "$user_email | $request->trx_ref | $session_id | $var->amount | just resolved deposit | LOG MARKET PLACEs";
+                    send_notification($message);
+                    send_notification_4($message);
+                    send_notification_2($message);
+
+
+                    $notify = "Transaction successfully Resolved, NGN $amount added to ur wallet";
+                    return redirect('products')->with('message', $notify);
+                }
+
+                if ($status == false) {
+
+                    $notify = $message;
+                    return back()->with('error', $notify);
+                }
+                $notify = "please try again later";
+                return back()->with('error', $notify);
+            }
+        }
+
+        return back();
+
     }
 
 
@@ -283,7 +484,7 @@ class UserController extends Controller
         $user->save();
 
         $notify[] = ['success', 'Registration process completed successfully'];
-        return to_route('user.products')->with('error',$notify);
+        return to_route('user.products')->with('error', $notify);
     }
 
     public function orders()
