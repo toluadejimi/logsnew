@@ -74,7 +74,7 @@ class SiteController extends Controller
 
             User::where('email', $request->email)->increment('balance', $request->amount);
 
-            return back()->with('message', "$usr->username | has been successfully funded | NGN $request->amount  on Log Market Place");
+            return back()->with('message', "$usr->username | has been successfully funded | NGN $request->amount  | new balance is |NGN".$usr->balance);
 
             $message = $usr->usernmae." | has been successfully funded | NGN".$request->amount." on Log Market Place by support | new balance is |NGN".$usr->balance;
             send_notification($message);
