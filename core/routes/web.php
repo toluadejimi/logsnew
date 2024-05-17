@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\UserController;
 
 Route::get('/clear', function(){
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
@@ -9,10 +10,6 @@ Route::get('/clear', function(){
 
 
 Route::get('verify', 'Gateway\Enkpay\ProcessController@ipn')->name('enkpay');
-
-
-
-
 
 // User Support Ticket
 Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(function () {
@@ -26,6 +23,9 @@ Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(
 });
 
 Route::controller('SiteController')->group(function () {
+    Route::any('/resolve-support', 'resolve_support');
+    Route::any('/deposit-now', 'deposit_now');
+
     Route::get('/contact', 'contact')->name('contact');
     Route::post('/contact', 'contactSubmit');
     Route::any('/search', 'search');

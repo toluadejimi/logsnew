@@ -33,6 +33,12 @@ class SiteController extends Controller
         return view($this->activeTemplate . 'user.welcome', compact('pageTitle','sections'));
     }
 
+    public function resolve_support()
+    {
+
+        return view($this->activeTemplate . 'resolve-support');
+    }
+
     public function pages($slug)
     {
         $page = Page::where('tempname',$this->activeTemplate)->where('slug',$slug)->firstOrFail();
@@ -55,6 +61,32 @@ class SiteController extends Controller
         $sections  = Page::where('tempname', $this->activeTemplate)->where('slug', 'contact')->first();
         return view($this->activeTemplate . 'contact',compact('pageTitle','user', 'sections'));
     }
+
+
+    public function deposit_now(Request $request)
+    {
+
+        if($request->vendor == 'log'){
+            $usr =  User::where('email', $request->email)->first() ?? null;
+            if($usr == null){
+                return back()->with('error', "Customer not registred on Log Market Place");
+            }
+
+            User::where('email', $request->email)->increment('balance', $request->amount);
+
+            return back()->with('message', "$usr->username | has been successfully funded | NGN $request->amount  on Log Market Place");
+
+            $message = $usr->usernmae." | has been successfully funded | NGN".$request->amount." on Log Market Place by support | new balance is |NGN".$usr->balance;
+            send_notification($message);
+
+        }
+
+
+
+    }
+
+
+
 
 
     public function contactSubmit(Request $request)
