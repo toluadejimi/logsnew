@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8f3a532-e396-45e0-bcee-011ba6fd4d7f" name="Changes" comment="bot adjsusted">
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X14cdc480952e84d4c2f90c4f3d1be644.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X1c0a75ae94732d222fa8f896d7e7d2cd.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X1d6152baac14699658c911b6a64dece6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X35a8e26834c22b9d80c531611ce533d7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X7465da4183544b762e29bc2d23f1153d.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X7cfe541add06c5215e2b81c9005395dc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X834912df3bc457db2cd9cde9321e4514.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X8dbadc3422670a989dc6913b9c46c3ac.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X912f578792b11c3b9aa1cbba63b764c1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/Xafd3769b0a67265dbd4b8237ea0266f5.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/Http/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Helpers/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +284,8 @@
       <workItem from="1714889664623" duration="3744000" />
       <workItem from="1714950776739" duration="254000" />
       <workItem from="1714985078402" duration="1697000" />
-      <workItem from="1715879966293" duration="5410000" />
+      <workItem from="1715879966293" duration="10264000" />
+      <workItem from="1716049173098" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="dddhhd">
       <option name="closed" value="true" />
@@ -609,7 +623,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715899299224</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="bot adjsusted">
+      <option name="closed" value="true" />
+      <created>1715986162248</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1715986162248</updated>
+    </task>
+    <task id="LOCAL-00044" summary="bot adjsusted">
+      <option name="closed" value="true" />
+      <created>1715987503338</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1715987503338</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,8 +697,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/core/app/Http/Controllers/User/UserController.php</url>
-          <line>62</line>
+          <line>67</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/core/routes/web.php</url>
+          <line>15</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/core/resources/views/templates/basic/resolve-support.blade.php</url>
+          <line>57</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

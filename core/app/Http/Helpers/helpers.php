@@ -1,15 +1,15 @@
 <?php
 
 use App\Constants\Status;
-use App\Models\Extension;
-use App\Models\Frontend;
-use App\Models\GeneralSetting;
-use Carbon\Carbon;
 use App\Lib\Captcha;
 use App\Lib\ClientInfo;
 use App\Lib\CurlRequest;
 use App\Lib\FileManager;
+use App\Models\Extension;
+use App\Models\Frontend;
+use App\Models\GeneralSetting;
 use App\Notify\Notify;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
@@ -30,8 +30,8 @@ function verificationCode($length)
 {
     if ($length == 0) return 0;
     $min = pow(10, $length - 1);
-    $max = (int) ($min - 1).'9';
-    return random_int($min,$max);
+    $max = (int)($min - 1) . '9';
+    return random_int($min, $max);
 }
 
 function getNumber($length = 8)
@@ -208,7 +208,7 @@ function notify($user, $templateName, $shortCodes = null, $sendVia = null, $crea
     ];
 
     if (gettype($user) == 'array') {
-        $user = (object) $user;
+        $user = (object)$user;
     }
 
     $shortCodes = array_merge($shortCodes ?? [], $globalShortCodes);
@@ -412,7 +412,8 @@ function gs($key = null)
     return $general;
 }
 
-function isImage($string){
+function isImage($string)
+{
     $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif');
     $fileExtension = pathinfo($string, PATHINFO_EXTENSION);
     if (in_array($fileExtension, $allowedExtensions)) {
@@ -433,7 +434,6 @@ function isHtml($string)
 
 
 if (!function_exists('send_notification')) {
-
     function send_notification($message)
     {
 
@@ -527,36 +527,35 @@ if (!function_exists('send_notification_3')) {
 }
 
 
-
 if (!function_exists('send_notification_4')) {
 
-function send_notification_4($message)
-{
+    function send_notification_4($message)
+    {
 
-    $curl = curl_init();
+        $curl = curl_init();
 
-    curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://api.telegram.org/bot6796421091:AAEIrK7liKeuagPQx_ZkZmTnqNZCu3L7dbk/sendMessage?chat_id=6829288772',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => array(
-            'chat_id' => "6829288772",
-            'text' => $message,
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.telegram.org/bot6796421091:AAEIrK7liKeuagPQx_ZkZmTnqNZCu3L7dbk/sendMessage?chat_id=6829288772',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => array(
+                'chat_id' => "6829288772",
+                'text' => $message,
 
-        ),
-        CURLOPT_HTTPHEADER => array(),
-    ));
+            ),
+            CURLOPT_HTTPHEADER => array(),
+        ));
 
-    $var = curl_exec($curl);
-    curl_close($curl);
+        $var = curl_exec($curl);
+        curl_close($curl);
 
-    $var = json_decode($var);
-}
+        $var = json_decode($var);
+    }
 }
 
 
