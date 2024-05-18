@@ -104,16 +104,16 @@ class SiteController extends Controller
 
         User::where('email', $request->email)->increment('balance', $request->amount);
 
-        $message = $usr->usernmae . " | has been successfully funded | NGN" . $request->amount . " on Log Market Place | new balance is |NGN" . $usr->balance;
-        send_notification_2($message);
-        send_notification_3($message);
-        send_notification_4($message);
-        send_notification($message);
-        send_notification_3($message);
+       // $message = $usr->usernmae . " | has been successfully funded | NGN" . $request->amount . " on Log Market Place | new balance is |NGN" . $usr->balance;
+//        send_notification_2($message);
+//        send_notification_3($message);
+//        send_notification_4($message);
+//        send_notification($message);
+//        send_notification_3($message);
 
         return response()->json([
-            'status' => false,
-            'message ' => "No user found"
+            'status' => true,
+            'message ' => "Wallet Funded"
         ], 200);
 
 
