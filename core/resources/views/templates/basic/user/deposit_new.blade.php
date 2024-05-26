@@ -35,7 +35,7 @@
 
                         <div class="card-body">
                             <h6>Enter Amount (NGN)</h6>
-                            <input type="number" name="amount" class="text-dark p-2 form-control" required>
+                            <input placeholder="Enter amount" type="number" name="amount" class="text-dark p-2 form-control" required>
                             <input type="text" hidden value="enkpay" name="payment">
 
 
