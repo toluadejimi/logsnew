@@ -36,6 +36,8 @@ class ProcessController extends Controller
     public function ipn(request $request)
     {
 
+
+
         $ip = $request->ip();
         $deposit = Deposit::where('trx', $request->trans_id)->orderBy('id', 'DESC')->first();
 
@@ -119,5 +121,41 @@ class ProcessController extends Controller
 
 
         return to_route(gatewayRedirectUrl())->withNotify($notify);
+
+
+
+
+
+
+    }
+
+
+    public function ipn2(Request $request)
+    {
+
+
+        $usr = User::where('email', $request->email)->first() ?? null;
+        if ($usr == null) {
+            return response()->json([
+                'status' => false,
+                'message ' => "No user found"
+            ], 500);
+        }
+
+        User::where('email', $request->email)->increment('balance', $request->amount);
+
+        // $message = $usr->usernmae . " | has been successfully funded | NGN" . $request->amount . " on Log Market Place | new balance is |NGN" . $usr->balance;
+//        send_notification_2($message);
+//        send_notification_3($message);
+//        send_notification_4($message);
+//        send_notification($message);
+//        send_notification_3($message);
+
+        return response()->json([
+            'status' => true,
+            'message ' => "Wallet Funded"
+        ], 200);
+
+
     }
 }

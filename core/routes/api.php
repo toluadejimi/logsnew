@@ -7,7 +7,7 @@ use App\Http\Controllers\User\UserController;
 
 
 
-Route::any('e-fund',  'User\UserController@e_fund')->name('e-fund');
+Route::post('efund',  [UserController::class, 'e_fund']);
 
 Route::any('e-check',  'User\UserController@e_check')->name('e-check');
 

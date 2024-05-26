@@ -466,4 +466,7 @@ class PaymentController extends Controller
         $notify = "You have payment request is successful, you will be credited soon";
         return redirect('/user/deposit/new')->with('message', $notify);
     }
+
+
+
 }

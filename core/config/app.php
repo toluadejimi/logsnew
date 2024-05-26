@@ -70,7 +70,7 @@ return [
     */
 
     'timezone' => 'Africa/Cairo',
-    
+
 
 
     /*
@@ -165,6 +165,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Jorenvh\Share\Providers\ShareServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -195,6 +197,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         'Status'=>App\Constants\Status::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Share' => Jorenvh\Share\ShareFacade::class,
     ])->toArray(),
 
 ];

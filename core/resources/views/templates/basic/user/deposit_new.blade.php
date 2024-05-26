@@ -35,7 +35,7 @@
 
                         <div class="card-body">
                             <h6>Enter Amount (NGN)</h6>
-                            <input type="number" name="amount" class="text-dark p-2 form-control2" required>
+                            <input type="number" name="amount" class="text-dark p-2 form-control" required>
                             <input type="text" hidden value="enkpay" name="payment">
 
 
@@ -51,12 +51,12 @@
                             <div class="d-flex align-items-center mb-3">
                                 <div class="col-12">
                                     <select class="text-dark form-control2 p-2" name="gateway" required>
-                                      
+
                                             <option value="">Select payment method</option>
                                             <option value="250">Instant Payment</option>
                                             <option value="1000">Manual Payment</option>
 
-                                       
+
                                     </select>
 
                                 </div>

@@ -22,34 +22,7 @@ class UserController extends Controller
 
 
 
-    public function e_fund(Request $request)
-{
 
-
-    $usr = User::where('email', $request->email)->first() ?? null;
-    if ($usr == null) {
-        return response()->json([
-            'status' => false,
-            'message ' => "No user found"
-        ], 500);
-    }
-
-    User::where('email', $request->email)->increment('balance', $request->amount);
-
-    // $message = $usr->usernmae . " | has been successfully funded | NGN" . $request->amount . " on Log Market Place | new balance is |NGN" . $usr->balance;
-//        send_notification_2($message);
-//        send_notification_3($message);
-//        send_notification_4($message);
-//        send_notification($message);
-//        send_notification_3($message);
-
-    return response()->json([
-        'status' => true,
-        'message ' => "Wallet Funded"
-    ], 200);
-
-
-}
 
     public function home()
     {

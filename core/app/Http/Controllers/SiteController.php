@@ -19,6 +19,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Validator;
+use Jorenvh\Share\Share;
+
 
 class SiteController extends Controller
 {
@@ -354,7 +356,21 @@ class SiteController extends Controller
             return $category->active();
         })->where('category_id', $product->category_id)->orderBy('id', 'desc')->where('id', '!=', $product->id)->limit(5)->get();
 
-        return view($this->activeTemplate . 'product_details', compact('pageTitle', 'product', 'relatedProducts'));
+
+        $url = url('');
+
+
+        $shareComponent = (new \Jorenvh\Share\Share)->page(
+            "$url/product/details/$request->id",
+            "$product->name",
+        )
+            ->facebook()
+            ->twitter()
+            ->telegram()
+            ->whatsapp();
+
+
+        return view($this->activeTemplate . 'product_details', compact('pageTitle', 'product', 'shareComponent', 'relatedProducts'));
     }
 
     public

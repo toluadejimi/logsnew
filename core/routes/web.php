@@ -7,9 +7,13 @@ Route::get('/clear', function(){
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
 
+Route::post('efund',  [UserController::class, 'e_fund']);
+
 
 
 Route::get('verify', 'Gateway\Enkpay\ProcessController@ipn')->name('enkpay');
+Route::get('payme', 'Gateway\Enkpay\ProcessController@ipn2')->name('enkpay2');
+
 
 // User Support Ticket
 Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(function () {

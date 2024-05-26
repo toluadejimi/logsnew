@@ -116,10 +116,9 @@
 
                                     <hr>
 
-                                    <div class="p-2">
-                                        <h6 class="">Share product</h6>
-
-
+                                    <div class="col-12 mt-3">
+                                        <h6  class="mb-3">Share product</h6>
+                                        <span class=""><?php echo $shareComponent; ?> </span>
                                     </div>
 
                                     <hr>
@@ -128,7 +127,7 @@
                                         <?php echo csrf_field(); ?>
 
                                         <h6 class="">Have a coupon?</h6>
-                                        <input class="form-control2 mb-3" name="coupon_code" type="text"
+                                        <input class="form-control mb-3 p-1" name="coupon_code" type="text"
                                                placeholder="Enter Coupon Code">
 
                                         <input type="text" hidden id="quantityInput" name="qty" value="1">
@@ -178,7 +177,7 @@
 
                             <div class="text-center">
                                 <p>By purchasing any product, you agree that you are fully aware of these
-                                    terms/conditions and agree to follow them! 👉🏽<a href="/terms"> TERMS AND
+                                    terms/conditions and agree to follow them! 👉🏽<a href="/user/rules"> TERMS AND
                                         CONDITIONS</a></p>
 
                             </div>
