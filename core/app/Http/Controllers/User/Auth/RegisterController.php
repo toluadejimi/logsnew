@@ -4,15 +4,13 @@ namespace App\Http\Controllers\User\Auth;
 
 use App\Constants\Status;
 use App\Http\Controllers\Controller;
-use App\Models\AdminNotification;
+use App\Models\Referre;
 use App\Models\User;
-use App\Models\UserLogin;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rules\Password;
 
 class RegisterController extends Controller
 {
@@ -41,19 +39,29 @@ class RegisterController extends Controller
         $this->activeTemplate = activeTemplate();
     }
 
-    public function showRegistrationForm()
+    public function showRegistrationForm(request $request)
     {
-        $pageTitle  = "Register";
-        $info       = json_decode(json_encode(getIpInfo()), true);
+
+
+        if ($request->code != null) {
+
+            $email = User::where('referal_code', $request->code)->increment('click_count', 1);
+
+        }
+
+        $pageTitle = "Register";
+        $info = json_decode(json_encode(getIpInfo()), true);
         $mobileCode = @implode(',', $info['code']);
-        $countries  = json_decode(file_get_contents(resource_path('views/partials/country.json')));
-        return view($this->activeTemplate . 'user.auth.register', compact('pageTitle', 'mobileCode', 'countries'));
+        $ref_code =$request->code;
+
+        $countries = json_decode(file_get_contents(resource_path('views/partials/country.json')));
+        return view($this->activeTemplate . 'user.auth.register', compact('pageTitle', 'mobileCode','ref_code', 'countries'));
     }
 
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array $data
+     * @param array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -78,7 +86,6 @@ class RegisterController extends Controller
         $this->validator($request->all())->validate();
 
 
-
         event(new Registered($user = $this->create($request->all())));
 
 
@@ -92,12 +99,37 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array $data
+     * @param array $data
      * @return \App\User
      */
     protected function create(array $data)
     {
+
+
+
         $general = gs();
+
+
+        if ($data['code'] != null) {
+
+
+            $email = User::where('referal_code', $data['code'])->first()->email;
+            $username = User::where('referal_code', $data['code'])->first()->username;
+            $get_email = Referre::where('email_2', $data['email'])->first()->email ?? null;
+
+
+            $ref = new Referre();
+            $ref->email = $email;
+            $ref->email_2 = trim($data['email']);
+            $ref->referer = $username;
+            $ref->refrere = trim($data['username']);
+            $ref->save();
+
+
+            User::where('email', $email)->increment('sign_up_count', 1);
+
+
+        }
 
         //User Create
         $user = new User();
@@ -121,47 +153,11 @@ class RegisterController extends Controller
         $user->save();
 
 
-        $adminNotification = new AdminNotification();
-        $adminNotification->user_id = $user->id;
-        $adminNotification->title = 'New member registered';
-        $adminNotification->click_url = urlPath('admin.users.detail', $user->id);
-        $adminNotification->save();
-
-
-        //Login Log Create
-        $ip = getRealIP();
-        $exist = UserLogin::where('user_ip', $ip)->first();
-        $userLogin = new UserLogin();
-
-        //Check exist or not
-        if ($exist) {
-            $userLogin->longitude =  $exist->longitude;
-            $userLogin->latitude =  $exist->latitude;
-            $userLogin->city =  $exist->city;
-            $userLogin->country_code = $exist->country_code;
-            $userLogin->country =  $exist->country;
-        } else {
-            $info = json_decode(json_encode(getIpInfo()), true);
-            $userLogin->longitude =  @implode(',', $info['long']);
-            $userLogin->latitude =  @implode(',', $info['lat']);
-            $userLogin->city =  @implode(',', $info['city']);
-            $userLogin->country_code = @implode(',', $info['code']);
-            $userLogin->country =  @implode(',', $info['country']);
-        }
-
-        $userAgent          = osBrowser();
-        $userLogin->user_id = $user->id;
-        $userLogin->user_ip = $ip;
-
-        $userLogin->browser = @$userAgent['browser'];
-        $userLogin->os      = @$userAgent['os_platform'];
-        $userLogin->save();
-
-
         return $user;
     }
 
-    public function checkUser(Request $request)
+    public
+    function checkUser(Request $request)
     {
         $exist['data'] = false;
         $exist['type'] = null;
@@ -180,7 +176,8 @@ class RegisterController extends Controller
         return response($exist);
     }
 
-    public function registered()
+    public
+    function registered()
     {
         return to_route('products');
     }

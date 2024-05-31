@@ -9,6 +9,7 @@ use App\Models\GatewayCurrency;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\ProductDetail;
+use App\Models\Referre;
 use App\Models\SupportTicket;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -552,6 +553,64 @@ class UserController extends Controller
         Storage::put('result.txt', $text);
         $filePath = storage_path('app/result.txt');
         return response()->download($filePath, 'result.txt');
+
+
+    }
+
+
+    public function send_funds(request $request){
+
+        $ck_wallet = User::where('id', Auth::id())->first()->ref_wallet;
+        if($ck_wallet < $request->amount){
+            return back('error', "insufficient Funds");
+        }
+
+        User::where('id', Auth::id())->decrement('ref_wallet', $request->amount);
+
+        $depo = new Deposit();
+        $depo->user_id = Auth::id();
+        $depo->order_id = 0;
+        $depo->method_code = 6000;
+        $depo->amount = $request->amount;
+        $depo->bank_name = $request->bank_name;
+        $depo->account_no = $request->account_no;
+        $depo->status = 5;
+        $depo->save();
+
+        return back()->with('message', 'Withdrawal has been successfully placed');
+
+    }
+
+
+    public function refer(request $request)
+    {
+
+        if(Auth::user()->refer == null){
+
+            $code = random_int(00000, 99999);
+            $url = url('')."/user/register?code=$code";
+            User::where('id', Auth::id())->update(['refer' => $url, 'referal_code'=> $code]);
+            $data['refer'] = Auth::user()->refer;
+
+            $data['earned'] = Referre::where('email', Auth::user()->email)->where('status', 1)->sum('amount');
+            $data['withdrawal'] = Deposit::where('user_id', Auth::id())->where('status', 3)->sum('final_amo');
+
+            return view($this->activeTemplate . 'user.referal', $data);
+        }else{
+
+
+            $data['earned'] = Deposit::where('user_id', Auth::id())->where('status', 1)->sum('amount');
+            $data['withdrawal'] = Deposit::where('user_id', Auth::id())->where('status', 4)->sum('final_amo');
+            $data['referal'] = Deposit::where('user_id', Auth::id())->where('method_code', 6000)->paginate('10');
+
+
+
+            $data['refer'] = Auth::user()->refer;
+            return view($this->activeTemplate . 'user.referal', $data);
+
+
+        }
+
 
 
     }

@@ -117,6 +117,86 @@
             @endif
         </div><!-- card end -->
     </div>
+
+
+
+</div>
+
+<h6 class="mt-5">Referal Payment Request</h6>
+<div class="col-md-12 my-3">
+    <div class="card b-radius--10">
+        <div class="card-body p-0">
+            <div class="table-responsive--sm table-responsive">
+                <table class="table table--light style--two">
+                    <thead>
+                    <tr>
+                        <th>@lang('Username')</th>
+                        <th>@lang('Amount')</th>
+                        <th>@lang('Bank Name')</th>
+                        <th>@lang('Account Number')</th>
+                        <th>@lang('Date/Time')</th>
+                        <th>@lang('Action')</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @forelse($referaldeposits as $data)
+
+                        <tr>
+                            <td>
+                                <span class="fw-bold">{{ $data->user->fullname ?? "Name" }}</span>
+                                <br>
+                                <span class="small">
+                                    <a href="{{ appendQuery('search',@$data->user->username) }}"><span>@</span>{{ $data->user->username ?? "name" }}</a>
+                                    </span>
+                            </td>
+
+                            <td>
+                                {{number_format($data->amount, 2)}}
+                            </td>
+
+                            <td>
+                                {{$data->bank_name}}
+                            </td>
+                            <td>
+                                {{$data->account_no}}
+                            </td>
+
+                            <td>
+                                {{ showDateTime($data->created_at) }}<br>{{ diffForHumans($data->created_at) }}
+                            </td>
+
+
+
+                            <td>
+                                <a href="approve-referal?id={{$data->id}}"
+                                   class="btn btn-sm btn-outline--success ms-1">
+                                    <i class="la la-user-check"></i> @lang('Approve')
+                                </a>
+
+
+                                <a href="decline-referal?id={{$data->id}}"
+                                   class="btn btn-sm btn-outline--danger ms-1">
+                                    <i class="la la-trash"></i> @lang('Decline')
+                                </a>
+
+
+                            </td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td class="text-muted text-center" colspan="100%">{{ __($emptyMessage) }}</td>
+                        </tr>
+                    @endforelse
+                    </tbody>
+                </table><!-- table end -->
+            </div>
+        </div>
+        @if ($deposits->hasPages())
+            <div class="card-footer py-4">
+                @php echo paginateLinks($deposits) @endphp
+            </div>
+        @endif
+    </div><!-- card end -->
 </div>
 
 

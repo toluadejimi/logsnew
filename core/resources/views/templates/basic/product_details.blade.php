@@ -28,7 +28,7 @@
         <!-- section start -->
 
         <div class="collection-wrapper">
-            <div class="container">
+            <div class="container" style="padding-bottom: 0px">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -51,7 +51,7 @@
                 <div class="row">
 
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 d-flex justify-content-center">
 
                         <div class="card">
 
@@ -72,170 +72,217 @@
                                     <div class="detail-content">
                                         <div class="flex-1">
                                             <h4>{{ __($product->name) }}</h4>
-                                            <p> @php echo $product->description; @endphp</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-5">
-                                            <h6 class="mt-2">NGN{{ number_format($product->price) }}/Pcs</h6>
-                                        </div>
-
-                                        <div class="col-7">
-                                            <button type="button"
-                                                    class="btn btn-outline-success btn-block">{{ $product->in_stock }}
-                                                Available in stock
+                                            <p>@php echo $product->description; @endphp</p>
+                                            <input class="border-0 w-0 text-white" style="border-right: 0px; font-size: 1px; color: white;"
+                                               id="element" value="@php echo $product->description; @endphp">
+                                            <button style="border: 0px" class="copy-button form-control"
+                                                    onclick="copyToClipboard()">
+                                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path opacity="0.2"
+                                                          d="M14.3438 2.5V10.5H11.1562V5.5H5.84375V2.5H14.3438Z"
+                                                          fill="#0F0673"/>
+                                                    <path
+                                                        d="M14.3438 2H5.84375C5.70285 2 5.56773 2.05268 5.4681 2.14645C5.36847 2.24021 5.3125 2.36739 5.3125 2.5V5H2.65625C2.51535 5 2.38023 5.05268 2.2806 5.14645C2.18097 5.24021 2.125 5.36739 2.125 5.5V13.5C2.125 13.6326 2.18097 13.7598 2.2806 13.8536C2.38023 13.9473 2.51535 14 2.65625 14H11.1562C11.2971 14 11.4323 13.9473 11.5319 13.8536C11.6315 13.7598 11.6875 13.6326 11.6875 13.5V11H14.3438C14.4846 11 14.6198 10.9473 14.7194 10.8536C14.819 10.7598 14.875 10.6326 14.875 10.5V2.5C14.875 2.36739 14.819 2.24021 14.7194 2.14645C14.6198 2.05268 14.4846 2 14.3438 2ZM10.625 13H3.1875V6H10.625V13ZM13.8125 10H11.6875V5.5C11.6875 5.36739 11.6315 5.24021 11.5319 5.14645C11.4323 5.05268 11.2971 5 11.1562 5H6.375V3H13.8125V10Z"
+                                                        fill="#0F0673"/>
+                                                </svg>
                                             </button>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <hr>
-
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <button style="background-color: #4d4d4d; color: white" class="btn"
-                                                    onclick="decrementQuantity()">-
-                                            </button>
-                                            <span class="p-2" id="quantity">1</span>
-                                            <button style="background-color: #FF0B9E; color: white" class="btn"
-                                                    onclick="incrementQuantity()">+
-                                            </button>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <button type="button" style="background-color: #10113D; color: white"
-                                                    class="btn btn-block">NGN<span id="total">10.00</span></button>
-
+                                            <span id="message"></span>
                                         </div>
                                     </div>
 
 
-                                    <hr>
+                                    <script>
 
-                                    <div class="col-12 mt-3">
-                                        <h6  class="mb-3">Share product</h6>
-                                        <span class="">{!! $shareComponent !!} </span>
+                                        function copyToClipboard() {
+                                            var textToCopy = document.getElementById("element");
+                                            var copyMessage = document.getElementById("message");
+
+                                            //Select the text
+                                           textToCopy.select();
+                                           textToCopy.setSelectionRange(0, 99999); // For mobile devices
+
+                                            // Copy the selected text
+                                            document.execCommand("copy");
+
+                                            // Deselect the text
+                                            textToCopy.blur();
+
+                                            // Display copy message
+                                            copyMessage.innerText = "Text copied!";
+
+                                            // Clear message after 2 seconds
+                                            setTimeout(function () {
+                                                copyMessage.innerText = "";
+                                            }, 2000);
+
+                                        }
+                                    </script>
+
+
+
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <h6 class="mt-2">NGN{{ number_format($product->price) }}/Pcs</h6>
                                     </div>
 
-                                    <hr>
+                                    <div class="col-7">
+                                        <button type="button"
+                                                class="btn btn-outline-success btn-block">{{ $product->in_stock }}
+                                            Available in stock
+                                        </button>
+                                        </span>
+                                    </div>
+                                </div>
 
-                                    <form action="{{ route('user.deposit.insert') }}" method="POST">
-                                        @csrf
-
-                                        <h6 class="">Have a coupon?</h6>
-                                        <input class="form-control mb-3 p-1" name="coupon_code" type="text"
-                                               placeholder="Enter Coupon Code">
-
-                                        <input type="text" hidden id="quantityInput" name="qty" value="1">
-                                        <input type="text" hidden name="id" value="{{$product->id}}">
-                                        <input type="text" hidden type="text" name="payment" value="wallet">
-                                        <input type="text" hidden name="gateway" value="250">
+                                <hr>
 
 
-                                        @if($product->in_stock == 0)
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button style="background-color: #4d4d4d; color: white" class="btn"
+                                                onclick="decrementQuantity()">-
+                                        </button>
+                                        <span class="p-2" id="quantity">1</span>
+                                        <button style="background-color: #FF0B9E; color: white" class="btn"
+                                                onclick="incrementQuantity()">+
+                                        </button>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <button type="button" style="background-color: #10113D; color: white"
+                                                class="btn btn-block">NGN<span id="total">10.00</span></button>
+
+                                    </div>
+                                </div>
+
+
+                                <hr>
+
+                                <div class="col-12 mt-3">
+                                    <h6 class="mb-3">Share product</h6>
+                                    <span class="mb-4">{!! $shareComponent !!} </span>
+                                </div>
+
+                                <hr>
+
+                                <form action="{{ route('user.deposit.insert') }}" method="POST">
+                                    @csrf
+
+                                    <h6 class="">Have a coupon?</h6>
+                                    <input class="form-control mb-3 p-1" name="coupon_code" type="text"
+                                           placeholder="Enter Coupon Code">
+
+                                    <input type="text" hidden id="quantityInput" name="qty" value="1">
+                                    <input type="text" hidden name="id" value="{{$product->id}}">
+                                    <input type="text" hidden type="text" name="payment" value="wallet">
+                                    <input type="text" hidden name="gateway" value="250">
+
+
+                                    @if($product->in_stock == 0)
                                         <button disabled type="submit"
                                                 style="background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%); color: white;"
                                                 class="btn btn-block">Out of stock
                                         </button>
-                                        @else
-                                            <button type="submit"
-                                                    style="background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%); color: white;"
-                                                    class="btn btn-block">Buy
-                                                now
-                                            </button>
-                                        @endif
+                                    @else
+                                        <button type="submit"
+                                                style="background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%); color: white;"
+                                                class="btn btn-block">Buy
+                                            now
+                                        </button>
+                                    @endif
 
-                                    </form>
-                                </div>
-
-
+                                </form>
                             </div>
 
 
                         </div>
+
+
                     </div>
-
-
-                </div>
-
-
-                <div class="col-lg-6" style="padding-bottom: 50px">
-
-
-                    <div class="card">
-                        <div class="card-body">
-
-                            <div class="card-title mt-3 text-center">
-                                <h6>Disclaimer</h6>
-
-                            </div>
-
-
-                            <div class="text-center">
-                                <p>By purchasing any product, you agree that you are fully aware of these
-                                    terms/conditions and agree to follow them! 👉🏽<a href="/user/rules"> TERMS AND
-                                        CONDITIONS</a></p>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
                 </div>
 
 
             </div>
 
 
+            <div class="col-lg-6" style="padding-bottom: 50px">
+
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="card-title mt-3 text-center">
+                            <h6>Disclaimer</h6>
+
+                        </div>
+
+
+                        <div class="text-center">
+                            <p>By purchasing any product, you agree that you are fully aware of these
+                                terms/conditions and agree to follow them! 👉🏽<a href="/user/rules"> TERMS AND
+                                    CONDITIONS</a></p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
 
-        <!-- Section ends -->
+
+    </div>
+
+    <!-- Section ends -->
 
 
-        <script>
-            // Variables to track quantity and price
-            let quantity = 1;
-            const price = {{ $product->price }};
+    <script>
+        // Variables to track quantity and price
+        let quantity = 1;
+        const price = {{ $product->price }};
 
-            // Functions to increment and decrement quantity
-            function incrementQuantity() {
-                quantity++;
+        // Functions to increment and decrement quantity
+        function incrementQuantity() {
+            quantity++;
+            updateView();
+        }
+
+        function decrementQuantity() {
+            if (quantity > 1) {
+                quantity--;
                 updateView();
             }
+        }
 
-            function decrementQuantity() {
-                if (quantity > 1) {
-                    quantity--;
-                    updateView();
-                }
-            }
+        // Function to update the view with new quantity and total
+        function updateView() {
+            const quantityElement = document.getElementById("quantity");
+            const totalElement = document.getElementById("total");
+            const quantityInput = document.getElementById("quantityInput");
 
-            // Function to update the view with new quantity and total
-            function updateView() {
-                const quantityElement = document.getElementById("quantity");
-                const totalElement = document.getElementById("total");
-                const quantityInput = document.getElementById("quantityInput");
+            const total = (quantity * price).toFixed(2);
 
-                const total = (quantity * price).toFixed(2);
+            quantityElement.textContent = quantity;
+            totalElement.textContent = total;
+            quantityInput.value = quantity;
+        }
 
-                quantityElement.textContent = quantity;
-                totalElement.textContent = total;
-                quantityInput.value = quantity;
-            }
+        // Function to submit quantity to the server
+        function submitQuantity() {
+            const quantityInput = document.getElementById("quantityInput");
+            alert("Quantity submitted: " + quantityInput.value);
+            // You can send the quantityInput.value to the server here
+        }
 
-            // Function to submit quantity to the server
-            function submitQuantity() {
-                const quantityInput = document.getElementById("quantityInput");
-                alert("Quantity submitted: " + quantityInput.value);
-                // You can send the quantityInput.value to the server here
-            }
-
-            // Initialize the view
-            updateView();
-        </script>
+        // Initialize the view
+        updateView();
+    </script>
 
 @endsection
 

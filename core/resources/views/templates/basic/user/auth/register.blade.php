@@ -103,6 +103,9 @@
                         <p class="text-center mt-3 mb-5">Sign up to get started.</p>
 
 
+                        <input type="text" name="code" value="{{$ref_code ?? "null"}}" hidden >
+
+
                         <div class="my-2">
                             <label>Username</label>
                             <input class="form-control2" name="username" value="{{ old('username') }}" required type="text" autofocus

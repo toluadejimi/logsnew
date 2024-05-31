@@ -161,6 +161,7 @@
       <path value="$PROJECT_DIR$/core/vendor/laravel/sail" />
       <path value="$PROJECT_DIR$/core/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/core/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/core/vendor/jorenvanhocht/laravel-share" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

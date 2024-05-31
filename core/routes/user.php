@@ -70,12 +70,18 @@ Route::middleware('auth')->name('user.')->group(function () {
                 Route::any('resolve-deposit', 'resloveDeposit')->name('resolve.deposit');
                 Route::any('rules', 'rules')->name('user.rules');
 
+                Route::any('send-funds', 'send_funds')->name('user.send-funds');
+
                 Route::any('resolve-now', 'resolve_now')->name('resolve.now');
                 Route::get('attachment-download/{fil_hash}','attachmentDownload')->name('attachment.download');
 
                 Route::get('orders', 'orders')->name('orders');
                 Route::get('order/details/{id}', 'orderDetails')->name('order.details');
                 Route::get('copy/{id}', 'copy')->name('copy');
+
+
+                Route::get('refer', 'refer')->name('user.refer');
+
 
             });
 

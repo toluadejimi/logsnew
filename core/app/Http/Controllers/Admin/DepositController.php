@@ -17,8 +17,50 @@ class DepositController extends Controller
     {
         $pageTitle = 'Pending Payments';
         $deposits = $this->depositData('pending');
-        return view('admin.deposit.log', compact('pageTitle', 'deposits'));
+        $referaldeposits = Deposit::where('method_code', 6000)->where('status', 5)->with('user')->paginate(getPaginate());
+        return view('admin.deposit.log', compact('pageTitle', 'deposits', 'referaldeposits'));
     }
+
+
+
+    public function approve_referal(request $request)
+    {
+        Deposit::where('id', $request->id)->update(['status' => 6]);
+        $user = User::where('id', $request->id)->first();
+        $dep =  Deposit::where('id', $request->id)->first();
+
+        $message = "Log Market Place |" .  $user->email . "| has been approved for referral payment of  " . number_format($dep->amount, 2) .  "| by admin";
+        send_notification_2($message);
+        send_notification_4($message);
+        send_notification($message);
+
+        return back()->with('message', 'Referral successfully approved');
+
+    }
+
+
+
+    public function decline_referal(request $request)
+    {
+        Deposit::where('id', $request->id)->update(['status' => 7]);
+        $user = User::where('id', $request->id)->first();
+        $dep =  Deposit::where('id', $request->id)->first();
+
+        User::where('id', $user->id)->increment('ref_wallet', $dep->amount);
+
+        $message = "Log Market Place |" .  $user->email . "| has been declined for referral payment of  " . number_format($dep->amount, 2) .  "| by admin";
+        send_notification_2($message);
+        send_notification_4($message);
+        send_notification($message);
+
+        return back()->with('message', 'Referral successfully declined');
+
+
+    }
+
+
+
+
 
 
     public function approved()

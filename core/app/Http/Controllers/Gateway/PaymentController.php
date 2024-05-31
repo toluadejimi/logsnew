@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Gateway;
 
+use App\Models\Referre;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Deposit;
@@ -90,6 +91,30 @@ class PaymentController extends Controller
             $order->save();
 
             $unsoldProductDetails = $product->unsoldProductDetails;
+
+
+            $amount1 = 3 / 100;
+            $amount2 = $amount1 * $product->price;
+            $percent = round($amount2, 2);
+
+
+            $ck_ref = Referre::where('refrere', Auth::user()->username)->first() ?? null;
+            if($ck_ref != null){
+                $reff = Referre::where('refrere', Auth::user()->username)->first();
+                $user_id = User::where('email', $reff->email)->first()->id;
+                User::where('username', $reff->referer)->increment('ref_wallet', $percent);
+
+                $depo = new Deposit();
+                $depo->user_id = $user_id;
+                $depo->order_id = 0;
+                $depo->method_code = 6000;
+                $depo->amount = $percent;
+                $depo->status = 1;
+                $depo->save();
+
+            }
+
+            //dd($percent, $ck_ref, $reff);
 
 
             for ($i = 0; $i < $qty; $i++) {
@@ -210,6 +235,8 @@ class PaymentController extends Controller
 
             $unsoldProductDetails = $product->unsoldProductDetails;
 
+
+
             for ($i = 0; $i < $qty; $i++) {
                 if (@!$unsoldProductDetails[$i]) {
                     continue;
@@ -221,6 +248,8 @@ class PaymentController extends Controller
                 $item->price = $product->price;
                 $item->save();
             }
+
+
 
 
             session()->put('Track', $data->trx);
