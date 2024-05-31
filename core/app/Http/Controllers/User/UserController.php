@@ -599,7 +599,7 @@ class UserController extends Controller
         }else{
 
 
-            $data['earned'] = Deposit::where('user_id', Auth::id())->where('status', 1)->sum('amount');
+            $data['earned'] = Deposit::where('method_code', 6000)->where('status', 5)->sum('amount');
             $data['withdrawal'] = Deposit::where('user_id', Auth::id())->where('status', 4)->sum('final_amo');
             $data['referal'] = Deposit::where('user_id', Auth::id())->where('method_code', 6000)->paginate('10');
 
