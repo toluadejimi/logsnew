@@ -592,7 +592,7 @@ class UserController extends Controller
             User::where('id', Auth::id())->update(['refer' => $url, 'referal_code'=> $code]);
             $data['refer'] = Auth::user()->refer;
 
-            $data['earned'] = Referre::where('email', Auth::user()->email)->where('status', 1)->sum('amount');
+            $data['earned'] = Deposit::where('method_code', 6000)->where('status', 5)->sum('amount');
             $data['withdrawal'] = Deposit::where('user_id', Auth::id())->where('status', 3)->sum('final_amo');
 
             return view($this->activeTemplate . 'user.referal', $data);
