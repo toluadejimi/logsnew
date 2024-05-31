@@ -562,7 +562,7 @@ class UserController extends Controller
 
         $ck_wallet = User::where('id', Auth::id())->first()->ref_wallet;
         if($ck_wallet < $request->amount){
-            return back('error', "insufficient Funds");
+            return back()->with('error', "insufficient Funds");
         }
 
         User::where('id', Auth::id())->decrement('ref_wallet', $request->amount);
