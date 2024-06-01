@@ -110,13 +110,10 @@ class RegisterController extends Controller
         $general = gs();
 
 
-        if ($data['code'] != null) {
-
-
+        if ($data['code'] != "null") {
             $email = User::where('referal_code', $data['code'])->first()->email;
             $username = User::where('referal_code', $data['code'])->first()->username;
             $get_email = Referre::where('email_2', $data['email'])->first()->email ?? null;
-
 
             $ref = new Referre();
             $ref->email = $email;
