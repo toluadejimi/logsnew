@@ -79,7 +79,10 @@
                                             <li>Solution: For safe work with accounts, it is recommended to first perform some of the usual actions that a real user usually does when registering.</li>
                                             <li> Example: Fill out a profile, subscribe to several users, leave a few likes, add a few photos, make reposts, comments, etc.</li>
 
-                                           <h5> It is important to note that we are not responsible for developers of programs, services and proxy providers. All accounts registered by us or our partners are created using private software, programs that are not available to the public, and proxy servers.</h5>
+                                            <br><br>
+
+
+                                            <h5> It is important to note that we are not responsible for developers of programs, services and proxy providers. All accounts registered by us or our partners are created using private software, programs that are not available to the public, and proxy servers.</h5>
 
                                         </ul>
 
