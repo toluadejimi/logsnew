@@ -82,9 +82,11 @@ class AppServiceProvider extends ServiceProvider
             ]);
         });
 
-        // if ($general->force_ssl) {
-        //     \URL::forceScheme('https');
-        // }
+
+
+         if ($general->force_ssl == 0) {
+             \URL::forceScheme('https');
+         }
 
         $this->app['request']->server->set('HTTP', true);
 

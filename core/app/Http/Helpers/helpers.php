@@ -409,7 +409,11 @@ function gs($key = null)
         Cache::put('GeneralSetting', $general);
     }
     if ($key) return @$general->$key;
+
+
     return $general;
+
+
 }
 
 function isImage($string)
