@@ -108,7 +108,8 @@ class DepositController extends Controller
         $pending = $summery['pending'];
         $rejected = $summery['rejected'];
         $initiated = $summery['initiated'];
-        return view('admin.deposit.log', compact('pageTitle', 'deposits','successful','pending','rejected','initiated'));
+        $referaldeposits = Deposit::where('method_code', 6000)->where('status', 5)->with('user')->paginate(getPaginate());
+        return view('admin.deposit.log', compact('pageTitle', 'deposits','successful','pending','rejected','initiated', 'referaldeposits'));
     }
 
     protected function depositData($scope = null,$summery = false)
