@@ -1,0 +1,36 @@
+[2024-05-31 04:54:08] development.INFO: Detected N+1 Query  
+[2024-05-31 04:54:08] development.INFO: Model: App\Models\Deposit
+Relation: user
+Num-Called: 2
+Call-Stack:
+#19 /storage/framework/views/174ef233fb7d2ff1b9f71b6929fc96369344a559.php:147
+#21 /vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:110
+#22 /vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php:58
+#23 /vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:70
+#24 /vendor/laravel/framework/src/Illuminate/View/View.php:195
+#25 /vendor/laravel/framework/src/Illuminate/View/View.php:178
+#26 /vendor/laravel/framework/src/Illuminate/View/View.php:147
+#27 /vendor/laravel/framework/src/Illuminate/Http/Response.php:69
+#28 /vendor/laravel/framework/src/Illuminate/Http/Response.php:35
+#29 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:906
+#30 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:875
+#31 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#32 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#33 /app/Http/Middleware/RedirectIfNotAdmin.php:22
+#34 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#35 /app/Http/Middleware/LanguageMiddleware.php:22
+#36 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#37 /vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php:50
+#38 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#39 /vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php:78
+#40 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#41 /vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php:49
+#42 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#43 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:121
+#44 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:64
+#45 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#46 /vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php:37
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#48 /vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php:67
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  
