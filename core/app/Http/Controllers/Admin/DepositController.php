@@ -29,12 +29,13 @@ class DepositController extends Controller
         $user = User::where('id', $request->id)->first();
         $dep =  Deposit::where('id', $request->id)->first();
 
+
         $message = "Log Market Place |" .  $user->email . "| has been approved for referral payment of  " . number_format($dep->amount, 2) .  "| by admin";
         send_notification_2($message);
         send_notification_4($message);
         send_notification($message);
 
-        return back()->with('message', 'Referral successfully approved');
+        return back()->with('message',  'Referral successfully approved');
 
     }
 
@@ -67,14 +68,18 @@ class DepositController extends Controller
     {
         $pageTitle = 'Approved Payments';
         $deposits = $this->depositData('approved');
-        return view('admin.deposit.log', compact('pageTitle', 'deposits'));
+        $referaldeposits = Deposit::where('method_code', 6000)->where('status', 5)->with('user')->paginate(getPaginate());
+
+        return view('admin.deposit.log', compact('pageTitle', 'deposits', 'referaldeposits'));
     }
 
     public function successful()
     {
         $pageTitle = 'Successful Payments';
         $deposits = $this->depositData('successful');
-        return view('admin.deposit.log', compact('pageTitle', 'deposits'));
+        $referaldeposits = Deposit::where('method_code', 6000)->where('status', 5)->with('user')->paginate(getPaginate());
+
+        return view('admin.deposit.log', compact('pageTitle', 'deposits', 'referaldeposits'));
     }
 
     public function rejected()
@@ -88,7 +93,8 @@ class DepositController extends Controller
     {
         $pageTitle = 'Initiated Payments';
         $deposits = $this->depositData('initiated');
-        return view('admin.deposit.log', compact('pageTitle', 'deposits'));
+        $referaldeposits = Deposit::where('method_code', 6000)->where('status', 5)->with('user')->paginate(getPaginate());
+        return view('admin.deposit.log', compact('pageTitle', 'deposits', 'referaldeposits'));
     }
 
     public function deposit()
