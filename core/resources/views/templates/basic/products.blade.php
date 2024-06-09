@@ -174,6 +174,15 @@
                         {{ paginateLinks($categories) }}
                     </div>
 
+
+
+
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <a href="#" style="position: sticky;width: 50px; height: 50px;" onclick="topFunction()" data-toggle="modal" data-target="#exampleModalCenter" class="float" target="_blank">
+                        <i class="fa fa-arrow-up"></i>
+                    </a>
+
+
                     <div class="container">
 
                         <div class="card p-3">
@@ -210,16 +219,43 @@
                             <p class="small"><strong>Let’s dig
                                     in!</strong></p>
 
+
+
                         </div>
+
+
+                        <script>
+                            // When the user scrolls down 20px from the top of the document, show the button
+                            window.onscroll = function() {scrollFunction()};
+
+                            function scrollFunction() {
+                                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                                    document.getElementById("scrollToTopBtn").style.display = "block";
+                                } else {
+                                    document.getElementById("scrollToTopBtn").style.display = "none";
+                                }
+                            }
+
+                            // When the user clicks on the button, scroll to the top of the document
+                            function topFunction() {
+                                document.body.scrollTop = 0; // For Safari
+                                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                            }
+
+                        </script>
+
+
+
+
 
 
                     </div>
                 </div>
-
-
             </div>
+
         </div>
     </div>
+
 
 
 @endsection
