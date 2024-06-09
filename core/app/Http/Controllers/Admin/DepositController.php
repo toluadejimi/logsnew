@@ -86,7 +86,8 @@ class DepositController extends Controller
     {
         $pageTitle = 'Rejected Payments';
         $deposits = $this->depositData('rejected');
-        return view('admin.deposit.log', compact('pageTitle', 'deposits'));
+        $referaldeposits = Deposit::where('method_code', 6000)->where('status', 5)->with('user')->paginate(getPaginate());
+        return view('admin.deposit.log', compact('pageTitle', 'deposits', 'referaldeposits'));
     }
 
     public function initiated()
