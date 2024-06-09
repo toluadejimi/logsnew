@@ -119,8 +119,7 @@
                                             <?php if($deposit->status == 1): ?>
                                                 <a href="#" class="btn btn-success btn-sm">Completed</a>
                                             <?php elseif($deposit->status == 2): ?>
-                                                <a href="/user/resolve-deposit?trx=<?php echo e($deposit->trx); ?>"
-                                                   class="btn btn-dark btn-sm">Resolve</a>
+nm
                                             <?php elseif($deposit->status == 3): ?>
                                                 <a href="#" class="btn btn-danger btn-sm">Rejected</a>
                                             <?php else: ?>
