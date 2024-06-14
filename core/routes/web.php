@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\UserController;
 
@@ -8,6 +9,15 @@ Route::get('/clear', function(){
 });
 
 Route::post('efund',  [UserController::class, 'e_fund']);
+
+Route::get('reset-password', [ResetPasswordController::class, 'resetpassword']);
+Route::post('pass-reset',  [ResetPasswordController::class, 'pass_reset']);
+Route::get('verify-password', [ResetPasswordController::class, 'verify_password']);
+Route::post('reset-password-now',  [ResetPasswordController::class,'reset_password_now']);
+
+
+
+
 
 
 

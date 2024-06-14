@@ -28,7 +28,7 @@
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body " style="margin-bottom: 100px">
-                        <form action="{{ route('user.password.email') }}" method="POST">
+                        <form action="/pass-reset" method="POST">
                             @csrf
                             @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -50,7 +50,7 @@
                                 </div>
                             @endif
                             <label>Enter Registered Email</label>
-                            <input type="text" class="form-control" name="value" value="{{ old('value') }}" required
+                            <input type="text" class="form-control" name="email" value="{{ old('value') }}" required
                                    autofocus>
                             <button style="color: white; border-radius: 10px;   background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%);"  class="btn btn-sm my-3" type="submit">Reset</button>
 

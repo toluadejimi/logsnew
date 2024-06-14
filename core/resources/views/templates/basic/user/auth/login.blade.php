@@ -110,7 +110,7 @@
                         </div>
 
 
-                        <a href="{{ route('user.password.request') }}" class="mt-3 mb-3 text-dark">Forgot password</a>
+                        <a href="/reset-password" class="mt-3 mb-3 text-dark">Forgot password</a>
 
 
                         <div class="text-center my-5">

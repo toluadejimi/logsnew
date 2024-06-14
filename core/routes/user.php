@@ -34,8 +34,7 @@ Route::namespace('User\Auth')->name('user.')->group(function () {
         Route::post('verify-code', 'verifyCode')->name('verify.code');
     });
     Route::controller('ResetPasswordController')->group(function(){
-        Route::post('password/reset', 'reset')->name('password.update');
-        Route::get('password/reset/{token}', 'showResetForm')->name('password.reset');
+        Route::post('password/reset-now', 'reset')->name('password.update');
     });
 
     Route::controller('SocialiteController')->group(function () {
