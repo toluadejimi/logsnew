@@ -28,7 +28,8 @@
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body " style="margin-bottom: 100px">
-                        <form action="/pass-reset" method="POST">
+                        <form action="/user/pass-reset" method="POST">
+                            @csrf
                             <label>Enter Registered Email</label>
                             <input type="text" class="form-control" name="email" value="{{ old('value') }}" required
                                    autofocus>
