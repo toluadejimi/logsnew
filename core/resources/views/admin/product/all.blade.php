@@ -39,6 +39,11 @@
                                             <button class="btn btn-sm btn-outline--primary dropdown-toggle id="actionButton" data-bs-toggle="dropdown">
                                                 <i class="las la-ellipsis-v"></i>@lang('Action')
                                             </button>
+                                            <a href="{{ route('admin.product.delete', $product->id) }}" class="btn btn-danger">
+                                                <i class="fa fa-trash"></i> @lang('Delete')
+                                            </a>
+
+
                                             <div class="dropdown-menu p-0">
                                                 <a href="{{ route('admin.product.form', $product->id) }}" class="dropdown-item">
                                                     <i class="la la-pencil"></i> @lang('Edit')
@@ -61,9 +66,7 @@
                                                     <i class="la la-clipboard-list"></i> @lang('Accounts')
                                                 </a>
 
-                                                <a href="{{ route('admin.product.delete', $product->id) }}" class="dropdown-item">
-                                                    <i class="la la-clipboard-basket"></i> @lang('Delete')
-                                                </a>
+
 
 
                                             </div>
