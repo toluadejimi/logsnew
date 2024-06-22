@@ -40,7 +40,7 @@
                                                 <i class="las la-ellipsis-v"></i>@lang('Action')
                                             </button>
                                             <a href="{{ route('admin.product.delete', $product->id) }}" class="btn btn-danger">
-                                                <i class="fa fa-trash"></i> @lang('Delete')
+                                                <i class="fa fa-trash"></i>
                                             </a>
 
 
