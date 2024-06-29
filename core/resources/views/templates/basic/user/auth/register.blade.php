@@ -4,9 +4,11 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+
     <link rel="stylesheet" href="{{ url('') }}/assets/assets2/concept/assets/vendor/bootstrap/css/bootstrap2.min.css">
     <link href="{{ url('') }}/assets/assets2/concept/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url('') }}/assets/assets2/concept/assets/libs/css/style2.css">
