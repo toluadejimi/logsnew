@@ -48,7 +48,7 @@
                     </div>
                 @endif
                 <div class="row">
-                    <div class="col-lg-6 d-flex justify-content-center">
+                    <div class="col-12 d-flex justify-content-center">
 
                         <div class="card">
 
@@ -322,7 +322,7 @@
 
 
                     </div>
-                    <div class="col-lg-6" style="padding-bottom: 50px">
+                    <div class="col-12" style="padding-bottom: 50px">
                         @auth
                             <div class="card">
                                 <div class="card-body">
