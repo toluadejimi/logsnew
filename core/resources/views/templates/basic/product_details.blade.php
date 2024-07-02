@@ -226,8 +226,11 @@
                                                              src="{{ getImage(getFilePath('product') . '/' . $product->image, getFileSize('product')) }}"
                                                              width="100px" height="100px">
                                                     </div>
+                                                    <div class="col-1">
 
-                                                    <div class="col-9">
+                                                    </div>
+
+                                                    <div class="col-8">
                                                         <h4>{{ __($product->name) }}</h4>
                                                         <h6 class="text-muted" style="font-size: 10px;">The account
                                                             format includes username,
