@@ -196,13 +196,13 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                         aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <div class="modal-body mt-5">
+                                            <div class="modal-body mt-2">
                                                 <h5 style="color: #ff407b; font-size: 16px;" class="mt-5">
                                                 </h5>
                                                 <h5 style="color: #ff407b; font-size: 16px; margin-bottom: 2px"
