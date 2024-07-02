@@ -27,7 +27,6 @@
 
         <!-- section start -->
 
-        <div class="collection-wrapper">
             <div class="container" style="padding-bottom: 0px">
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -49,8 +48,6 @@
                     </div>
                 @endif
                 <div class="row">
-
-
                     <div class="col-lg-6 d-flex justify-content-center">
 
                         <div class="card">
@@ -325,11 +322,7 @@
 
 
                     </div>
-
-
                     <div class="col-lg-6" style="padding-bottom: 50px">
-
-
                         @auth
                             <div class="card">
                                 <div class="card-body">
@@ -413,11 +406,7 @@
                         @endauth
 
                     </div>
-
-
                 </div>
-
-
             </div>
 
             <!-- Section ends -->
