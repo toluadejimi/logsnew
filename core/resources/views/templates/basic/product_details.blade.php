@@ -267,8 +267,7 @@
                                                     @csrf
 
                                                     <h6 class="">Have a coupon?</h6>
-                                                    <input class="form-control4 mb-3 p-1" name="coupon_code" type="text"
-                                                           placeholder="Enter Coupon Code">
+                                                    <input class="form-control4 mb-3 p-1" name="coupon_code" type="text" tabindex="-1" placeholder="Enter Coupon Code">
 
                                                     <input type="text" hidden id="quantityInput" name="qty" value="1">
                                                     <input type="text" hidden name="id" value="{{$product->id}}">
@@ -376,7 +375,7 @@
                                                         </defs>
                                                     </svg>
 
-                                                    {{$data->user_name}}, | <span style="color: #0AC028"> bought </span>|<span>{{\Illuminate\Support\Str::limit($data->item,
+                                                    {{\Illuminate\Support\Str::limit($data->user_name,4, '.')}}, | <span style="color: #0AC028"> bought </span>|<span>{{\Illuminate\Support\Str::limit($data->item,
                                     16, '...')}}</span>|<span style="color: #FF6304">₦{{number_format($data->amount)}}</span>|<a href="#" style=" font-size: 6px; background: linear-gradient(90deg, #FF6304 0%, #FF0D9B 100%); border-radius: 5px; padding: 3px; color: white">{{ diffForHumans($data->created_at) }}</a>
                                                     <hr>
                                                 </div>

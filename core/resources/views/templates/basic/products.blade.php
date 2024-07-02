@@ -183,73 +183,73 @@
                     </a>
 
 
-                    <div class="container">
+{{--                    <div class="container">--}}
 
-                        <div class="card p-3">
-                            <div class="card-body p-3">
-                            </div>
-
-
-                            <h5>Why do people Buy social media
-                                accounts?</h5>
-                            <p class="small">A solid social media
-                                account can be a powerful tool for
-                                branding and marketing.</p>
-                            <p class="small">A good social media
-                                account
-                                has an active and responsive
-                                community
-                                fired up by the
-                                topic or niche that brought them
-                                together.</p>
-                            <p class="small">Sometimes it makes
-                                sense to
-                                buy or sell a social media account
-                                depending on where
-                                you are with your business and how
-                                goals
-                                have changed and evolved.</p>
-                            <p class="small">There is a thriving
-                                market
-                                for buying/selling social media
-                                accounts, but it’s
-                                important to know what the best
-                                platforms are. </p>
-
-                            <p class="small"><strong>Let’s dig
-                                    in!</strong></p>
+{{--                        <div class="card p-3">--}}
+{{--                            <div class="card-body p-3">--}}
+{{--                            </div>--}}
 
 
+{{--                            <h5>Why do people Buy social media--}}
+{{--                                accounts?</h5>--}}
+{{--                            <p class="small">A solid social media--}}
+{{--                                account can be a powerful tool for--}}
+{{--                                branding and marketing.</p>--}}
+{{--                            <p class="small">A good social media--}}
+{{--                                account--}}
+{{--                                has an active and responsive--}}
+{{--                                community--}}
+{{--                                fired up by the--}}
+{{--                                topic or niche that brought them--}}
+{{--                                together.</p>--}}
+{{--                            <p class="small">Sometimes it makes--}}
+{{--                                sense to--}}
+{{--                                buy or sell a social media account--}}
+{{--                                depending on where--}}
+{{--                                you are with your business and how--}}
+{{--                                goals--}}
+{{--                                have changed and evolved.</p>--}}
+{{--                            <p class="small">There is a thriving--}}
+{{--                                market--}}
+{{--                                for buying/selling social media--}}
+{{--                                accounts, but it’s--}}
+{{--                                important to know what the best--}}
+{{--                                platforms are. </p>--}}
 
-                        </div>
+{{--                            <p class="small"><strong>Let’s dig--}}
+{{--                                    in!</strong></p>--}}
 
 
-                        <script>
-                            // When the user scrolls down 20px from the top of the document, show the button
-                            window.onscroll = function() {scrollFunction()};
 
-                            function scrollFunction() {
-                                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                                    document.getElementById("scrollToTopBtn").style.display = "block";
-                                } else {
-                                    document.getElementById("scrollToTopBtn").style.display = "none";
-                                }
-                            }
-
-                            // When the user clicks on the button, scroll to the top of the document
-                            function topFunction() {
-                                document.body.scrollTop = 0; // For Safari
-                                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-                            }
-
-                        </script>
+{{--                        </div>--}}
 
 
+{{--                        <script>--}}
+{{--                            // When the user scrolls down 20px from the top of the document, show the button--}}
+{{--                            window.onscroll = function() {scrollFunction()};--}}
+
+{{--                            function scrollFunction() {--}}
+{{--                                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {--}}
+{{--                                    document.getElementById("scrollToTopBtn").style.display = "block";--}}
+{{--                                } else {--}}
+{{--                                    document.getElementById("scrollToTopBtn").style.display = "none";--}}
+{{--                                }--}}
+{{--                            }--}}
+
+{{--                            // When the user clicks on the button, scroll to the top of the document--}}
+{{--                            function topFunction() {--}}
+{{--                                document.body.scrollTop = 0; // For Safari--}}
+{{--                                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera--}}
+{{--                            }--}}
+
+{{--                        </script>--}}
 
 
 
 
-                    </div>
+
+
+{{--                    </div>--}}
                 </div>
             </div>
 
