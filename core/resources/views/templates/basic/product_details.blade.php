@@ -325,152 +325,145 @@
 
 
                     </div>
+
+
+                    <div class="col-lg-6" style="padding-bottom: 50px">
+
+
+                        @auth
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="card-title mt-3 text-center">
+                                        <h6 style="background: #565656; padding: 10px; border-radius: 10px; color: white"
+                                            class="text-left">LAST ORDER</h6>
+                                    </div>
+
+                                    @if($bought_qty == 0)
+                                    @else
+                                        @foreach($bought as $data)
+
+                                            <div class="row">
+
+
+                                                <div style="font-size: 10px" class="col">
+                                                    <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.61913 13.2708H4.37496C3.37163 13.2708 2.61913 13.0025 2.15246 12.4717C1.6858 11.9408 1.50496 11.1708 1.62746 10.1733L2.15246 5.79833C2.30413 4.50917 2.6308 3.35416 4.9058 3.35416H9.1058C11.375 3.35416 11.7016 4.50917 11.8591 5.79833L12.3841 10.1733C12.5008 11.1708 12.3258 11.9467 11.8591 12.4717C11.375 13.0025 10.6283 13.2708 9.61913 13.2708ZM4.89996 4.22916C3.21996 4.22916 3.13829 4.89416 3.01579 5.89749L2.4908 10.2725C2.4033 11.0133 2.50829 11.5558 2.80579 11.8883C3.10329 12.2208 3.6283 12.39 4.37496 12.39H9.61913C10.3658 12.39 10.8908 12.2208 11.1883 11.8883C11.4858 11.5558 11.5908 11.0133 11.5033 10.2725L10.9783 5.89749C10.8558 4.88832 10.78 4.22916 9.09413 4.22916H4.89996Z"
+                                                            fill="url(#paint0_linear_309_90)"/>
+                                                        <path
+                                                            d="M9.33334 5.10416C9.09417 5.10416 8.89584 4.90583 8.89584 4.66666V2.625C8.89584 1.995 8.505 1.60416 7.87501 1.60416H6.12501C5.49501 1.60416 5.10417 1.995 5.10417 2.625V4.66666C5.10417 4.90583 4.90584 5.10416 4.66667 5.10416C4.42751 5.10416 4.22917 4.90583 4.22917 4.66666V2.625C4.22917 1.51083 5.01084 0.729164 6.12501 0.729164H7.87501C8.98917 0.729164 9.77084 1.51083 9.77084 2.625V4.66666C9.77084 4.90583 9.5725 5.10416 9.33334 5.10416Z"
+                                                            fill="url(#paint1_linear_309_90)"/>
+                                                        <path
+                                                            d="M11.9058 10.3717H4.66667C4.42751 10.3717 4.22917 10.1733 4.22917 9.93418C4.22917 9.69501 4.42751 9.49668 4.66667 9.49668H11.9058C12.145 9.49668 12.3433 9.69501 12.3433 9.93418C12.3433 10.1733 12.145 10.3717 11.9058 10.3717Z"
+                                                            fill="url(#paint2_linear_309_90)"/>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_309_90" x1="7.00467"
+                                                                            y1="3.35416"
+                                                                            x2="7.00467" y2="13.2708"
+                                                                            gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FF6304"/>
+                                                                <stop offset="1" stop-color="#FF1888"/>
+                                                            </linearGradient>
+                                                            <linearGradient id="paint1_linear_309_90" x1="7.00001"
+                                                                            y1="0.729164"
+                                                                            x2="7.00001" y2="5.10416"
+                                                                            gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FF6304"/>
+                                                                <stop offset="1" stop-color="#FF1888"/>
+                                                            </linearGradient>
+                                                            <linearGradient id="paint2_linear_309_90" x1="8.28626"
+                                                                            y1="9.49668"
+                                                                            x2="8.28626" y2="10.3717"
+                                                                            gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FF6304"/>
+                                                                <stop offset="1" stop-color="#FF1888"/>
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg>
+
+                                                    {{$data->user_name}}, | <span style="color: #0AC028"> bought </span>|<span>{{\Illuminate\Support\Str::limit($data->item,
+                                    20, '...')}}</span>| <span
+                                                        style="color: #FF6304">₦{{number_format($data->amount, 2)}}</span>|<a
+                                                        href="#"
+                                                        style=" background: linear-gradient(90deg, #FF6304 0%, #FF0D9B 100%); border-radius: 5px; padding: 3px; color: white">{{ diffForHumans($data->created_at) }}</a>
+                                                    <hr>
+                                                </div>
+
+
+                                            </div>
+
+                                        @endforeach
+                                    @endif
+
+
+                                    {{--                            <div class="text-center">--}}
+                                    {{--                                <p>By purchasing any product, you agree that you are fully aware of these--}}
+                                    {{--                                    terms/conditions and agree to follow them! 👉🏽<a href="/user/rules"> TERMS AND--}}
+                                    {{--                                        CONDITIONS</a></p>--}}
+
+                                    {{--                            </div>--}}
+
+
+                                </div>
+                            </div>
+                        @else
+
+                        @endauth
+
+                    </div>
+
+
                 </div>
 
 
             </div>
 
-
-            <div class="col-lg-6" style="padding-bottom: 50px">
-
-
-                @auth
-                    <div class="card">
-                        <div class="card-body">
-
-                            <div class="card-title mt-3 text-center">
-                                <h6 style="background: #565656; padding: 10px; border-radius: 10px; color: white"
-                                    class="text-left">LAST ORDER</h6>
-                            </div>
-
-                            @if($bought_qty == 0)
-                            @else
-                                @foreach($bought as $data)
-
-                                    <div class="row">
+            <!-- Section ends -->
 
 
-                                        <div style="font-size: 10px" class="col">
-                                            <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M9.61913 13.2708H4.37496C3.37163 13.2708 2.61913 13.0025 2.15246 12.4717C1.6858 11.9408 1.50496 11.1708 1.62746 10.1733L2.15246 5.79833C2.30413 4.50917 2.6308 3.35416 4.9058 3.35416H9.1058C11.375 3.35416 11.7016 4.50917 11.8591 5.79833L12.3841 10.1733C12.5008 11.1708 12.3258 11.9467 11.8591 12.4717C11.375 13.0025 10.6283 13.2708 9.61913 13.2708ZM4.89996 4.22916C3.21996 4.22916 3.13829 4.89416 3.01579 5.89749L2.4908 10.2725C2.4033 11.0133 2.50829 11.5558 2.80579 11.8883C3.10329 12.2208 3.6283 12.39 4.37496 12.39H9.61913C10.3658 12.39 10.8908 12.2208 11.1883 11.8883C11.4858 11.5558 11.5908 11.0133 11.5033 10.2725L10.9783 5.89749C10.8558 4.88832 10.78 4.22916 9.09413 4.22916H4.89996Z"
-                                                    fill="url(#paint0_linear_309_90)"/>
-                                                <path
-                                                    d="M9.33334 5.10416C9.09417 5.10416 8.89584 4.90583 8.89584 4.66666V2.625C8.89584 1.995 8.505 1.60416 7.87501 1.60416H6.12501C5.49501 1.60416 5.10417 1.995 5.10417 2.625V4.66666C5.10417 4.90583 4.90584 5.10416 4.66667 5.10416C4.42751 5.10416 4.22917 4.90583 4.22917 4.66666V2.625C4.22917 1.51083 5.01084 0.729164 6.12501 0.729164H7.87501C8.98917 0.729164 9.77084 1.51083 9.77084 2.625V4.66666C9.77084 4.90583 9.5725 5.10416 9.33334 5.10416Z"
-                                                    fill="url(#paint1_linear_309_90)"/>
-                                                <path
-                                                    d="M11.9058 10.3717H4.66667C4.42751 10.3717 4.22917 10.1733 4.22917 9.93418C4.22917 9.69501 4.42751 9.49668 4.66667 9.49668H11.9058C12.145 9.49668 12.3433 9.69501 12.3433 9.93418C12.3433 10.1733 12.145 10.3717 11.9058 10.3717Z"
-                                                    fill="url(#paint2_linear_309_90)"/>
-                                                <defs>
-                                                    <linearGradient id="paint0_linear_309_90" x1="7.00467" y1="3.35416"
-                                                                    x2="7.00467" y2="13.2708"
-                                                                    gradientUnits="userSpaceOnUse">
-                                                        <stop stop-color="#FF6304"/>
-                                                        <stop offset="1" stop-color="#FF1888"/>
-                                                    </linearGradient>
-                                                    <linearGradient id="paint1_linear_309_90" x1="7.00001" y1="0.729164"
-                                                                    x2="7.00001" y2="5.10416"
-                                                                    gradientUnits="userSpaceOnUse">
-                                                        <stop stop-color="#FF6304"/>
-                                                        <stop offset="1" stop-color="#FF1888"/>
-                                                    </linearGradient>
-                                                    <linearGradient id="paint2_linear_309_90" x1="8.28626" y1="9.49668"
-                                                                    x2="8.28626" y2="10.3717"
-                                                                    gradientUnits="userSpaceOnUse">
-                                                        <stop stop-color="#FF6304"/>
-                                                        <stop offset="1" stop-color="#FF1888"/>
-                                                    </linearGradient>
-                                                </defs>
-                                            </svg>
+            <script>
+                // Variables to track quantity and price
+                let quantity = 1;
+                const price = {{ $product->price }};
 
-                                            {{$data->user_name}}, | <span style="color: #0AC028"> bought </span>|<span>{{\Illuminate\Support\Str::limit($data->item,
-                                    20, '...')}}</span>| <span style="color: #FF6304">₦{{number_format($data->amount, 2)}}</span>|<a href="#" style=" background: linear-gradient(90deg, #FF6304 0%, #FF0D9B 100%); border-radius: 5px; padding: 3px; color: white">{{ diffForHumans($data->created_at) }}</a>
-                                            <hr>
-                                        </div>
+                // Functions to increment and decrement quantity
+                function incrementQuantity() {
+                    quantity++;
+                    updateView();
+                }
 
+                function decrementQuantity() {
+                    if (quantity > 1) {
+                        quantity--;
+                        updateView();
+                    }
+                }
 
+                // Function to update the view with new quantity and total
+                function updateView() {
+                    const quantityElement = document.getElementById("quantity");
+                    const totalElement = document.getElementById("total");
+                    const quantityInput = document.getElementById("quantityInput");
 
+                    const total = (quantity * price).toFixed(2);
 
+                    quantityElement.textContent = quantity;
+                    totalElement.textContent = total;
+                    quantityInput.value = quantity;
+                }
 
-                                    </div>
+                // Function to submit quantity to the server
+                function submitQuantity() {
+                    const quantityInput = document.getElementById("quantityInput");
+                    alert("Quantity submitted: " + quantityInput.value);
+                    // You can send the quantityInput.value to the server here
+                }
 
-                                @endforeach
-                            @endif
-
-
-{{--                            <div class="text-center">--}}
-{{--                                <p>By purchasing any product, you agree that you are fully aware of these--}}
-{{--                                    terms/conditions and agree to follow them! 👉🏽<a href="/user/rules"> TERMS AND--}}
-{{--                                        CONDITIONS</a></p>--}}
-
-{{--                            </div>--}}
-
-
-                        </div>
-                    </div>
-                @else
-                    <div class="">
-                        <a href="{{route('user.login')}}" class="btn  btn-sm text-white"
-                           style="border-radius: 10px; background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%);">
-                            Login
-                        </a>
-                    </div>
-                @endauth
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-    <!-- Section ends -->
-
-
-    <script>
-        // Variables to track quantity and price
-        let quantity = 1;
-        const price = {{ $product->price }};
-
-        // Functions to increment and decrement quantity
-        function incrementQuantity() {
-            quantity++;
-            updateView();
-        }
-
-        function decrementQuantity() {
-            if (quantity > 1) {
-                quantity--;
+                // Initialize the view
                 updateView();
-            }
-        }
-
-        // Function to update the view with new quantity and total
-        function updateView() {
-            const quantityElement = document.getElementById("quantity");
-            const totalElement = document.getElementById("total");
-            const quantityInput = document.getElementById("quantityInput");
-
-            const total = (quantity * price).toFixed(2);
-
-            quantityElement.textContent = quantity;
-            totalElement.textContent = total;
-            quantityInput.value = quantity;
-        }
-
-        // Function to submit quantity to the server
-        function submitQuantity() {
-            const quantityInput = document.getElementById("quantityInput");
-            alert("Quantity submitted: " + quantityInput.value);
-            // You can send the quantityInput.value to the server here
-        }
-
-        // Initialize the view
-        updateView();
-    </script>
+            </script>
 
 @endsection
 
