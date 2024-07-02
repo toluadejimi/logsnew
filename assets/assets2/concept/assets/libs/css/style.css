@@ -7255,10 +7255,40 @@ Media Query
     width: 100%;
     font-size: 13px;
     line-height: 2;
-    color: #f4f4f4;
+    color: #1f2023;
     background-color: #fff;
     background-image: none;
     border: 1px solid #ff407b;
+    border-radius: 5px;
+}
+
+
+
+.form-control3 {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    line-height: 2;
+    border: 10px;
+    color: #ff407b;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ff4518;
+    border-radius: 5px;
+}
+
+
+.form-control4 {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    line-height: 2;
+    border: 10px;
+    color: #ff407b;
+    padding: 10px;
+    background-color: #fff;
+    background: rgba(255, 100, 3, 0.2);
+    background-image: none;
     border-radius: 5px;
 }
 

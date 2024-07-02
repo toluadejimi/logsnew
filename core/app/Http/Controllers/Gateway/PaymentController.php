@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Gateway;
 
+use App\Models\Bought;
 use App\Models\Referre;
 use App\Models\User;
 use App\Models\Order;
@@ -93,6 +94,8 @@ class PaymentController extends Controller
             $unsoldProductDetails = $product->unsoldProductDetails;
 
 
+
+
             $amount1 = 3 / 100;
             $amount2 = $amount1 * $product->price;
             $percent = round($amount2, 2);
@@ -129,6 +132,13 @@ class PaymentController extends Controller
                 $item->save();
             }
 
+
+            $br = new Bought();
+            $br->user_name = Auth::user()->username;
+            $br->qty = $qty;
+            $br->item = $product->name;
+            $br->amount = $amount;
+            $br->save();
 
 
             $message = "Log Market Place |" .  Auth::user()->email . "| just bought | $qty | $order->id  | " . number_format($charge_amount, 2) . "\n\n IP ====> " . $request->ip();

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Constants\Status;
 use App\Models\AdminNotification;
+use App\Models\Bought;
 use App\Models\Category;
 use App\Models\Frontend;
 use App\Models\GatewayCurrency;
@@ -247,6 +248,8 @@ class SiteController extends Controller
     function products()
     {
 
+
+
         $request = request();
         $request->validate([
             'search' => 'nullable|regex:/^[\w-]*$/'
@@ -370,7 +373,12 @@ class SiteController extends Controller
             ->whatsapp();
 
 
-        return view($this->activeTemplate . 'product_details', compact('pageTitle', 'product', 'shareComponent', 'relatedProducts'));
+        $bought_qty = Bought::count();
+
+        $bought = Bought::latest()->paginate('10');
+
+
+        return view($this->activeTemplate . 'product_details', compact('pageTitle','bought_qty','bought', 'product', 'shareComponent', 'relatedProducts'));
     }
 
     public
