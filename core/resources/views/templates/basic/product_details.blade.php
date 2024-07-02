@@ -206,7 +206,7 @@
                                                 <h5 style="color: #ff407b; font-size: 16px;" class="mt-5">
                                                 </h5>
                                                 <h5 style="color: #ff407b; font-size: 16px; margin-bottom: 2px"
-                                                    class="">Hello
+                                                    class="mt-3">Hello
                                                     @auth
                                                         {{Auth::user()->username ?? "User"}}
                                                     @else
