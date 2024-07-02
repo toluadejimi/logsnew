@@ -377,10 +377,7 @@
                                                     </svg>
 
                                                     {{$data->user_name}}, | <span style="color: #0AC028"> bought </span>|<span>{{\Illuminate\Support\Str::limit($data->item,
-                                    16, '...')}}</span>|<span
-                                                        style="color: #FF6304">₦{{number_format($data->amount)}}</span>|<a
-                                                        href="#"
-                                                        style=" font-size: 6px; background: linear-gradient(90deg, #FF6304 0%, #FF0D9B 100%); border-radius: 5px; padding: 3px; color: white">{{ diffForHumans($data->created_at) }}</a>
+                                    16, '...')}}</span>|<span style="color: #FF6304">₦{{number_format($data->amount)}}</span>|<a href="#" style=" font-size: 6px; background: linear-gradient(90deg, #FF6304 0%, #FF0D9B 100%); border-radius: 5px; padding: 3px; color: white">{{ diffForHumans($data->created_at) }}</a>
                                                     <hr>
                                                 </div>
 
