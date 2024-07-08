@@ -2,7 +2,26 @@
 @section('content')
 
     <div class="container">
-    <div class="container">
+
+        @if ($errors->any())
+            <div class="alert alert-danger my-4">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+        @endif
+        @if (session()->has('error'))
+            <div class="alert alert-danger mt-2">
+                {{ session()->get('error') }}
+            </div>
+        @endif
 
         <div class="row">
             <div class="col-6">

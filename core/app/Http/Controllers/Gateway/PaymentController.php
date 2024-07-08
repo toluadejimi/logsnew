@@ -17,6 +17,7 @@ use App\Models\ProductDetail;
 use App\Models\GatewayCurrency;
 use App\Models\AdminNotification;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
@@ -27,6 +28,26 @@ class PaymentController extends Controller
 
 
         if ($request->payment == "wallet") {
+
+            $last_order = Order::latest()->where('user_id', Auth::id())->first()->created_at ?? null;
+
+            if($last_order != null){
+
+                $createdAt = strtotime($last_order);
+                $currentTime = time();
+                $timeDifference = $currentTime - $createdAt;
+
+                if ($timeDifference < 50) {
+
+                    $notify = "Please wait for 10sec and try again";
+                    return redirect('user/orders')->with('error', $notify);
+
+
+                }
+
+            }
+
+
 
 
 
@@ -95,7 +116,6 @@ class PaymentController extends Controller
 
 
 
-
             $amount1 = 3 / 100;
             $amount2 = $amount1 * $product->price;
             $percent = round($amount2, 2);
@@ -148,6 +168,8 @@ class PaymentController extends Controller
 
             $notify = "Order Purchased Successfully";
             return redirect('user/orders')->with('message', $notify);
+
+
         }
 
         if ($request->payment == "enkpay") {
