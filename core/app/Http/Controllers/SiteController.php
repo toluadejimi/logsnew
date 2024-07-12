@@ -288,11 +288,17 @@ class SiteController extends Controller
         $greetings = $greeting;
 
 
+        $bought_qty = Bought::count();
+
+        $bought = Bought::latest()->paginate('20');
+
+
+
         $sections = Page::where('tempname', $this->activeTemplate)->where('slug', 'products')->first();
         $gateway_currency = GatewayCurrency::all();
 
 
-        return view($this->activeTemplate . 'products', compact('pageTitle', 'gateway_currency', 'greetings', 'categories', 'sections', 'wallet'));
+        return view($this->activeTemplate . 'products', compact('pageTitle', 'bought_qty','bought', 'gateway_currency', 'greetings', 'categories', 'sections', 'wallet'));
     }
 
 
@@ -375,7 +381,7 @@ class SiteController extends Controller
 
         $bought_qty = Bought::count();
 
-        $bought = Bought::latest()->paginate('10');
+        $bought = Bought::latest()->paginate('20');
 
 
         return view($this->activeTemplate . 'product_details', compact('pageTitle','bought_qty','bought', 'product', 'shareComponent', 'relatedProducts'));

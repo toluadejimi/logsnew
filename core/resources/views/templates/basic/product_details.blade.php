@@ -263,11 +263,11 @@
                                                 <hr>
 
 
-                                                <form action="{{ route('user.deposit.insert') }}" method="POST">
+                                                <form class="p-3" action="{{ route('user.deposit.insert') }}" method="POST">
                                                     @csrf
 
                                                     <h6 class="">Have a coupon?</h6>
-                                                    <input class="form-control4 mb-3 p-1" name="coupon_code" type="text" tabindex="-1" placeholder="Enter Coupon Code">
+                                                    <input style="background: #ffa78c; color: #000000" class="form-control mb-3 p-1" name="coupon_code" type="text" tabindex="-1" placeholder="Enter Coupon Code">
 
                                                     <input type="text" hidden id="quantityInput" name="qty" value="1">
                                                     <input type="text" hidden name="id" value="{{$product->id}}">
@@ -323,13 +323,15 @@
                     </div>
                     <div class="col-12" style="padding-bottom: 50px">
                         @auth
-                            <div class="card">
-                                <div class="card-body">
+                            <div class="card-title mt-3 text-center">
+                                <h6 style="background: #565656; padding: 10px; border-radius: 10px; color: white"
+                                    class="text-left">LAST ORDER</h6>
+                            </div>
 
-                                    <div class="card-title mt-3 text-center">
-                                        <h6 style="background: #565656; padding: 10px; border-radius: 10px; color: white"
-                                            class="text-left">LAST ORDER</h6>
-                                    </div>
+
+                            <div style="height:400px; width:100%; overflow-y: scroll;" class="card">
+
+                            <div class="card-body">
 
                                     @if($bought_qty == 0)
                                     @else

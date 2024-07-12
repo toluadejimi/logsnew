@@ -94,10 +94,7 @@ class PaymentController extends Controller
 
                 $charge_amount = $final_amo - $coupon_amount;
 
-                //                CouponCode::where('id', $ck->id)->update
-                //                ([
-                //                    'status' => 2,
-                //                ]);
+
 
             } else {
                 $charge_amount = $final_amo;

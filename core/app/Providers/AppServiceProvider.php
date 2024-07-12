@@ -84,11 +84,11 @@ class AppServiceProvider extends ServiceProvider
 
 
 
-         if ($general->force_ssl) {
-             \URL::forceScheme('https');
-         }
-
-        $this->app['request']->server->set('HTTP', true);
+//         if ($general->force_ssl) {
+//             \URL::forceScheme('https');
+//         }
+//
+//        $this->app['request']->server->set('HTTP', true);
 
 
 
