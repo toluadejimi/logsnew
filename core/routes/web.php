@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\LogViewerController;
+use Rap2hpoutre\LaravelLogViewer\LogViewerController;
 use App\Http\Controllers\User\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\UserController;
@@ -9,7 +9,7 @@ Route::get('/clear', function(){
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
 
-Route::get('/logs', [LogViewerController::class, 'index']);
+Route::get('/custom-log-viewer', [LogViewerController::class, 'index']);
 
 
 Route::post('efund',  [UserController::class, 'e_fund']);
