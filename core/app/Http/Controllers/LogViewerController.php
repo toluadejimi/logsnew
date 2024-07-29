@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Response;
 
 class LogViewerController extends Controller
 {
     public function index()
     {
-        $logFile = storage_path('logs/laravel.log');
-        $logs = File::exists($logFile) ? File::get($logFile) : 'Log file does not exist.';
+        $logPath = storage_path('logs/laravel.log');
+        $logs = File::exists($logPath) ? File::get($logPath) : 'No logs found.';
 
-        return view('logs.index', ['logs' => $logs]);
+        return view('logs', ['logs' => $logs]);
     }
 }
