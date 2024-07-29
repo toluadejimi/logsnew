@@ -8,6 +8,9 @@ Route::get('/clear', function(){
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
 
+Route::get('/logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+
+
 Route::post('efund',  [UserController::class, 'e_fund']);
 
 Route::get('reset-password', [ResetPasswordController::class, 'resetpassword']);

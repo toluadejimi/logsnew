@@ -753,6 +753,13 @@ class ComposerStaticInitf39298c643e8fd1c423f71a484ad7ba9
     );
 
     public static $prefixesPsr0 = array (
+        'R' => 
+        array (
+            'Rap2hpoutre\\LaravelLogViewer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/rap2hpoutre/laravel-log-viewer/src',
+            ),
+        ),
         'M' => 
         array (
             'Mailjet' => 
@@ -868,6 +875,7 @@ class ComposerStaticInitf39298c643e8fd1c423f71a484ad7ba9
         'App\\Http\\Controllers\\Gateway\\Stripe\\ProcessController' => __DIR__ . '/../..' . '/app/Http/Controllers/Gateway/Stripe/ProcessController.php',
         'App\\Http\\Controllers\\Gateway\\TwoCheckout\\ProcessController' => __DIR__ . '/../..' . '/app/Http/Controllers/Gateway/TwoCheckout/ProcessController.php',
         'App\\Http\\Controllers\\Gateway\\Voguepay\\ProcessController' => __DIR__ . '/../..' . '/app/Http/Controllers/Gateway/Voguepay/ProcessController.php',
+        'App\\Http\\Controllers\\LogViewerController' => __DIR__ . '/../..' . '/app/Http/Controllers/LogViewerController.php',
         'App\\Http\\Controllers\\SiteController' => __DIR__ . '/../..' . '/app/Http/Controllers/SiteController.php',
         'App\\Http\\Controllers\\TicketController' => __DIR__ . '/../..' . '/app/Http/Controllers/TicketController.php',
         'App\\Http\\Controllers\\User\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/User/Auth/ForgotPasswordController.php',
@@ -905,6 +913,7 @@ class ComposerStaticInitf39298c643e8fd1c423f71a484ad7ba9
         'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
         'App\\Models\\AdminNotification' => __DIR__ . '/../..' . '/app/Models/AdminNotification.php',
         'App\\Models\\AdminPasswordReset' => __DIR__ . '/../..' . '/app/Models/AdminPasswordReset.php',
+        'App\\Models\\Bought' => __DIR__ . '/../..' . '/app/Models/Bought.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\CouponCode' => __DIR__ . '/../..' . '/app/Models/CouponCode.php',
         'App\\Models\\Deposit' => __DIR__ . '/../..' . '/app/Models/Deposit.php',
@@ -923,6 +932,7 @@ class ComposerStaticInitf39298c643e8fd1c423f71a484ad7ba9
         'App\\Models\\PasswordReset' => __DIR__ . '/../..' . '/app/Models/PasswordReset.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
         'App\\Models\\ProductDetail' => __DIR__ . '/../..' . '/app/Models/ProductDetail.php',
+        'App\\Models\\Referre' => __DIR__ . '/../..' . '/app/Models/Referre.php',
         'App\\Models\\Subscriber' => __DIR__ . '/../..' . '/app/Models/Subscriber.php',
         'App\\Models\\SupportAttachment' => __DIR__ . '/../..' . '/app/Models/SupportAttachment.php',
         'App\\Models\\SupportMessage' => __DIR__ . '/../..' . '/app/Models/SupportMessage.php',
@@ -5931,6 +5941,12 @@ class ComposerStaticInitf39298c643e8fd1c423f71a484ad7ba9
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
+        'Rap2hpoutre\\LaravelLogViewer\\BaseController' => __DIR__ . '/..' . '/rap2hpoutre/laravel-log-viewer/src/controllers/LogViewerController.php',
+        'Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewer' => __DIR__ . '/..' . '/rap2hpoutre/laravel-log-viewer/src/Rap2hpoutre/LaravelLogViewer/LaravelLogViewer.php',
+        'Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider' => __DIR__ . '/..' . '/rap2hpoutre/laravel-log-viewer/src/Rap2hpoutre/LaravelLogViewer/LaravelLogViewerServiceProvider.php',
+        'Rap2hpoutre\\LaravelLogViewer\\Level' => __DIR__ . '/..' . '/rap2hpoutre/laravel-log-viewer/src/Rap2hpoutre/LaravelLogViewer/Level.php',
+        'Rap2hpoutre\\LaravelLogViewer\\LogViewerController' => __DIR__ . '/..' . '/rap2hpoutre/laravel-log-viewer/src/controllers/LogViewerController.php',
+        'Rap2hpoutre\\LaravelLogViewer\\Pattern' => __DIR__ . '/..' . '/rap2hpoutre/laravel-log-viewer/src/Rap2hpoutre/LaravelLogViewer/Pattern.php',
         'Razorpay\\Api\\Account' => __DIR__ . '/..' . '/razorpay/razorpay/src/Account.php',
         'Razorpay\\Api\\Addon' => __DIR__ . '/..' . '/razorpay/razorpay/src/Addon.php',
         'Razorpay\\Api\\Api' => __DIR__ . '/..' . '/razorpay/razorpay/src/Api.php',

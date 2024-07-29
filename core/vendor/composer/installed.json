@@ -48,17 +48,17 @@
         },
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v3.13.4",
-            "version_normalized": "3.13.4.0",
+            "version": "v3.13.5",
+            "version_normalized": "3.13.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "00201bcd1eaf9b1d3debddcdc13c219e4835fb61"
+                "reference": "92d86be45ee54edff735e46856f64f14b6a8bb07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/00201bcd1eaf9b1d3debddcdc13c219e4835fb61",
-                "reference": "00201bcd1eaf9b1d3debddcdc13c219e4835fb61",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/92d86be45ee54edff735e46856f64f14b6a8bb07",
+                "reference": "92d86be45ee54edff735e46856f64f14b6a8bb07",
                 "shasum": ""
             },
             "require": {
@@ -75,7 +75,7 @@
                 "phpunit/phpunit": "^9.6|^10.5",
                 "squizlabs/php_codesniffer": "^3.5"
             },
-            "time": "2024-04-10T09:15:45+00:00",
+            "time": "2024-04-12T11:20:37+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -119,7 +119,7 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-debugbar/issues",
-                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.13.4"
+                "source": "https://github.com/barryvdh/laravel-debugbar/tree/v3.13.5"
             },
             "funding": [
                 {
@@ -6324,6 +6324,72 @@
                 }
             ],
             "install-path": "../ramsey/uuid"
+        },
+        {
+            "name": "rap2hpoutre/laravel-log-viewer",
+            "version": "v2.4.0",
+            "version_normalized": "2.4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rap2hpoutre/laravel-log-viewer.git",
+                "reference": "49c52ae197b3d4f7f9e43d328628edc4bc529afa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rap2hpoutre/laravel-log-viewer/zipball/49c52ae197b3d4f7f9e43d328628edc4bc529afa",
+                "reference": "49c52ae197b3d4f7f9e43d328628edc4bc529afa",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0|^9.0",
+                "phpunit/phpunit": "^7||^8.4|^9.3.3|^10.1"
+            },
+            "time": "2024-03-20T08:49:53+00:00",
+            "type": "laravel-package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Rap2hpoutre\\LaravelLogViewer\\": "src/"
+                },
+                "classmap": [
+                    "src/controllers"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "rap2hpoutre",
+                    "email": "raphaelht@gmail.com"
+                }
+            ],
+            "description": "A Laravel log reader",
+            "keywords": [
+                "laravel",
+                "log",
+                "log-reader",
+                "log-viewer",
+                "logging",
+                "lumen"
+            ],
+            "support": {
+                "issues": "https://github.com/rap2hpoutre/laravel-log-viewer/issues",
+                "source": "https://github.com/rap2hpoutre/laravel-log-viewer/tree/v2.4.0"
+            },
+            "install-path": "../rap2hpoutre/laravel-log-viewer"
         },
         {
             "name": "razorpay/razorpay",

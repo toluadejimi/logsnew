@@ -109,7 +109,7 @@
 
                 <div class="lh-100">
                     <h6 class="mb-0 text-black lh-100">Log Out</h6>
-                    <a href="/logout"><small>Click Here to Log Out</small></a>
+                    <a href="logout"><small>Click Here to Log Out</small></a>
                 </div>
             </div>
 
