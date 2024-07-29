@@ -166,6 +166,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Jorenvh\Share\Providers\ShareServiceProvider::class,
+        Rap2hpoutre\LaravelLogViewer\LogViewerServiceProvider::class,
+
 
 
         /*

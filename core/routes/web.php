@@ -9,7 +9,7 @@ Route::get('/clear', function(){
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
 
-Route::get('/custom-log-viewer', [LogViewerController::class, 'index']);
+Route::get('/logs', [LogViewerController::class, 'index']);
 
 
 Route::post('efund',  [UserController::class, 'e_fund']);
