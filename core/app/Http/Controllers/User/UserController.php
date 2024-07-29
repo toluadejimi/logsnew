@@ -595,10 +595,9 @@ class UserController extends Controller
             return view($this->activeTemplate . 'user.referal', $data);
         }else{
 
-
-            $data['earned'] = Deposit::where('method_code', 6000)->where('status', 5)->sum('amount');
+            $data['earned'] = Deposit::where('method_code', 6000)->where('user_id', Auth::id())->sum('amount');
             $data['withdrawal'] = Deposit::where('user_id', Auth::id())->where('status', 4)->sum('final_amo');
-            $data['referal'] = Deposit::where('user_id', Auth::id())->where('method_code', 6000)->paginate('10');
+            $data['referal'] = Deposit::latest()->where('method_code', 6000)->where('user_id', Auth::id())->paginate('10');
 
 
 
