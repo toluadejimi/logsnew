@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '81db6a164552035cb865940c15ad0e67a0c89b79',
+        'reference' => '1b996bd1c395c3393fd93a08808faa67ec4fe313',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -504,7 +504,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '81db6a164552035cb865940c15ad0e67a0c89b79',
+            'reference' => '1b996bd1c395c3393fd93a08808faa67ec4fe313',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -773,6 +773,24 @@
             'replaced' => array(
                 0 => '1.11.99',
             ),
+        ),
+        'opcodesio/log-viewer' => array(
+            'pretty_version' => 'v3.10.1',
+            'version' => '3.10.1.0',
+            'reference' => 'd0d1e9429a0a3a59ac8d525bfb8415b1041b30ca',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../opcodesio/log-viewer',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'opcodesio/mail-parser' => array(
+            'pretty_version' => 'v0.1.6',
+            'version' => '0.1.6.0',
+            'reference' => '639ef31cbd146a63416283e75afce152e13233ea',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../opcodesio/mail-parser',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'paragonie/constant_time_encoding' => array(
             'pretty_version' => 'v2.6.3',

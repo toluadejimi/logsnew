@@ -74,6 +74,8 @@ return array(
     'ParagonIE\\ConstantTime\\' => array($vendorDir . '/paragonie/constant_time_encoding/src'),
     'PackageVersions\\' => array($vendorDir . '/composer/package-versions-deprecated/src/PackageVersions'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'Opcodes\\MailParser\\' => array($vendorDir . '/opcodesio/mail-parser/src'),
+    'Opcodes\\LogViewer\\' => array($vendorDir . '/opcodesio/log-viewer/src'),
     'NunoMaduro\\Collision\\' => array($vendorDir . '/nunomaduro/collision/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Mollie\\Laravel\\' => array($vendorDir . '/mollie/laravel-mollie/src'),
