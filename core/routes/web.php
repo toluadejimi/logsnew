@@ -40,6 +40,8 @@ Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(
     Route::get('download/{ticket}', 'ticketDownload')->name('download');
 });
 
+
+
 Route::controller('SiteController')->group(function () {
     Route::any('/resolve-support', 'resolve_support');
     Route::any('/deposit-now', 'deposit_now');
@@ -72,5 +74,14 @@ Route::controller('SiteController')->group(function () {
 
 
     Route::get('/{slug}', 'pages')->name('pages');
-    Route::get('/', 'products')->name('home');
+    Route::get('/', 'front')->name('home');
+
+
+
+
+
+
+
 });
+
+

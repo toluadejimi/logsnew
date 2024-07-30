@@ -6,12 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-    <link rel="shortcut icon" href="<?php echo e(asset(mix('img/log-viewer-32.png', 'vendor/log-viewer'))); ?>">
+    <link rel="shortcut icon" href="<?php echo e(url('')); ?>/assets/log-viewer/img/log-viewer-32.png">
 
     <title>Log Viewer<?php echo e(config('app.name') ? ' - ' . config('app.name') : ''); ?></title>
 
     <!-- Style sheets-->
-    <link href="<?php echo e(asset(mix('app.css', 'vendor/log-viewer'))); ?>" rel="stylesheet" onerror="alert('app.css failed to load. Please refresh the page, re-publish Log Viewer assets, or fix routing for vendor assets.')">
+    <link href="<?php echo e(url('')); ?>/assets/log-viewer/app.css" rel="stylesheet" onerror="alert('app.css failed to load. Please refresh the page, re-publish Log Viewer assets, or fix routing for vendor assets.')">
 </head>
 
 <body class="h-full px-3 lg:px-5 bg-gray-100 dark:bg-gray-900">
@@ -26,7 +26,7 @@
     // Add additional headers for LogViewer requests like so:
     // window.LogViewer.headers['Authorization'] = 'Bearer xxxxxxx';
 </script>
-<script src="<?php echo e(asset(mix('app.js', 'vendor/log-viewer'))); ?>" onerror="alert('app.js failed to load. Please refresh the page, re-publish Log Viewer assets, or fix routing for vendor assets.')"></script>
+<script src="<?php echo e(url('')); ?>/assets/log-viewer/app.js" onerror="alert('app.js failed to load. Please refresh the page, re-publish Log Viewer assets, or fix routing for vendor assets.')"></script>
 </body>
 </html>
 <?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/project/logsnew/core/vendor/opcodesio/log-viewer/src/../resources/views/index.blade.php ENDPATH**/ ?>

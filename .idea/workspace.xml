@@ -5,187 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50829a9c-2435-4711-9983-8c792e53ac09" name="Changes" comment="d">
-      <change afterPath="$PROJECT_DIR$/core/public/vendor/log-viewer/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/public/vendor/log-viewer/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/public/vendor/log-viewer/app.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/public/vendor/log-viewer/img/log-viewer-128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/public/vendor/log-viewer/img/log-viewer-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/public/vendor/log-viewer/img/log-viewer-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/public/vendor/log-viewer/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/X1291955de292a6328b330a740d14daf9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/Xc980a12301fb9a4356de9e73b291e958.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/storage/debugbar/Xfe0c2307e1d19e08d6399f9b23dd12f6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/storage/framework/cache/data/5a/ae/5aaea5f3c4242cefabc7a355a2074353a827b3f2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/storage/framework/cache/data/95/51/95512ca236ce017decb19adcf74da84c0d24498d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/config/log-viewer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/pint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/public/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/public/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/public/app.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/public/img/log-viewer-128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/public/img/log-viewer-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/public/img/log-viewer-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/css/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/css/loader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/img/log-viewer-128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/img/log-viewer-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/img/log-viewer-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/BaseLogTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/BmcIcon.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/BmcLogo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/Checkmark.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/DownloadLink.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/FileList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/FileListItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/FileTypeSelector.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/HostSelector.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/KeyboardShortcutsOverlay.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/LevelButtons.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/LogCopyButton.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/LogList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/MailHtmlPreview.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/MailPreviewAttributes.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/MailTextPreview.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/Pagination.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/PaginationOptions.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/SearchInput.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/SiteSettingsDropdown.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/SpinnerIcon.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/TabContainer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/components/TabContent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/keyboardNavigation/files.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/keyboardNavigation/global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/keyboardNavigation/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/keyboardNavigation/logs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/keyboardNavigation/shared.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/pages/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/stores/files.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/stores/hosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/stores/logViewer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/stores/pagination.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/stores/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/js/stores/severity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/views/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/resources/views/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogFile/CanCacheData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogFile/HasMetadata.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogIndex/CanCacheIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogIndex/CanFilterIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogIndex/CanIterateIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogIndex/CanSplitIndexIntoChunks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogIndex/HasMetadata.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogIndex/PreservesIndexingProgress.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogReader/CanFilterUsingIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogReader/CanSetDirectionUsingIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogReader/KeepsFileHandle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Concerns/LogReader/KeepsInstances.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Console/Commands/GenerateDummyLogsCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Console/Commands/PublishCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Direction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Events/LogFileDeleted.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Exceptions/CannotCloseFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Exceptions/CannotOpenFileException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Exceptions/InvalidChunkSizeException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Exceptions/InvalidRegularExpression.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Exceptions/SkipLineException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Facades/Cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Facades/LogViewer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Host.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/HostCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Controllers/HostsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Controllers/LogsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Middleware/AuthorizeLogViewer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Middleware/ForwardRequestToHostMiddleware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Middleware/JsonResourceWithoutWrappingMiddleware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Resources/LevelCountResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Resources/LogFileResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Resources/LogFolderResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Resources/LogResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Http/Resources/LogViewerHostResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LevelCount.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogFile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogFileCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogFolder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogFolderCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogIndexChunk.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/HorizonStatusLevel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/HttpStatusCodeLevel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/LaravelLogLevel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/LevelClass.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/LevelInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/NginxStatusLevel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/PostgresLevel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/RedisLogLevel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogLevels/SupervisorLogLevel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogTypeRegistrar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogViewerService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/LogViewerServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/HorizonLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/HorizonOldLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/HttpAccessLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/HttpApacheErrorLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/HttpNginxErrorLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/LaravelLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/Log.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/LogType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/PhpFpmLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/PostgresLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/RedisLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Logs/SupervisorLog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Readers/BaseLogReader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Readers/IndexedLogReader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Readers/LogReaderInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Readers/MultipleLogReader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Utils/Benchmark.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Utils/GenerateCacheKey.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/Utils/Utils.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/src/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/src/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/src/MessagePart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/tests/Fixtures/complex_email.eml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/tests/Fixtures/multiformat_email.eml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/tests/Pest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser/tests/Unit/MessageTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/logsnew.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/logsnew.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.12.3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.12.3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.12.3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.12.3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.12.3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.20.3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.20.3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.20.3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.20.3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.20.3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.29.0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.29.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.29.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.29.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.29.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.29.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot?" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot?" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=5.9.14.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=5.9.14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/formidable/css/formidableforms1.css?ver=3272142.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/formidable/images/ajax_loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/css/minified/frontend.min.css?ver=4.6.9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/fonts/astra.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/fonts/astra.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/fonts/astra.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=4.6.9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/accounts-marketplace-300x267.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/accounts-marketplace.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/download.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/homeBanner-300x286.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/homeBanner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/how-works-290x300.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/how-works-768x796.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/how-works.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/lock-300x225.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/message-300x227.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/pxfuel.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/ratings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/smartphone-300x127.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/smartphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/elementor/css/post-38.css?ver=1712134038.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/elementor/css/post-8192.css?ver=1712134901.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/resources/views/templates/basic/front.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/core/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/core/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/storage/framework/sessions/YzS1QtvxruI3Fc9FyXXUMz49qCbzTaizdQNuJGlw" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/framework/sessions/YzS1QtvxruI3Fc9FyXXUMz49qCbzTaizdQNuJGlw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/storage/framework/views/20c4a91b763b2d0158e40805686659bfe3a628d6.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/framework/views/20c4a91b763b2d0158e40805686659bfe3a628d6.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/storage/framework/views/4a931b0b0200876157ef15d4ad365c4aee069ee0.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/framework/views/4a931b0b0200876157ef15d4ad365c4aee069ee0.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/logs/laravel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/core/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,22 +269,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/resources/views/templates/basic" />
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/core/resources/views" />
     </key>
   </component>
@@ -444,7 +344,8 @@
       <workItem from="1721787948265" duration="7383000" />
       <workItem from="1722063771004" duration="5000" />
       <workItem from="1722064377663" duration="100000" />
-      <workItem from="1722145034112" duration="5616000" />
+      <workItem from="1722145034112" duration="9089000" />
+      <workItem from="1722293463560" duration="2812000" />
     </task>
     <task id="LOCAL-00005" summary="dep">
       <option name="closed" value="true" />
@@ -534,7 +435,39 @@
       <option name="project" value="LOCAL" />
       <updated>1722278946221</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="d">
+      <option name="closed" value="true" />
+      <created>1722279965027</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1722279965027</updated>
+    </task>
+    <task id="LOCAL-00017" summary="d">
+      <option name="closed" value="true" />
+      <created>1722280511389</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1722280511389</updated>
+    </task>
+    <task id="LOCAL-00018" summary="d">
+      <option name="closed" value="true" />
+      <created>1722281385332</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722281385332</updated>
+    </task>
+    <task id="LOCAL-00019" summary="d">
+      <option name="closed" value="true" />
+      <created>1722298917518</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1722298917518</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -232,6 +232,16 @@ class SiteController extends Controller
         return view($this->activeTemplate . 'maintenance', compact('pageTitle', 'maintenance'));
     }
 
+
+    public function front(){
+
+        return view($this->activeTemplate . 'front');
+    }
+
+
+
+
+
     public
     function products()
     {
