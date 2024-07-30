@@ -5,85 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50829a9c-2435-4711-9983-8c792e53ac09" name="Changes" comment="d">
-      <change afterPath="$PROJECT_DIR$/assets/arc/test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.12.3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.12.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.12.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.12.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.12.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.20.3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.20.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.20.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.20.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.20.3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.29.0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.29.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.29.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.29.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.29.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.29.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot?" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot?" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=5.9.14.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=5.9.14" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/formidable/css/formidableforms1.css?ver=3272142.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/plugins/formidable/images/ajax_loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/css/minified/frontend.min.css?ver=4.6.9.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/fonts/astra.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/fonts/astra.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/fonts/astra.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=4.6.9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/accounts-marketplace-300x267.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/accounts-marketplace.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/download.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/homeBanner-300x286.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/homeBanner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/how-works-290x300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/how-works-768x796.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/how-works.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/lock-300x225.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/lock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/message-300x227.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/message.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/pxfuel.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/ratings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/smartphone-300x127.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/2024/04/smartphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/elementor/css/post-38.css?ver=1712134038.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-content/uploads/elementor/css/post-8192.css?ver=1712134901.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/arc/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/resources/views/templates/basic/front.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/Http/Controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/Http/Controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/storage/framework/views/20c4a91b763b2d0158e40805686659bfe3a628d6.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/framework/views/20c4a91b763b2d0158e40805686659bfe3a628d6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/storage/framework/views/4a931b0b0200876157ef15d4ad365c4aee069ee0.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/framework/views/4a931b0b0200876157ef15d4ad365c4aee069ee0.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/resources/views/templates/basic/product_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/resources/views/templates/basic/product_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/storage/framework/views/7298e6fe564cbe3a1f47bf0c23cb6d7af8c7b5ca.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/storage/framework/views/7298e6fe564cbe3a1f47bf0c23cb6d7af8c7b5ca.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +269,7 @@
       <workItem from="1722063771004" duration="5000" />
       <workItem from="1722064377663" duration="100000" />
       <workItem from="1722145034112" duration="9089000" />
-      <workItem from="1722293463560" duration="2812000" />
+      <workItem from="1722293463560" duration="3966000" />
     </task>
     <task id="LOCAL-00005" summary="dep">
       <option name="closed" value="true" />
@@ -467,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722298917518</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="d">
+      <option name="closed" value="true" />
+      <created>1722343728836</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722343728836</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

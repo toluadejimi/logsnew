@@ -75,9 +75,8 @@
                                             <input class="border-0 w-0 text-white"
                                                    style="border-right: 0px; font-size: 1px; color: white;"
                                                    id="element" value="@php echo $product->description; @endphp">
-                                            <button class="copy-button form-control3"
-                                                    onclick="copyToClipboard()">
-
+                                            <button class="copy-button form-control"
+                                                   style="font-size: 15px" onclick="copyToClipboard()">
                                                 Copy Description
                                                 <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
