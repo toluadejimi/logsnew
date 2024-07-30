@@ -54,7 +54,7 @@
                                     <select class="text-dark form-control2 p-2" name="gateway" required>
 
                                         <option value="">Select payment method</option>
-{{--                                        <option value="250">Instant Payment</option>--}}
+                                        <option value="250">Instant Payment</option>
                                         <option value="1000">Manual Payment</option>
 
 
