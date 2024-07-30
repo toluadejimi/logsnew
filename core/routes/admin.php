@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::namespace('Auth')->group(function () {
     Route::controller('LoginController')->group(function () {
         Route::get('/', 'showLoginForm')->name('login');
-        Route::post('/', 'login')->name('login');
+        Route::post('/', 'login')->name('loginn');
         Route::get('logout', 'logout')->middleware('admin')->name('logout');
     });
 
@@ -88,7 +88,7 @@ Route::middleware('admin')->group(function () {
         Route::get('detail/{id}', 'detail')->name('detail');
         Route::post('update/{id}', 'update')->name('update');
         Route::get('send-notification/{id}', 'showNotificationSingleForm')->name('notification.single');
-        Route::post('send-notification/{id}', 'sendNotificationSingle')->name('notification.single');
+        //Route::post('send-notification/{id}', 'sendNotificationSingle')->name('notification.single');
         Route::get('login/{id}', 'login')->name('login');
         Route::post('status/{id}', 'status')->name('status');
         Route::post('addbalance/{id}', 'addbalance')->name('addbalance');
@@ -106,7 +106,7 @@ Route::middleware('admin')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('send-email', 'sendEmailForm')->name('send.email');
         Route::post('remove/{id}', 'remove')->name('remove');
-        Route::post('send-email', 'sendEmail')->name('send.email');
+       // Route::post('send-email', 'sendEmail')->name('send.email');
     });
 
     // Deposit Gateway
@@ -201,7 +201,7 @@ Route::middleware('admin')->group(function () {
 
         // Logo-Icon
         Route::get('setting/logo-icon', 'logoIcon')->name('setting.logo.icon');
-        Route::post('setting/logo-icon', 'logoIconUpdate')->name('setting.logo.icon');
+        //Route::post('setting/logo-icon', 'logoIconUpdate')->name('setting.logo.icon');
 
         //socialite credentials
         Route::get('setting/social/credentials', 'socialiteCredentials')->name('setting.socialite.credentials');

@@ -2,16 +2,16 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Api\UserController;
 
 
 
 
-Route::post('efund',  [UserController::class, 'e_fund']);
+Route::post('e-check',  [UserController::class, 'e_check']);
+Route::post('e-fund',  [UserController::class, 'e_fund']);
+Route::post('verify-username',  [UserController::class, 'verify_username']);
 
-Route::any('e-check',  'User\UserController@e_check')->name('e-check');
 
-//Route::any('fund',  'SiteController@fund_now')->name('fund');
 
 
 
