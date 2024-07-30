@@ -217,89 +217,89 @@
 
     </script>
 
-    <style>
-        .loader-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000000cc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
+{{--    <style>--}}
+{{--        .loader-wrapper {--}}
+{{--            position: fixed;--}}
+{{--            top: 0;--}}
+{{--            left: 0;--}}
+{{--            width: 100%;--}}
+{{--            height: 100%;--}}
+{{--            background: #000000cc;--}}
+{{--            display: flex;--}}
+{{--            align-items: center;--}}
+{{--            justify-content: center;--}}
+{{--            z-index: 1000;--}}
+{{--        }--}}
 
-        .loader {
-            max-width: 100%;
-            /* Ensure the GIF doesn't exceed its natural size */
-            max-height: 100vh;
-            /* Ensure the GIF doesn't exceed the viewport height */
-            width: auto;
-            /* Allow the GIF to scale proportionally */
-            height: auto;
-            /* Allow the GIF to scale proportionally */
-        }
-
-
-        .modal {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1050;
-            display: none;
-            overflow: hidden;
-            outline: 0;
-            background-color: rgba(0, 0, 0, 0.343);
-        }
-
-        i {
-            padding: 2px;
-        }
-
-        .child {
-            width: 30px;
-            height: 30px;
-            /* Center horizontally*/
-            position: center;
-            margin: 0 auto;
-        }
-
-    </style>
+{{--        .loader {--}}
+{{--            max-width: 100%;--}}
+{{--            /* Ensure the GIF doesn't exceed its natural size */--}}
+{{--            max-height: 100vh;--}}
+{{--            /* Ensure the GIF doesn't exceed the viewport height */--}}
+{{--            width: auto;--}}
+{{--            /* Allow the GIF to scale proportionally */--}}
+{{--            height: auto;--}}
+{{--            /* Allow the GIF to scale proportionally */--}}
+{{--        }--}}
 
 
-    /* HTML: <div class="loader"></div> */
+{{--        .modal {--}}
+{{--            position: fixed;--}}
+{{--            top: 0;--}}
+{{--            right: 0;--}}
+{{--            bottom: 0;--}}
+{{--            left: 0;--}}
+{{--            z-index: 1050;--}}
+{{--            display: none;--}}
+{{--            overflow: hidden;--}}
+{{--            outline: 0;--}}
+{{--            background-color: rgba(0, 0, 0, 0.343);--}}
+{{--        }--}}
 
-    <style>
+{{--        i {--}}
+{{--            padding: 2px;--}}
+{{--        }--}}
 
-        .loader {
-            width: fit-content;
-            font-weight: bold;
-            font-family: monospace;
-            font-size: 30px;
-            background: radial-gradient(circle closest-side,#000 94%,#0000) right/calc(200% - 1em) 100%;
-            animation: l24 1s infinite alternate linear;
-        }
+{{--        .child {--}}
+{{--            width: 30px;--}}
+{{--            height: 30px;--}}
+{{--            /* Center horizontally*/--}}
+{{--            position: center;--}}
+{{--            margin: 0 auto;--}}
+{{--        }--}}
 
-        .loader::before {
-            content: "Loading...";
-            line-height: 1em;
-            color: #0000;
-            background: inherit;
-            background-image: radial-gradient(circle closest-side,#fff 94%,#000);
-            -webkit-background-clip:text;
-            background-clip:text;
-        }
-
-        @keyframes l24{
-            100%{background-position: left}
-        }
+{{--    </style>--}}
 
 
-    </style>
+{{--    <div class="loader"></div> --}}
+
+{{--    <style>--}}
+
+{{--        .loader {--}}
+{{--            width: fit-content;--}}
+{{--            font-weight: bold;--}}
+{{--            font-family: monospace;--}}
+{{--            font-size: 30px;--}}
+{{--            background: radial-gradient(circle closest-side,#000 94%,#0000) right/calc(200% - 1em) 100%;--}}
+{{--            animation: l24 1s infinite alternate linear;--}}
+{{--        }--}}
+
+{{--        .loader::before {--}}
+{{--            content: "Loading...";--}}
+{{--            line-height: 1em;--}}
+{{--            color: #0000;--}}
+{{--            background: inherit;--}}
+{{--            background-image: radial-gradient(circle closest-side,#fff 94%,#000);--}}
+{{--            -webkit-background-clip:text;--}}
+{{--            background-clip:text;--}}
+{{--        }--}}
+
+{{--        @keyframes l24{--}}
+{{--            100%{background-position: left}--}}
+{{--        }--}}
+
+
+{{--    </style>--}}
 
 
 
