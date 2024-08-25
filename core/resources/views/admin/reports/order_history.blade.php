@@ -43,7 +43,7 @@
                         <thead>
                             <tr>
                                 <th>@lang('User')</th>
-                                <th>@lang('Payment Trx')</th>
+                                <th>@lang('Order ID')</th>
                                 <th>@lang('Ordered At')</th>
                                 <th>@lang('Amount')</th>
                                 <th>@lang('Quantity')</th>
@@ -66,7 +66,7 @@
 
                                     <td>
                                         <div>
-                                            <div class="fw-bold">{{ $order->deposit->trx ?? "Trx" }}</div>
+                                            <div class="fw-bold">{{  $order->id ?? "Trx" }}</div>
 {{--                                            <a href="{{ route('admin.deposit.details', $order->deposit->id) }}">--}}
 {{--                                                @lang('View Details')--}}
 {{--                                            </a>--}}
