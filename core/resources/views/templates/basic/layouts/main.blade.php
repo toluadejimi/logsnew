@@ -16,6 +16,10 @@
     <link rel="shortcut icon" href="{{ url('') }}/assets/assets2/img/logo/favicon.ico">
 
 
+    <!-- Pixel Code - https://notify.tomitechltd.com/ -->
+    <script defer src="https://notify.tomitechltd.com/pixel/tmi0AmsA5jGpRjc1"></script>
+    <!-- END Pixel Code -->
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ url('') }}/assets/assets2/concept/assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="{{ url('') }}/assets/assets2/concept/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
