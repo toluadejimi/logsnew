@@ -1,7 +1,7 @@
 <tr>
 
     <td class="inner">
-        <a style="margin: 20px" href="#" data-help="Click to read detailed description">
+        <a style="margin: 10px" href="#" data-help="Click to read detailed description">
             <img src="{{ url('') }}/assets/images/product/{{$product->image}}" height="50" width="50" loading="lazy">
         </a>
     </td>
