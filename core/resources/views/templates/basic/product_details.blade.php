@@ -61,7 +61,7 @@
 
                                     <div class="page-content">
                                         <div class="d-flex justify-content-center my-4">
-                                            <img class="my-2"
+                                            <img style="height:50px; width:50px" class="my-2"
                                                  src="{{ getImage(getFilePath('product') . '/' . $product->image, getFileSize('product')) }}"
                                                  width="100px" height="100px">
                                         </div>
