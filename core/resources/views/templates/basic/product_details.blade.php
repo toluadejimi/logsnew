@@ -320,7 +320,7 @@
 
 
                     </div>
-                    <div class="col-12" style="padding-bottom: 50px">
+                    <div class="col-12" style="padding-bottom: 200px">
                         @auth
                             <div class="card-title mt-3 text-center">
                                 <h6 style="background: #565656; padding: 10px; border-radius: 10px; color: white"

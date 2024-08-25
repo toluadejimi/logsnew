@@ -1,7 +1,7 @@
 @extends($activeTemplate . 'layouts.main')
 @section('content')
 
-    <div class="container">
+    <div class="container" style="padding-bottom: 400px">
 
         @if ($errors->any())
             <div class="alert alert-danger my-4">
