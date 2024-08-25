@@ -1,35 +1,6 @@
 <?php $__env->startSection('panel'); ?>
-    <?php if(@json_decode($general->system_info)->version > systemDetails()['version']): ?>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card text-white bg-warning mb-3">
-                <div class="card-header">
-                    <h3 class="card-title"> <?php echo app('translator')->get('New Version Available'); ?> <button class="btn btn--dark float-end"><?php echo app('translator')->get('Version'); ?> <?php echo e(json_decode($general->system_info)->version); ?></button> </h3>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title text-dark"><?php echo app('translator')->get('What is the Update?'); ?></h5>
-                    <p><pre  class="f-size--24"><?php echo e(json_decode($general->system_info)->details); ?></pre></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php endif; ?>
-    <?php if(@json_decode($general->system_info)->message): ?>
-    <div class="row">
-        <?php $__currentLoopData = json_decode($general->system_info)->message; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $msg): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="col-md-12">
-                <div class="alert border border--primary" role="alert">
-                    <div class="alert__icon bg--primary">
-                        <i class="far fa-bell"></i>
-                        <p class="alert__message"><?php echo $msg; ?></p>
-                        <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span></button>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </div>
-    <?php endif; ?>
+
+
 
     <div class="row gy-4">
         <div class="col-xxl-3 col-sm-6">

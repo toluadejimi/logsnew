@@ -1,6 +1,6 @@
 <tr>
 
-    <td class="">
+    <td class="inner">
         <a href="#" data-help="Click to read detailed description">
             <img src="<?php echo e(url('')); ?>/assets/images/product/<?php echo e($product->image); ?>" height="50" width="50" loading="lazy">
         </a>

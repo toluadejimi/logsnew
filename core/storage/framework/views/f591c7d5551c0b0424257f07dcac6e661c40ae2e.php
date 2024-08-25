@@ -9,9 +9,9 @@
     <meta name="author" content="DexignZone" />
     <meta name="keywords" content="" />
     <meta name="robots" content="" />
-    <meta name="description" content="ACELOGSTORE"/>
-    <meta property="og:title" content="ACELOGSTORE" />
-    <meta property="og:description" content="ACELOGSTORE" />
+    <meta name="description" content="LOGMARKETPLACE"/>
+    <meta property="og:title" content="LOGMARKETPLACE" />
+    <meta property="og:description" content="LOGMARKETPLACE" />
     <meta property="og:image" content="https://makaanlelo.com/tf_products_007/foodia/xhtml/social-image.png"/>
     <meta name="format-detection" content="telephone=no">
 
@@ -19,7 +19,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(url('')); ?>/assets/assets/images/fav.svg" />
 
     <!-- Title -->
-    <title>ACELOGSTORE</title>
+    <title>LOGMARKETPLACE</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?php echo e(url('')); ?>/assets/assets/css/style.css">
