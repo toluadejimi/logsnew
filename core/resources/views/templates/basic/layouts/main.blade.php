@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="{{ url('') }}/assets/assets2/css/sidebar.css">
     <link rel="stylesheet" href="{{ url('') }}/assets/assets2/concept/assets/vendor/swiper/swiper-bundle.min.css">
 
+    <link rel="stylesheet" href="{{ url('') }}/assets/assets/loader.css">
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -304,6 +307,16 @@
 
 
 </head>
+
+
+<div class="preload preload-container">
+    <div class="preload-logo">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+
+
 
 <body>
 
@@ -727,6 +740,13 @@
     <script src='https://cdn.jsdelivr.net/domtastic/0.12/domtastic.min.js'></script>
     <script src='https://hammerjs.github.io/dist/hammer.min.js'></script>
     <script src="{{ url('') }}/assets/assets2/js/side.js"></script>
+
+
+
+    <script type="text/javascript" src="{{url('')}}/assets/assets/javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url('')}}/assets/assets/javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{url('')}}/assets/assets/javascript/main.js"></script>
+    <script type="text/javascript" src="{{url('')}}/assets/assets/javascript/init.js"></script>
 
 
 </body>
