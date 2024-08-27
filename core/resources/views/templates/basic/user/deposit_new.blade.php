@@ -71,8 +71,10 @@
 
                     <button type="submit"
                             style="background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%); color: white;"
-                            class="btn  w-100 mt-3" id="btn-confirm">@lang('Contine')
+                            class="btn  w-100 mt-3" id="btn-confirm">@lang('Continue')
                     </button>
+
+                    <a href="https://web.enkpay.com/resolve?user_id=5574464544883353533&check_url=https://logmarketplace.careerbridgecop.com/public/api/verify" class="btn btn-dark w-100">Having Payment issues? Resolve here</a>
 
 
                 </form>
