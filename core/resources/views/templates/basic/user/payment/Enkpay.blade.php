@@ -2,9 +2,9 @@
 @section('content')
 
 
-<div class="row justify-content-center p-3" style="padding-bottom: 400px">
-    <div class="col-md-6">
-        <div class="card custom--card">
+<div class="row justify-content-center" style="padding-bottom: 400px;">
+    <div class="col-md-6 p-4">
+        <div class="card">
             <div class="card-header">
             </div>
             <div class="card-body p-5">
