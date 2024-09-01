@@ -342,21 +342,22 @@
 
             <style>
                 #myBtn {
-                    display: none;
-                    position: fixed;
-                    bottom: 50px;
-                    z-index: 70;
-                    font-size: 18px;
-                    border: none;
-                    outline: none;
-                    background-color: red;
-                    color: white;
-                    cursor: pointer;
-                    padding: 0;
-                    border-radius: 4px;
-                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-                    width: 30px;
-                    margin-top: 60px
+                        display: none;
+                        position: fixed;
+                        bottom: -10px;
+                        z-index: 70;
+                        font-size: 20px;
+                        border: none;
+                        outline: none;
+                        background-color: red;
+                        color: white;
+                        cursor: pointer;
+                        padding: 0;
+                        border-radius: 4px;
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                        width: 50px;
+                        margin-top: 60px;
+                        height: 40px;
                 }
 
                 #myBtn:hover {
@@ -403,17 +404,16 @@
     <style>
         .float {
             position: fixed;
-            width: 200px;
-            height: 70px;
-            bottom: 15px;
-            left: 45px;
-            background-color: #010c13;
-            border-radius: 10px;
+            width: 60px;
+            height: 60px;
+            bottom: 80px;
+            right: 40px;
+            background-color: #000000;
+            color: #FFF;
+            border-radius: 50px;
             text-align: center;
-            font-size: 10px;
-            z-index: 100;
-            border: 20px;
-            margin: 80px;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
         }
         .my-float {
             margin-top: 16px;
