@@ -334,10 +334,15 @@
 
                 </div>
 
-
                 <div style="border-top: 50px">
 
+                    <div class="card border-0">
+
+                    </div>
+
                 </div>
+
+
 
                 <button style="margin-bottom: 70px" class="mb-5" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
 
