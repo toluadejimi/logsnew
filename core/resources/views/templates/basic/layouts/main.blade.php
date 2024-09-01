@@ -323,10 +323,6 @@
 
 
 <body>
-
-
-
-
 <div class="sidebar">
     <div class="brand"></div>
     <div class="menu">
@@ -504,7 +500,6 @@
         </ul>
     </div>
 </div>
-
 <div class="content no-animation" data-pos="0">
     <div class="">
         <div class="" id="openMenu">
@@ -550,42 +545,8 @@
 
 
     </div>
-
-
-
-
     @yield('content')
 
-
-
-
-    {{--<div class="container">--}}
-    {{--    <footer class="py-3">--}}
-    {{--        <ul class="nav justify-content-center border-bottom pb-3">--}}
-    {{--            <li class="nav-item"><a--}}
-    {{--                    href="https://t.me/logsmarkeplace"--}}
-    {{--                    class="nav-link px-2 text-muted">Telegram</a>--}}
-    {{--            </li>--}}
-    {{--            <li class="nav-item"><a href="faq"--}}
-    {{--                                    class="nav-link px-2 text-muted">FAQs</a>--}}
-    {{--            </li>--}}
-    {{--            <li class="nav-item"><a href="terms"--}}
-    {{--                                    class="nav-link px-2 text-muted">Terms--}}
-    {{--                    & Condition</a></li>--}}
-    {{--            <li class="nav-item"><a href="policy"--}}
-    {{--                                    class="nav-link px-2 text-muted">Policy</a>--}}
-    {{--            </li>--}}
-    {{--            <li class="nav-item"><a href="rules"--}}
-    {{--                                    class="nav-link px-2 text-muted">Rules</a>--}}
-    {{--            </li>--}}
-    {{--        </ul>--}}
-
-    {{--        </ul>--}}
-    {{--        <p class="text-center text-muted">&copy;--}}
-    {{--            2023 Log MarketPlace</p>--}}
-    {{--    </footer>--}}
-    {{--</div>--}}
-    {{--    --}}
 
 
 
@@ -751,6 +712,33 @@
     <script type="text/javascript" src="{{url('')}}/assets/assets/javascript/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{url('')}}/assets/assets/javascript/main.js"></script>
     <script type="text/javascript" src="{{url('')}}/assets/assets/javascript/init.js"></script>
+
+
+    <style>
+        .float {
+            position: fixed;
+            width: 200px;
+            height: 40px;
+            bottom: 5px;
+            left: 45px;
+            background-color: #010c13;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            z-index: 100;
+            margin: 80px;
+        }
+        .my-float {
+            margin-top: 16px;
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+    </style>
+
+
+
 
 
 </body>
