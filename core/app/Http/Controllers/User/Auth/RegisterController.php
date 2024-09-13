@@ -10,6 +10,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -150,7 +151,31 @@ class RegisterController extends Controller
         $user->save();
 
 
+
+        $data = array(
+                'fromsender' => 'info@logmarketplace.tomitechltd.com', 'Logmarketplace',
+                'subject' => "Welcome to Logmarketplace!",
+                'toreceiver' => $user->email,
+                'user' => $user->username,
+        );
+
+
+
+
+        Mail::send('welcome_mail', ["data1" => $data], function ($message) use ($data) {
+                $message->from($data['fromsender']);
+                $message->to($data['toreceiver']);
+                $message->subject($data['subject']);
+        });
+
+
+
         return $user;
+
+
+
+
+
     }
 
     public

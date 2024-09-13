@@ -437,7 +437,7 @@
     <![endif]-->
 </head>
 <body>
-<span class="preheader"Reset Password</span>
+<span class="preheader">Welcome to Logmarketplace!</span>
 <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
     <tr>
         <td align="center">
@@ -456,7 +456,11 @@
                                 <td class="content-cell">
                                     <div class="f-fallback">
                                         <h1>Hi {{$data1['user']}},</h1>
-                                        <p>You recently requested to reset your password for your LOGMARKETPLACE account. Use the button below to reset it. <strong>This password reset is only valid for the next 24 hours.</strong></p>
+                                        <p>Thanks for joining Logmarketplace! We're excited to help you grow your social media presence with our range of high-quality accounts.<br><br>
+                                            Explore our marketplace, discover new opportunities, and let us know if you need any assistance.<br><br>
+                                            Best,<br>
+                                            The Logmarketplace Team
+
                                         <!-- Action -->
                                         <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                                             <tr>
@@ -466,7 +470,7 @@
                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
                                                         <tr>
                                                             <td align="center">
-                                                                <a href="{{$data1['url']}}" class="f-fallback button button--red" target="_blank">Reset your password</a>
+                                                                <a href="https://logmarketplace/com/user/login" class="f-fallback button button--red" target="_blank">Login your account</a>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -474,14 +478,6 @@
                                             </tr>
                                         </table>
                                         <!-- Sub copy -->
-                                        <table class="body-sub" role="presentation">
-                                            <tr>
-                                                <td>
-                                                    <p class="f-fallback sub">If you’re having trouble with the button above, copy and paste the URL below into your web browser.</p>
-                                                    <p class="f-fallback sub">{{$data1['url']}}</p>
-                                                </td>
-                                            </tr>
-                                        </table>
                                     </div>
                                 </td>
                             </tr>

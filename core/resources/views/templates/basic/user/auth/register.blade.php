@@ -25,6 +25,42 @@
     <title>Log Marketplace </title>
 
 
+    <style>
+        .btn {
+            position: relative;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .loader {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #3498db;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .btn.disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
@@ -58,7 +94,7 @@
                 <div class="card-body p-3">
 
                      
-                    <form action="{{ route('user.register') }}" method="POST">
+                    <form action="{{ route('user.register') }}" id="submitform" method="POST">
                         @csrf
 
 
@@ -146,7 +182,8 @@
 
                             <button type="submit"
                                     style="background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%);"
-                                    class="btn text-white">Sign Up
+                                    class="btn text-white" id="signup"
+                                    >Sign Up
                             </button>
 
                         </div>
@@ -157,6 +194,16 @@
 
 
                     </form>
+
+
+                    <script>
+                        document.getElementById('submitform').addEventListener('submit', function() {
+                            var submitButton = document.getElementById('signup');
+                            submitButton.disabled = true;
+                            submitButton.innerText = 'Please wait...'; // Optional: Change button text
+                        });
+                    </script>
+
 
                 </div>
             </div>
@@ -183,6 +230,9 @@
     </div>
 
 </div>
+
+
+
 
 </body>
 
