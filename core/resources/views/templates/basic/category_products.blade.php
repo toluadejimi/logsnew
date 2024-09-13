@@ -1,11 +1,9 @@
 @extends($activeTemplate . 'layouts.main')
 @section('content')
-    <div class="container">
+    <div class="container" style="margin-bottom: 700px">
 
 
-
-
-        <div class="card">
+        <div class="card" >
             <div class="card-body">
 
 
@@ -27,12 +25,13 @@
                         @forelse ($products as $product)
                             <tr>
 
-                                <td class="">
-                                    <a href="#" data-help="Click to read detailed description">
-                                        <img src="{{ url('') }}/assets/images/product/{{ $product->image }}"
-                                            height="50" width="50" loading="lazy">
+                                <td class="inner">
+                                    <a style="margin: 12px" href="#" data-help="Click to read detailed description">
+                                        <img src="{{ url('') }}/assets/images/product/{{$product->image}}" height="70" width="70" loading="lazy">
                                     </a>
                                 </td>
+
+
                                 <td class="small col-sm-12">
                                     <a href="/product/details/{{ $product->id }}">
                                         {{ \Illuminate\Support\Str::limit($product->name, 50, '...Show more') }}</a>

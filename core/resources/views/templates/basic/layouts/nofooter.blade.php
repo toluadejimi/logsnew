@@ -10,16 +10,16 @@
     <meta name="author" content="DexignZone"/>
     <meta name="keywords" content=""/>
     <meta name="robots" content=""/>
-    <meta name="description" content="Acelogstore"/>
-    <meta property="og:title" content="Acelogstore"/>
-    <meta property="og:description" content="Acelogstore"/>
+    <meta name="description" content="LOGMARKETPLACE"/>
+    <meta property="og:title" content="LOGMARKETPLACE"/>
+    <meta property="og:description" content="LOGMARKETPLACE"/>
     <meta name="format-detection" content="telephone=no">
 
     <!-- Favicons Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('') }}/assets/assets/images/fav.svg"/>
 
     <!-- Title -->
-    <title>ACELOGSTORE</title>
+    <title>LOGMARKETPLACE</title>
 
     <!-- PWA Version -->
     <link rel="manifest" href="manifest.json">
@@ -390,7 +390,7 @@
             <div class="container">
                 <div class="offcanvas-body small">
                     <img class="logo" src="{{url('')}}/assets/assets/images/icon.png" alt="">
-                    <h5 class="title">Welcome to AceLogStore</h5>
+                    <h5 class="title">Welcome to LOGMARKETPLACE</h5>
                     <p class="pwa-text">Install Acelog store just like any other app</p>
                     <a href="javascrpit:void(0);" class="btn btn-sm btn-primary pwa-btn">Add to Home Screen</a>
                     <a href="javascrpit:void(0);" class="btn btn-sm pwa-close light btn-secondary ms-2">Maybe later</a>
