@@ -40,7 +40,7 @@ class ResetPasswordController extends Controller
             ]);
 
             $data = array(
-                'fromsender' => 'noreply@logmarketplace.com', 'Logmarketplace',
+                'fromsender' => 'info@logmarketplace.tomitechltd.com', 'Logmarketplace',
                 'subject' => "Reset Password",
                 'toreceiver' => $email,
                 'url' => $url,
