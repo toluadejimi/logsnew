@@ -68,7 +68,7 @@
                     <div style="margin-right: 126px" class="col d-flex justify-content-start">
                         @if ($categories->count())
                             <div class="category-nav">
-                                <button class="category-nav__button" style="background: #10113D;"><span
+                                <button class="category-navbutton" style="background: #10113D;"><span
                                         class="search-text text-white">@lang('
                                 Category')</span>
                                     <span class="arrow"><i class="las la-angle-down"></i></span>

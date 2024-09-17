@@ -106,9 +106,13 @@ class LoginController extends Controller
 
     public function logout()
     {
-        $this->guard()->logout();
-
+//        $this->guard()->logout();
+//
+//        request()->session()->invalidate();
+//
+        Auth::logout();
         request()->session()->invalidate();
+        request()->session()->regenerateToken();
 
         $notify[] = ['success', 'You have been logged out.'];
         return to_route('user.login')->withNotify($notify);

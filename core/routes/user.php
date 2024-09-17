@@ -15,7 +15,7 @@ Route::namespace('User\Auth')->name('user.')->group(function () {
     Route::controller('LoginController')->group(function(){
         Route::get('/login', 'showLoginForm')->name('login');
         Route::post('/login', 'login');
-        Route::get('logout', 'logout')->middleware('auth')->name('logout');
+        Route::get('logout', 'logout')->name('logout');
         Route::post('/buy-item', 'buy_item');
 
 
@@ -57,7 +57,7 @@ Route::middleware('auth')->name('user.')->group(function () {
         Route::get('user-data', 'User\UserController@userData')->name('data');
         Route::post('user-data-submit', 'User\UserController@userDataSubmit')->name('data.submit');
 
-        Route::middleware('registration.complete')->namespace('User')->group(function () {
+        Route::middleware(['registration.complete', 'inactivity.timeout'])->namespace('User')->group(function () {
 
             Route::controller('UserController')->group(function(){
 

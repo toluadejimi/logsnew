@@ -38,6 +38,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\LanguageMiddleware::class,
+            \App\Http\Middleware\InactivityTimeout::class,
         ],
 
         'api' => [
@@ -73,5 +74,7 @@ class Kernel extends HttpKernel
         'demo' => \App\Http\Middleware\Demo::class,
         'registration.complete' => \App\Http\Middleware\RegistrationStep::class,
         'maintenance' => \App\Http\Middleware\MaintenanceMode::class,
+        'inactivity.timeout' => \App\Http\Middleware\InactivityTimeout::class,
+
     ];
 }

@@ -2,96 +2,31 @@
 
 namespace App\Exceptions;
 
-use Mail;
-use Throwable;
-use App\Mail\ExceptionOccured;
-use Illuminate\Support\Facades\Log;
+
+use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
-
-class Handler extends ExceptionHandler
-{
-    /**
-     * A list of the exception types that are not reported.
-     *
-     * @var array>
-
-     */
-    protected $dontReport = [
-
-    ];
+class Handler extends ExceptionHandler{
 
     /**
-     * A list of the inputs that are never flashed for validation exceptions.
+     * Render an exception into an HTTP response.
      *
-     * @var array
-
+     * @param \Illuminate\Http\Request $request
+     * @param \Exception $exception
+     * @return \Illuminate\Http\Response
      */
-    protected $dontFlash = [
-        'current_password',
-        'password',
-        'password_confirmation',
-    ];
-
-    /**
-     * Register the exception handling callbacks for the application.
-     *
-     * @return void
-     */
-    public function register()
+    public function render($request, Exception|\Throwable $exception)
     {
-        $this->reportable(function (Throwable $e) {
-            $this->sendEmail($e);
-        });
-    }
-
-    /**
-     * Write code on Method
-     *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application()
-     */
-    public function sendEmail(Throwable $exception)
-    {
-        try {
-
-            $message = $content['message'] = $exception->getMessage();
-            $file = $content['file'] = $exception->getFile();
-            $line = $content['line'] = $exception->getLine();
-            $trace = $content['trace'] = $exception->getTrace();
-
-            $url = $content['url'] = request()->url();
-            $body = $content['body'] = request()->all();
-            $ip = $content['ip'] = request()->ip();
-
-            $message2 = "Error Message on LOG MARKET PLACE";
-            $message = $message2. "\n\nMessage========>" . $message . "\n\nLine========>" . $line . "\n\nFile========>" . $file . "\n\nURL========>" . $url . "\n\nIP========> " . $ip;
-
-            //$message = "Error Message on ENKPAY APP";
-            send_notification($message);
-
-
-            return view('errors.500');
-
-
-
-
-        } catch (Throwable $exception) {
-            Log::error($exception);
+        if ($exception instanceof MethodNotAllowedHttpException) {
+                Auth::logout();
+                $request->session()->invalidate();
+                $request->session()->regenerateToken();
+                return redirect()->guest('user/login')->with('message', 'Your session has expired due to an invalid request method.');
         }
+        return parent::render($request, $exception);
     }
 
-
-//    public function render($request, Throwable $exception)
-//    {
-//        if ($this->isHttpException($exception)) {
-//            switch ($exception->getStatusCode()) {
-//                case 404:
-//                    return response()->view('errors.404', [], 404);
-//                case 500:
-//                    return response()->view('errors.500', [], 500);
-//            }
-//        }
-//
-//        return parent::render($request, $exception);
-//    }
 }

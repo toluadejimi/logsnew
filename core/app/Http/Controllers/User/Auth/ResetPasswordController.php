@@ -48,8 +48,6 @@ class ResetPasswordController extends Controller
             );
 
 
-
-
             Mail::send('reset-password-mail', ["data1" => $data], function ($message) use ($data) {
                 $message->from($data['fromsender']);
                 $message->to($data['toreceiver']);
