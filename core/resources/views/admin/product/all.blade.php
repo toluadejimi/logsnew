@@ -36,12 +36,18 @@
                                     </td>
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-sm btn-outline--primary dropdown-toggle id="actionButton" data-bs-toggle="dropdown">
+                                            <button class="btn btn-sm btn-outline--primary dropdown-toggle" id="actionButton" data-bs-toggle="dropdown">
                                                 <i class="las la-ellipsis-v"></i>@lang('Action')
                                             </button>
-                                            <a href="{{ route('admin.product.delete', $product->id) }}" class="btn btn-danger">
+
+                                            <a href="{{ route('admin.product.delete', $product->id) }}" onclick="return confirmDelete();" class="btn btn-danger">
                                                 <i class="fa fa-trash"></i>
                                             </a>
+                                            <script>
+                                                function confirmDelete() {
+                                                    return confirm('Are you sure you want to delete this item?');
+                                                }
+                                            </script>
 
 
                                             <div class="dropdown-menu p-0">
