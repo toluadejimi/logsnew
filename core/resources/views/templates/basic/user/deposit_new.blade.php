@@ -52,21 +52,38 @@
                             <div class="d-flex align-items-center mb-3">
                                 <div class="col-12">
                                     <select class="text-dark form-control2 p-2" name="gateway" required>
-
                                         <option value="">Select payment method</option>
+                                        @if($card > 0 )
+                                            @php
+                                                $cardNumber = $vcard->card_no;
+                                                $maskedCardNumber = substr($cardNumber, 0, 5) . str_repeat('*', 7) . substr($cardNumber, -4);
+                                            @endphp
+                                            <option value="card">Pay with linked card {{$maskedCardNumber}}</option>
+                                        @else
+                                        @endif
                                         <option value="250">Instant Payment</option>
                                         <option value="1000">Manual Payment</option>
-
-
                                     </select>
 
                                 </div>
                             </div>
 
 
+
+
                         </div>
 
+
+
+
+
+
+
+
                     </div>
+
+
+
 
 
                     <button type="submit"

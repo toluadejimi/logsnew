@@ -117,6 +117,95 @@
     </div>
 
 
+    <div class="card my-3">
+        <div class="card-body">
+
+            <div class="d-flex align-items-center p-3 my-3 text-black-50 bg-purple rounded box-shadow">
+                <a href="logout">
+                    <svg class="mr-3"  width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="20" cy="20.92" r="20" fill="#555555"/>
+                        <path opacity="0.4" d="M22.5133 17.0779V16.3004C22.5133 14.6046 21.1383 13.2296 19.4425 13.2296H15.38C13.685 13.2296 12.31 14.6046 12.31 16.3004V25.5754C12.31 27.2712 13.685 28.6463 15.38 28.6463H19.4508C21.1417 28.6463 22.5133 27.2754 22.5133 25.5846V24.7988" stroke="#10113D" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M28.1746 20.9378H18.1404" stroke="#10113D" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.7343 18.5086L28.1743 20.9377L25.7343 23.3677" stroke="#10113D" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+
+                <div class="lh-100">
+                    <h6 class="mb-0 text-black lh-100">My card</h6>
+                    <?php if($card == 0 ): ?>
+                        <a href="#" data-toggle="modal" data-target="#exampleModalCenter"><small>Link your card</small></a>
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content" style="background: black">
+                                    <div class="modal-header">
+                                        <h5  class="modal-title text-white" id="exampleModalLongTitle">Add a new card</h5>
+
+                                    </div>
+                                    <div class="modal-body p-3">
+
+                                        <form action="add-new-card" method="post">
+                                            <?php echo csrf_field(); ?>
+                                            <div class="row">
+                                                <div class="col-12">
+
+                                                    <label class="text-white">Card No</label>
+                                                    <input placeholder="4434 47738 48483 88383" class="form-control" type="number" name="card_no" required>
+
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <label class="text-white my-3">Expiry Date</label>
+                                                    <input placeholder="MM/YY" class="form-control" type="text" name="year" required>
+
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <label class="text-white my-3">CVV</label>
+                                                    <input placeholder="123" class="form-control" type="text" name="cvv" required>
+
+                                                </div>
+
+                                            </div>
+
+                                            <hr class="mt-4 mb-4">
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Link Card</button>
+                                            </div>
+
+
+                                        </form>
+
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php else: ?>
+
+                        <?php
+                            $cardNumber = $v_card->card_no;
+                            $maskedCardNumber = substr($cardNumber, 0, 5) . str_repeat('*', 7) . substr($cardNumber, -4);
+                        ?>
+
+                        <h6 class="mt-3"><?php echo e($maskedCardNumber); ?></h6>
+                        <a href="#"><small>Click to open card</small></a>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+
+        </div>
+    </div>
+
 
 <?php $__env->stopSection(); ?>
 

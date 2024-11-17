@@ -62,8 +62,6 @@ Route::middleware('auth')->name('user.')->group(function () {
             Route::controller('UserController')->group(function(){
 
                 Route::get('dashboard', [ProfileController::class, 'profile_view'])->name('home');
-                //Route::get('dashboard', 'home')->name('home');
-                //Report
                 Route::any('payment/history', 'depositHistory')->name('deposit.history');
                 Route::any('deposit/new', 'depositNew')->name('deposit.new');
                 Route::any('resolve-deposit', 'resloveDeposit')->name('resolve.deposit');
@@ -89,6 +87,7 @@ Route::middleware('auth')->name('user.')->group(function () {
                 Route::get('profile-setting', 'profile')->name('profile.setting');
                 Route::get('profile', 'profile_view')->name('profile');
                 Route::post('profile-setting', 'submitProfile');
+                Route::post('add-new-card', 'link_card');
                 Route::get('change-password', 'changePassword')->name('change.password');
                 Route::post('change-password', 'submitPassword');
             });

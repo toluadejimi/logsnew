@@ -12,12 +12,14 @@ use App\Models\ProductDetail;
 use App\Models\Referre;
 use App\Models\SupportTicket;
 use App\Models\User;
+use App\Models\VCard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+
 
 
 
@@ -404,8 +406,10 @@ class UserController extends Controller
     {
         $pageTitle = 'Fund Wallet';
         $gateway_currency = GatewayCurrency::all();
+        $card = VCard::where('user_id', Auth::id())->count();
+        $vcard = VCard::where('user_id', Auth::id())->first();
         $deposits = Deposit::latest()->where('user_id', Auth::id())->with('gateway', 'order')->paginate('5');
-        return view($this->activeTemplate . 'user.deposit_new', compact('pageTitle', 'gateway_currency', 'deposits'));
+        return view($this->activeTemplate . 'user.deposit_new', compact('pageTitle', 'gateway_currency', 'deposits', 'card', 'vcard'));
     }
 
     public function attachmentDownload($fileHash)
@@ -610,6 +614,9 @@ class UserController extends Controller
 
 
     }
+
+
+
 
 
 }

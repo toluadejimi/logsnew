@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\VCard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -17,19 +18,21 @@ class ProfileController extends Controller
     {
         $pageTitle = "Profile";
         $user = auth()->user();
-
-
+        $card = VCard::where('user_id', Auth::id())->count() ?? null;
+        $v_card = VCard::where('user_id', Auth::id())->first() ?? null;
         $orders = Order::where('user_id', Auth::id())->where('status', 1)->count();
         $spent = Order::where('user_id', Auth::id())->where('status', 1)->sum('total_amount');
 
         $deposit = auth()->user();
-        return view($this->activeTemplate. 'user.profile', compact('pageTitle','user', 'spent', 'orders'));
+        return view($this->activeTemplate. 'user.profile', compact('pageTitle','user', 'spent', 'orders', 'card', 'v_card'));
 
     }
     public function profile()
     {
+
         $pageTitle = "Profile Setting";
         $user = auth()->user();
+
         return view($this->activeTemplate. 'user.profile_setting', compact('pageTitle','user'));
     }
 
@@ -92,4 +95,55 @@ class ProfileController extends Controller
             return back()->with('error', $notify);
         }
     }
+
+    public function link_card(request $request)
+    {
+
+        $databody = array(
+            "card_no" => $request->card_no,
+            "cvv" => $request->cvv,
+            "site" => "LogmarketPlace",
+
+        );
+
+        $post_data = json_encode($databody);
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://sprintpay.online/api/card',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => $post_data,
+            CURLOPT_HTTPHEADER => array(
+                'Content-Type: application/json',
+            ),
+        ));
+        $var = curl_exec($curl);
+        curl_close($curl);
+        $var = json_decode($var);
+        $status = $var->status ?? null;
+        $message = $var->message ?? null;
+
+
+        if($status == "success"){
+            $vc = new VCard();
+            $vc->user_id = Auth::user()->id;
+            $vc->card_no = $request->card_no;
+            $vc->cvv = $request->cvv;
+            $vc->save();
+            return redirect('user/profile')->with('message','Card has been successfully linked');
+        }else{
+            return redirect('user/profile')->with('error',"$message");
+
+        }
+
+
+
+    }
+
 }

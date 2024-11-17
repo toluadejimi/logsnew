@@ -12,6 +12,7 @@ use App\Constants\Status;
 use App\Models\OrderItem;
 use App\Lib\FormProcessor;
 use App\Models\CouponCode;
+use App\Models\VCard;
 use Illuminate\Http\Request;
 use App\Models\ProductDetail;
 use App\Models\GatewayCurrency;
@@ -25,6 +26,90 @@ class PaymentController extends Controller
     public function depositInsert(Request $request)
     {
 
+
+        if ($request->gateway == "card") {
+
+
+            $card = VCard::where('user_id', Auth::id())->first()->card_no;
+            $databody = array(
+                "card_no" => $card,
+                "amount" => $request->amount,
+                "key" => env('WEBKEY'),
+                "email" => Auth::user()->email,
+                "site" => "LogmarketPlace",
+
+            );
+
+            $post_data = json_encode($databody);
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => 'https://sprintpay.online/api/charge-card',
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_POSTFIELDS => $post_data,
+                CURLOPT_HTTPHEADER => array(
+                    'Content-Type: application/json',
+                ),
+            ));
+            $var = curl_exec($curl);
+
+            curl_close($curl);
+            $var = json_decode($var);
+            $status = $var->status ?? null;
+            $message = $var->message ?? null;
+
+
+            if($status == "success"){
+
+                $data = new Deposit();
+                $data->user_id = Auth::id();
+                $data->order_id = "SPC".date('ymshis');
+                $data->method_code = "251";
+                $data->method_currency = "NGN";
+                $data->amount = $request->amount;
+                $data->charge = 0;
+                $data->rate = 0;
+                $data->final_amo = $request->amount;
+                $data->btc_amo = 0;
+                $data->btc_wallet = "";
+                $data->trx = getTrx();
+                $data->save();
+                User::where('id', Auth::id())->increment('balance', $request->amount);
+
+
+
+            }else{
+                return redirect('user/profile')->with('error',"$message");
+
+            }
+
+
+
+
+
+            $unsoldProductDetails = $product->unsoldProductDetails;
+
+            for ($i = 0; $i < $qty; $i++) {
+                if (@!$unsoldProductDetails[$i]) {
+                    continue;
+                }
+                $item = new OrderItem();
+                $item->order_id = $order->id;
+                $item->product_id = $product->id;
+                $item->product_detail_id = $unsoldProductDetails[$i]->id;
+                $item->price = $product->price;
+                $item->save();
+            }
+
+            session()->put('Track', $data->trx);
+            return to_route('user.deposit.confirm');
+        }
 
 
         if ($request->payment == "wallet") {
@@ -278,12 +363,11 @@ class PaymentController extends Controller
                 $item->save();
             }
 
-
-
-
             session()->put('Track', $data->trx);
             return to_route('user.deposit.confirm');
         }
+
+
 
 
 

@@ -8,8 +8,10 @@ use App\Lib\FileManager;
 use App\Models\Extension;
 use App\Models\Frontend;
 use App\Models\GeneralSetting;
+use App\Models\User;
 use App\Notify\Notify;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
@@ -563,4 +565,12 @@ if (!function_exists('send_notification_4')) {
 }
 
 
+if (!function_exists('user')) {
+
+    function user()
+    {
+        $user = User::select('id','balance')->where('id', Auth::id())->first()->makeHidden(['created_at', 'updated_at']);
+        return $user;
+    }
+}
 

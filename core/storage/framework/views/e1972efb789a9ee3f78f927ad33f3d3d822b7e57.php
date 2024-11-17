@@ -53,27 +53,48 @@
                             <div class="d-flex align-items-center mb-3">
                                 <div class="col-12">
                                     <select class="text-dark form-control2 p-2" name="gateway" required>
-
                                         <option value="">Select payment method</option>
+                                        <?php if($card > 0 ): ?>
+                                            <?php
+                                                $cardNumber = $vcard->card_no;
+                                                $maskedCardNumber = substr($cardNumber, 0, 5) . str_repeat('*', 7) . substr($cardNumber, -4);
+                                            ?>
+                                            <option value="card">Pay with linked card <?php echo e($maskedCardNumber); ?></option>
+                                        <?php else: ?>
+                                        <?php endif; ?>
                                         <option value="250">Instant Payment</option>
                                         <option value="1000">Manual Payment</option>
-
-
                                     </select>
 
                                 </div>
                             </div>
 
 
+
+
                         </div>
+
+
+
+
+
+
+
 
                     </div>
 
 
+
+
+
                     <button type="submit"
                             style="background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%); color: white;"
-                            class="btn  w-100 mt-3" id="btn-confirm"><?php echo app('translator')->get('Contine'); ?>
+                            class="btn  w-100 mt-3" id="btn-confirm"><?php echo app('translator')->get('Pay Now'); ?>
                     </button>
+
+                    <hr>
+
+                    <a  href="https://web.enkpay.com/resolve?user_id=5574464544883353533&check_url=https://logmarketplace.careerbridgecop.com/public/api/verify" class="btn btn-dark w-100 my-2">Having Payment issues? Resolve here</a>
 
 
                 </form>
@@ -119,7 +140,7 @@
                                             <?php if($deposit->status == 1): ?>
                                                 <a href="#" class="btn btn-success btn-sm">Completed</a>
                                             <?php elseif($deposit->status == 2): ?>
-nm
+
                                             <?php elseif($deposit->status == 3): ?>
                                                 <a href="#" class="btn btn-danger btn-sm">Rejected</a>
                                             <?php else: ?>
