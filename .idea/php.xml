@@ -165,6 +165,14 @@
       <path value="$PROJECT_DIR$/core/vendor/rap2hpoutre/laravel-log-viewer" />
       <path value="$PROJECT_DIR$/core/vendor/opcodesio/mail-parser" />
       <path value="$PROJECT_DIR$/core/vendor/opcodesio/log-viewer" />
+      <path value="$PROJECT_DIR$/core/vendor/league/event" />
+      <path value="$PROJECT_DIR$/core/vendor/league/uri" />
+      <path value="$PROJECT_DIR$/core/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/core/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/core/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/core/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/core/vendor/league/uri-interfaces" />
+      <path value="$PROJECT_DIR$/core/vendor/league/oauth2-server" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
