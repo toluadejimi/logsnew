@@ -76,13 +76,7 @@ Route::controller('SiteController')->group(function () {
     Route::get('/{slug}', 'pages')->name('pages');
     Route::get('/', 'front')->name('home');
 
-    //Route::get('/all', 'products')->name('home');
-
-
-    // Route::get('/', 'products')->name('home');
-
-
-
+    
 
 
 
