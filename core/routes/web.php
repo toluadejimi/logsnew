@@ -76,7 +76,6 @@ Route::controller('SiteController')->group(function () {
     Route::get('/{slug}', 'pages')->name('pages');
     Route::get('/', 'front')->name('home');
 
-    
 
 
 
