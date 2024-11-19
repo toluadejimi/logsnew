@@ -1,5 +1,12 @@
 <?php $__env->startSection('content'); ?>
 
+
+
+    <!-- Bootstrap JavaScript CDN -->
+    <script src=
+                "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
     <div class="container">
 
 
@@ -27,7 +34,6 @@
             <?php endif; ?>
         </div>
 
-        <!-- Recent -->
         <div class="mb-5">
             <div class="swiper-btn-center-lr">
                 <div class="swiper-container demo-swiper">
@@ -57,21 +63,13 @@
                 </div>
             </div>
         </div>
-        <!-- Recent -->
-
-
-        <!-- Page Content -->
         <div class="page-content">
-
             <div class="dashboard-area">
-
-
-                <!-- Recomended Start -->
                 <div class="row">
                     <div style="margin-right: 126px" class="col d-flex justify-content-start">
                         <?php if($categories->count()): ?>
                             <div class="category-nav">
-                                <button class="category-nav__button" style="background: #10113D;"><span
+                                <button class="category-navbutton" style="background: #10113D;"><span
                                         class="search-text text-white"><?php echo app('translator')->get('
                                 Category'); ?></span>
                                     <span class="arrow"><i class="las la-angle-down"></i></span>
@@ -146,7 +144,7 @@
 
                                 <div class="col-12  mb-4">
                                     <a style="color:white; border-radius: 10px; background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%);"
-                                       href="<?php echo e(route('category.products', ['search' => request()->search, 'slug' => slug($category->name), 'id' => $category->id])); ?>"
+                                       href="<?php echo e(route('category.items', ['search' => request()->search, 'slug' => slug($category->name), 'id' => $category->id])); ?>"
                                        class="btn  btn-block">
                                         <?php echo app('translator')->get('View All'); ?>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -176,81 +174,7 @@
 
                     </div>
 
-
-
-
-
-
-
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
-
                 <div class="col-12">
                     <?php if(auth()->guard()->check()): ?>
 
@@ -262,16 +186,13 @@
 
                         <div style="height:400px; width:100%; overflow-y: scroll;" class="card">
                             <div class="card-body">
-
-
-
                                 <?php if($bought_qty == 0): ?>
                                 <?php else: ?>
                                     <?php $__currentLoopData = $bought; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
+
+
                                         <div class="row justify-content-around">
-
-
                                             <div style="font-size: 10px" class="col">
                                                 <svg width="10" height="10" viewBox="0 0 14 14" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
@@ -313,51 +234,43 @@
                                     16, '...')); ?></span>|<span style="color: #FF6304">₦<?php echo e(number_format($data->amount)); ?></span>|<a href="#" style=" font-size: 6px; background: linear-gradient(90deg, #FF6304 0%, #FF0D9B 100%); border-radius: 5px; padding: 3px; color: white"><?php echo e(diffForHumans($data->created_at)); ?></a>
                                                 <hr>
                                             </div>
-
-
                                         </div>
 
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 <?php endif; ?>
 
-
-                                
-                                
-                                
-                                
-
-                                
-
-
                             </div>
                         </div>
+
                     <?php else: ?>
 
                     <?php endif; ?>
 
                 </div>
-
-                <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
-
-
+                <div style="border-top: 80px">
+                    <div class="card border-0">
+                        <button style="margin-bottom: 70px" class="mb-5" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+                    </div>
+                </div>
             </div>
-
             <style>
                 #myBtn {
-                    display: none; /* Hide the button by default */
-                    position: fixed; /* Fixed positioning */
-                    bottom: 20px; /* Distance from the bottom of the viewport */
-                    right: 30px; /* Distance from the right of the viewport */
-                    z-index: 99; /* Ensure the button stays on top of other content */
-                    font-size: 18px;
-                    border: none;
-                    outline: none;
-                    background-color: red;
-                    color: white;
-                    cursor: pointer;
-                    padding: 15px;
-                    border-radius: 4px;
-                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual effect */
+                        display: none;
+                        position: fixed;
+                        bottom: -10px;
+                        z-index: 70;
+                        font-size: 20px;
+                        border: none;
+                        outline: none;
+                        background-color: red;
+                        color: white;
+                        cursor: pointer;
+                        padding: 0;
+                        border-radius: 4px;
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                        width: 50px;
+                        margin-top: 60px;
+                        height: 40px;
                 }
 
                 #myBtn:hover {
@@ -367,15 +280,7 @@
 
 
 
-
-
-
-
-
-
         </div>
-
-
         <script>
             function topFunction() {
                 document.body.scrollTop = 0; // For Safari
@@ -395,7 +300,12 @@
                 }
             }
         </script>
+
+
+
+
     </div>
+
 
 
 

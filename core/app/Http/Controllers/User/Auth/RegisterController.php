@@ -201,6 +201,6 @@ class RegisterController extends Controller
     public
     function registered()
     {
-        return to_route('products');
+        return to_route('home');
     }
 }
