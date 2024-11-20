@@ -52,9 +52,12 @@ Route::middleware('auth')->name('user.')->group(function () {
         Route::post('verify-mobile', 'mobileVerification')->name('verify.mobile');
     });
 
+    Route::middleware(['check.status'])->group(function () {
 
         Route::get('user-data', 'User\UserController@userData')->name('data');
         Route::post('user-data-submit', 'User\UserController@userDataSubmit')->name('data.submit');
+
+        Route::middleware(['registration.complete'])->namespace('User')->group(function () {
 
             Route::controller('UserController')->group(function(){
 
@@ -98,3 +101,5 @@ Route::middleware('auth')->name('user.')->group(function () {
             Route::get('manual', 'manualDepositConfirm')->name('manual.confirm');
             Route::post('manual', 'manualDepositUpdate')->name('manual.update');
         });
+    });
+});
