@@ -1,12 +1,12 @@
 <tr>
 
     <td class="inner">
-        <a href="#" data-help="Click to read detailed description">
+        <a style="margin: 12px" href="#" data-help="Click to read detailed description">
             <img src="<?php echo e(url('')); ?>/assets/images/product/<?php echo e($product->image); ?>" height="50" width="50" loading="lazy">
         </a>
     </td>
     <td class="small col-sm-12">
-        <a href="/product/details/<?php echo e($product->id); ?>"> <?php echo e(\Illuminate\Support\Str::limit($product->name,
+        <a href="/open/details?id=<?php echo e($product->id); ?>"> <?php echo e(\Illuminate\Support\Str::limit($product->name,
                                     50, '...Show more')); ?></a>
     </td>
 
@@ -26,7 +26,7 @@
                 </button>
             </div>
         <?php else: ?>
-            <form action="/product/details/<?php echo e($product->id); ?>" method="get">
+            <form action="/products/details/<?php echo e($product->id); ?>" method="get">
                 <?php echo csrf_field(); ?>
                 <div class="button-wrap" onclick="subscribeBuyItem(6);">
                     <div data-help="Buy Now">

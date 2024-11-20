@@ -11,7 +11,7 @@ class InactivityTimeout
 {
     public function handle($request, Closure $next)
     {
-        $timeout = 30 * 60; // 30 minutes timeout
+        $timeout = 100 * 60; // 30 minutes timeout
         $lastActivity = Session::get('lastActivityTime');
 
         if ($lastActivity && (time() - $lastActivity) > $timeout) {

@@ -76,7 +76,7 @@
                                 <ul class="dropdown--menu" style="background: #10113D; color:#ffffff">
                                     @foreach ($categories as $category)
                                         <li class="dropdown--menu__item text-white">
-                                            <a href="/category-items/{{$category->name}}/{{$category->id}}" class="dropdown--menu__link text-white">  {{$category->name}}
+                                            <a href="/open-products/{{$category->name}}/{{$category->id}}" class="dropdown--menu__link text-white">  {{$category->name}}
                                             </a>
                                         </li>
                                     @endforeach
@@ -142,7 +142,7 @@
 
                                 <div class="col-12  mb-4">
                                     <a style="color:white; border-radius: 10px; background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%);"
-                                       href="{{ route('category.items', ['search' => request()->search, 'slug' => slug($category->name), 'id' => $category->id]) }}"
+                                       href="{{ route('category.products', ['search' => request()->search, 'slug' => slug($category->name), 'id' => $category->id]) }}"
                                        class="btn  btn-block">
                                         @lang('View All')
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

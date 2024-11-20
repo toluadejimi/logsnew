@@ -77,7 +77,7 @@
                                 <ul class="dropdown--menu" style="background: #10113D; color:#ffffff">
                                     <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <li class="dropdown--menu__item text-white">
-                                            <a href="/category-products/<?php echo e($category->name); ?>/<?php echo e($category->id); ?>" class="dropdown--menu__link text-white">  <?php echo e($category->name); ?>
+                                            <a href="/open-products/<?php echo e($category->name); ?>/<?php echo e($category->id); ?>" class="dropdown--menu__link text-white">  <?php echo e($category->name); ?>
 
                                             </a>
                                         </li>
@@ -144,7 +144,7 @@
 
                                 <div class="col-12  mb-4">
                                     <a style="color:white; border-radius: 10px; background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%);"
-                                       href="<?php echo e(route('category.items', ['search' => request()->search, 'slug' => slug($category->name), 'id' => $category->id])); ?>"
+                                       href="<?php echo e(route('category.products', ['search' => request()->search, 'slug' => slug($category->name), 'id' => $category->id])); ?>"
                                        class="btn  btn-block">
                                         <?php echo app('translator')->get('View All'); ?>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

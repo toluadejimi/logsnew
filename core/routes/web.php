@@ -64,9 +64,21 @@ Route::controller('SiteController')->group(function () {
     Route::get('placeholder-image/{size}', 'placeholderImage')->name('placeholder.image');
     Route::post('/subscribe', 'SiteController@subscribe')->name('subscribe');
 
-    Route::get('/items/{category?}/{id?}', 'products')->name('home');
-    Route::get('/category-items/{slug?}/{id?}', 'categoryProducts')->name('category.items');
-    Route::get('/items/details/{id}', 'productDetails')->name('item.details');
+
+
+
+
+    Route::get('/open/details/', 'productDetails')->name('products');
+
+
+    Route::get('/products/{category?}/{id?}', 'products')->name('products');
+
+
+
+    Route::get('/category-products/{slug?}/{id?}', 'categoryProducts')->name('category.products');
+   // Route::get('/product/details/{id}', 'productDetails')->name('product.details');
+
+
 
 
     Route::any('e-fund',  'e_fund')->name('e-fund');

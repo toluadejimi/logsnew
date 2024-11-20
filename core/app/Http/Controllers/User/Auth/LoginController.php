@@ -158,7 +158,7 @@ class LoginController extends Controller
             return redirect()->to($redirectUrl);
         }
 
-        return redirect('items');
+        return redirect('products');
     }
 
 
