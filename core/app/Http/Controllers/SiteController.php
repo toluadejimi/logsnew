@@ -6,6 +6,7 @@ use App\Constants\Status;
 use App\Models\AdminNotification;
 use App\Models\Bought;
 use App\Models\Category;
+use App\Models\Deposit;
 use App\Models\Frontend;
 use App\Models\GatewayCurrency;
 use App\Models\Language;
@@ -445,10 +446,27 @@ class SiteController extends Controller
 
         $amount = number_format($request->amount, 2);
 
+        $get_depo = Deposit::where('trx', $request->order_id)->first() ?? null;
+        if ($get_depo == null){
+            $trx = new Deposit();
+            $trx->trx = $request->order_id;
+            $trx->status = 1;
+            $trx->user_id = $get_user->id;
+            $trx->amount = $request->amount;
+            $trx->method_code = 250;
+            $trx->save();
+        }else{
+            Deposit::where('trx', $request->order_id)->update(['status'=> 1]);
+        }
+
+
+
+
         return response()->json([
             'status' => true,
             'message' => "NGN $amount has been successfully added to your wallet",
         ]);
+
     }
 
 
