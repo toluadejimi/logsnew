@@ -44,7 +44,7 @@
                             <span class="border-bottom p-2 bg--base text-white text-center fw-bold">
                                 <span><?php echo app('translator')->get('Shortcuts'); ?></span>
                             </span>
-                            <a href="<?php echo e(route('products')); ?>" class="list-group-item">
+                            <a href="<?php echo e(route('items')); ?>" class="list-group-item">
                                 <?php echo app('translator')->get('Products'); ?>
                             </a>
                             <a href="<?php echo e(route('user.logout')); ?>" class="list-group-item">
@@ -127,7 +127,7 @@
                 </div>
             </div>
 
-         
+
         </div>
         <div class="row g-4">
             <div class="col-lg-12">
@@ -173,7 +173,7 @@
                                  <?php endif; ?>
 
                         </td>
-                       
+
 
 
                     </tr>
@@ -217,7 +217,7 @@
     </a>
 
 
-   
+
 
 </div>
 
