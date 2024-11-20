@@ -39,7 +39,7 @@
 
 
                                     <td class="small col-sm-12">
-                                        <a href="/product/items/{{ $product->id }}">
+                                        <a href="/items/details/{{ $product->id }}">
                                             {{ \Illuminate\Support\Str::limit($product->name, 50, '...Show more') }}</a>
                                     </td>
 
@@ -59,7 +59,7 @@
                                                 </button>
                                             </div>
                                         @else
-                                            <form action="/product/items/{{ $product->id }}" method="get">
+                                            <form action="/items/details/{{ $product->id }}" method="get">
                                                 @csrf
                                                 <div class="button-wrap" onclick="subscribeBuyItem(6);">
                                                     <div data-help="Buy Now">

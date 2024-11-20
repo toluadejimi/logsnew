@@ -369,7 +369,7 @@ class SiteController extends Controller
 
 
         $shareComponent = (new \Jorenvh\Share\Share)->page(
-            "$url/product/items/$request->id",
+            "$url/items/details/$request->id",
             "$product->name",
         )
             ->facebook()
