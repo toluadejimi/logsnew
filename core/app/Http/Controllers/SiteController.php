@@ -422,7 +422,7 @@ class SiteController extends Controller
 
         return response()->json([
             'status' => true,
-            'user' => $get_user->username,
+            'username' => $get_user->username,
         ]);
     }
 
