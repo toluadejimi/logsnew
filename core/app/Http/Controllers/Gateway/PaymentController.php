@@ -145,7 +145,7 @@ class PaymentController extends Controller
 
             if ($product->in_stock < $qty) {
                 $notify = "Not enough stock available. Only {$product->in_stock} quantity left";
-                return redirect('/products')->with('error', $notify);
+                return redirect('/items')->with('error', $notify);
             }
 
             $amount = ($product->price * $qty);
@@ -154,7 +154,7 @@ class PaymentController extends Controller
             $balance = Auth::user()->balance ?? null;
             if ($balance < $amount) {
                 $notify = "Insufficient Funds, Fund your wallet";
-                return redirect('/products')->with('error', $notify);
+                return redirect('/items')->with('error', $notify);
             }
 
 

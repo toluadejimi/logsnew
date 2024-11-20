@@ -2841,7 +2841,7 @@ text-fill-color: transparent;">Marketplace</b></h2></div>
                         <div class="elementor-widget-container">
                             <div class="elementor-button-wrapper">
                                 <a class="elementor-button elementor-button-link elementor-size-sm"
-                                   href="https://logmarketplace.com/products">
+                                   href="https://logmarketplace.com/items">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">Purchase an account</span>
 		</span>

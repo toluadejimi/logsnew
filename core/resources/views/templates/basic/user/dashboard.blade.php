@@ -42,7 +42,7 @@
                             <span class="border-bottom p-2 bg--base text-white text-center fw-bold">
                                 <span>@lang('Shortcuts')</span>
                             </span>
-                            <a href="{{ route('products') }}" class="list-group-item">
+                            <a href="{{ route('items') }}" class="list-group-item">
                                 @lang('Products')
                             </a>
                             <a href="{{ route('user.logout') }}" class="list-group-item">
@@ -123,7 +123,7 @@
                 </div>
             </div>
 
-         
+
         </div>
         <div class="row g-4">
             <div class="col-lg-12">
@@ -168,7 +168,7 @@
                                  @endif
 
                         </td>
-                       
+
 
 
                     </tr>
@@ -212,7 +212,7 @@
     </a>
 
 
-   
+
 
 </div>
 
@@ -293,7 +293,7 @@
             $('.search-form').on('submit', function(e) {
                 e.preventDefault();
                 var keyword = $(this).find('input[name=search]').val();
-                window.location.href = "{{ route('products') }}?search=" + keyword;
+                window.location.href = "{{ route('items') }}?search=" + keyword;
             })
 
             // Responsive Sidebar
