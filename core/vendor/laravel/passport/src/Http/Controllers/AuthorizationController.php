@@ -85,9 +85,6 @@ class AuthorizationController
         if ($request->get('prompt') === 'login' &&
             ! $request->session()->get('promptedForLogin', false)) {
             $this->guard->logout();
-            $request->session()->invalidate();
-            $request->session()->regenerateToken();
-
             return $this->promptForLogin($request);
         }
 

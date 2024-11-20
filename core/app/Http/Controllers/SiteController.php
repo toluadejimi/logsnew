@@ -111,7 +111,6 @@ class SiteController extends Controller
             return back()->withNotify($notify);
         }
 
-        $request->session()->regenerateToken();
 
         $random = getNumber();
 

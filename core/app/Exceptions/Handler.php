@@ -22,8 +22,6 @@ class Handler extends ExceptionHandler{
     {
         if ($exception instanceof MethodNotAllowedHttpException) {
                 Auth::logout();
-                $request->session()->invalidate();
-                $request->session()->regenerateToken();
                 return redirect()->guest('user/login')->with('message', 'Your session has expired due to an invalid request method.');
         }
         return parent::render($request, $exception);
