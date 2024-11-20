@@ -10,6 +10,7 @@ use App\Models\ProductDetail;
 use App\Rules\FileTypeValidate;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -97,9 +98,23 @@ class ProductController extends Controller
 
         if ($request->hasFile('image')) {
             try {
+
+                $image = $request->file('image');
+
+                Log::info('Uploading image: ' . $image->getClientOriginalName());
+                Log::info('File size: ' . $image->getSize() . ' bytes');
+                Log::info('File MIME type: ' . $image->getMimeType());
+
+
                 $old = $product->image;
                 $product->image = fileUploader($request->image, getFilePath('product'), getFileSize('product'), $old);
+
+                Log::info('Image uploaded successfully for product ID: ' . $product->id);
+
             } catch (\Exception $exp) {
+
+                Log::error('Image upload failed for product ID: ' . $product->id . '. Error: ' . $exp->getMessage());
+
                 $notify[] = ['error', 'Couldn\'t upload your image'];
                 return back()->withNotify($notify);
             }
@@ -108,16 +123,29 @@ class ProductController extends Controller
 
         if ($request->hasFile('file')) {
             $file = $request->file('file');
+
+
             $fileContents = file_get_contents($file->path());
             $lines = explode("\n", $fileContents);
             $lines = array_filter($lines);
+
+            Log::info('Processing file with ' . count($lines) . ' lines.');
+
 
             foreach ($lines as $line) {
                 $details = new ProductDetail();
                 $details->product_id = $product->id;
                 $details->details = $line;
                 $details->save();
+
+                Log::info('Product detail saved for product ID: ' . $product->id . '. Detail: ' . $line);
+
             }
+
+
+            Log::info('File processed successfully for product ID: ' . $product->id);
+
+
         }
 
         return $product;
