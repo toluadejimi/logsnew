@@ -154,7 +154,7 @@ class PaymentController extends Controller
             $balance = Auth::user()->balance ?? null;
             if ($balance < $amount) {
                 $notify = "Insufficient Funds, Fund your wallet";
-                return redirect('/products)->with('error', $notify);
+                return redirect('/products')->with('error', $notify);
             }
 
 
