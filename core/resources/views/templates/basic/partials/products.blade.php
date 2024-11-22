@@ -25,7 +25,7 @@
                 </button>
             </div>
         @else
-            <form action="/products/details/{{ $product->id }}" method="get">
+            <form action="/open/details/{{ $product->id }}" method="get">
                 @csrf
                 <div class="button-wrap" onclick="subscribeBuyItem(6);">
                     <div data-help="Buy Now">
