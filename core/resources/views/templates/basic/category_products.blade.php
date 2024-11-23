@@ -59,11 +59,12 @@
                                                 </button>
                                             </div>
                                         @else
-                                            <form action="/products/details/{{ $product->id }}" method="get">
+                                            <form action="/open/details" method="get">
                                                 @csrf
                                                 <div class="button-wrap" onclick="subscribeBuyItem(6);">
                                                     <div data-help="Buy Now">
                                                         {{ $product->in_stock }} pcs.
+                                                        <input name="id" value="{{ $product->id }}" hidden>
                                                         <button type="submit" class="form-control" type="button"
                                                                 data-id="12005">
                                                             <ion-icon class="" style="border: 0px;"

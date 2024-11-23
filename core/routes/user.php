@@ -5,11 +5,6 @@ use App\Http\Controllers\SiteController;
 use App\Http\Controllers\User\ProfileController;
 
 
-
-
-
-
-
 Route::namespace('User\Auth')->name('user.')->group(function () {
 
     Route::controller('LoginController')->group(function(){

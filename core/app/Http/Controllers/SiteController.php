@@ -469,4 +469,21 @@ class SiteController extends Controller
     }
 
 
+    public
+    function searchcat(request $request)
+    {
+
+        $data = Category::where('status', 1)
+            ->where('name', 'LIKE', '%' . $request->term . '%')
+            ->get();
+
+        return response()->json([
+            'data' => $data
+        ]);
+
+    }
+
+
+
+
 }

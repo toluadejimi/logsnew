@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Rap2hpoutre\LaravelLogViewer\LogViewerController;
 use App\Http\Controllers\User\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Route;
@@ -8,6 +9,10 @@ use App\Http\Controllers\User\UserController;
 Route::get('/clear', function(){
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
+
+Route::get('/search.php', [SiteController::class, 'searchcat']);
+
+
 
 Route::get('/logs', [LogViewerController::class, 'index']);
 
@@ -76,7 +81,6 @@ Route::controller('SiteController')->group(function () {
 
 
     Route::get('/category-products/{slug?}/{id?}', 'categoryProducts')->name('category.products');
-   // Route::get('/product/details/{id}', 'productDetails')->name('product.details');
 
 
 

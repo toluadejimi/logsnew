@@ -1,8 +1,6 @@
 @extends($activeTemplate . 'layouts.main')
 @section('content')
 
-
-
     <!-- Bootstrap JavaScript CDN -->
     <script src=
                 "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
@@ -63,32 +61,94 @@
             </div>
         </div>
         <div class="page-content">
-            <div class="dashboard-area">
+            <div class="dashboard-area mb-3">
                 <div class="row">
-                    <div style="margin-right: 126px" class="col d-flex justify-content-start">
-                        @if ($categories->count())
-                            <div class="category-nav">
-                                <button class="category-navbutton" style="background: #10113D;"><span
-                                        class="search-text text-white">@lang('
-                                Category')</span>
-                                    <span class="arrow"><i class="las la-angle-down"></i></span>
-                                </button>
-                                <ul class="dropdown--menu" style="background: #10113D; color:#ffffff">
-                                    @foreach ($categories as $category)
-                                        <li class="dropdown--menu__item text-white">
-                                            <a href="/open-products/{{$category->name}}/{{$category->id}}" class="dropdown--menu__link text-white">  {{$category->name}}
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                    </div>
-
-                    <div class="col d-flex justify-content-end">
-                        <h2 class="">Hi, {{ Auth::user()->username ?? "User"}}, </h2>
+                    <div class="col-xxl-10 col-xl-11">
+                        <div class="col d-flex justify-content-center">
+                            <h4 class="">Hi, {{ Auth::user()->username ?? "User"}}, </h4>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-xxl-10 col-xl-11">
+
+                    <style>
+                        #results {
+                            border: 1px solid #ccc;
+                            max-height: 200px;
+                            overflow-y: auto;
+                            position: absolute;
+                            background: white;
+                            width: 350px;
+                            z-index: 1000;
+                        }
+
+                        #results div {
+                            padding: 8px;
+                            cursor: pointer;
+                        }
+
+                        #results div:hover {
+                            background-color: #f0f0f0;
+                        }
+                    </style>
+                    <script>
+                        function liveSearch() {
+                            const query = document.getElementById('searchInput').value;
+
+                            if (query.length > 0) {
+                                fetch(`search.php?term=${encodeURIComponent(query)}`)
+                                    .then(response => response.json())
+                                    .then(json => {
+                                        const resultsContainer = document.getElementById('results');
+                                        resultsContainer.innerHTML = '';
+
+                                        const items = json.data;
+
+                                        if (items.length === 0) {
+                                            resultsContainer.innerHTML = '<div>No results found</div>';
+                                            return;
+                                        }
+
+                                        items.forEach(item => {
+                                            const div = document.createElement('div');
+                                            div.textContent = item.name;
+                                            div.setAttribute('data-id', item.id);
+                                            div.onclick = () => {
+                                                window.location.href = `category-products/${item.name}/${item.id}`;
+                                            };
+                                            resultsContainer.appendChild(div);
+                                        });
+                                    })
+                                    .catch(error => console.error('Error:', error));
+                            } else {
+                                document.getElementById('results').innerHTML = '';
+                            }
+                        }
+
+
+                    </script>
+                    <div class="card mt-4">
+                        <div class="card-body">
+
+
+                            <input type="text"
+                                   id="searchInput"
+                                   placeholder="Type to search..."
+                                   onkeyup="liveSearch()"
+                                   autocomplete="off"
+                                   style="color:white; border-radius: 10px;  background: linear-gradient(279deg, #FF0B9E -6.58%, #FF6501 121.69%);"
+                                   class="form-control text-white">
+
+                            <div class="" id="results"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
                 <div class="row mt-2">
 
                     <div class="col-xxl-10 col-xl-11">
@@ -172,6 +232,8 @@
                     </div>
 
                 </div>
+
+
                 <div class="col-12">
                     @auth
 
@@ -186,8 +248,6 @@
                                 @if($bought_qty == 0)
                                 @else
                                     @foreach($bought as $data)
-
-
 
                                         <div class="row justify-content-around">
                                             <div style="font-size: 10px" class="col">
@@ -227,8 +287,12 @@
                                                     </defs>
                                                 </svg>
 
-                                                {{\Illuminate\Support\Str::limit($data->user_name,4, '.')}}, | <span style="color: #0AC028"> bought </span>|<span>{{\Illuminate\Support\Str::limit($data->item,
-                                    16, '...')}}</span>|<span style="color: #FF6304">₦{{number_format($data->amount)}}</span>|<a href="#" style=" font-size: 6px; background: linear-gradient(90deg, #FF6304 0%, #FF0D9B 100%); border-radius: 5px; padding: 3px; color: white">{{ diffForHumans($data->created_at) }}</a>
+                                                {{\Illuminate\Support\Str::limit($data->user_name,4, '.')}}, | <span
+                                                    style="color: #0AC028"> bought </span>|<span>{{\Illuminate\Support\Str::limit($data->item,
+                                    16, '...')}}</span>|<span
+                                                    style="color: #FF6304">₦{{number_format($data->amount)}}</span>|<a
+                                                    href="#"
+                                                    style=" font-size: 6px; background: linear-gradient(90deg, #FF6304 0%, #FF0D9B 100%); border-radius: 5px; padding: 3px; color: white">{{ diffForHumans($data->created_at) }}</a>
                                                 <hr>
                                             </div>
                                         </div>
@@ -246,35 +310,35 @@
                 </div>
                 <div style="border-top: 80px">
                     <div class="card border-0">
-                        <button style="margin-bottom: 70px" class="mb-5" onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+                        <button style="margin-bottom: 70px" class="mb-5" onclick="topFunction()" id="myBtn"
+                                title="Go to top"><i class="fa fa-arrow-up"></i></button>
                     </div>
                 </div>
             </div>
             <style>
                 #myBtn {
-                        display: none;
-                        position: fixed;
-                        bottom: -10px;
-                        z-index: 70;
-                        font-size: 20px;
-                        border: none;
-                        outline: none;
-                        background-color: red;
-                        color: white;
-                        cursor: pointer;
-                        padding: 0;
-                        border-radius: 4px;
-                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-                        width: 50px;
-                        margin-top: 60px;
-                        height: 40px;
+                    display: none;
+                    position: fixed;
+                    bottom: -10px;
+                    z-index: 70;
+                    font-size: 20px;
+                    border: none;
+                    outline: none;
+                    background-color: red;
+                    color: white;
+                    cursor: pointer;
+                    padding: 0;
+                    border-radius: 4px;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                    width: 50px;
+                    margin-top: 60px;
+                    height: 40px;
                 }
 
                 #myBtn:hover {
                     background-color: #555; /* Darken background color on hover */
                 }
             </style>
-
 
 
         </div>
@@ -285,7 +349,7 @@
             }
 
             // Show the button when user scrolls down 20px from the top of the document
-            window.onscroll = function() {
+            window.onscroll = function () {
                 scrollFunction();
             };
 
@@ -299,12 +363,7 @@
         </script>
 
 
-
-
     </div>
-
-
-
 
 @endsection
 

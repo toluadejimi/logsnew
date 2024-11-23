@@ -56,9 +56,6 @@ class LoginController extends Controller
             return back()->withNotify($notify);
         }
 
-        // If the class is using the ThrottlesLogins trait, we can automatically throttle
-        // the login attempts for this application. We'll key this by the username and
-        // the IP address of the client making these requests into this application.
         if ($this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
 
@@ -69,12 +66,7 @@ class LoginController extends Controller
             return $this->sendLoginResponse($request);
         }
 
-        // If the login attempt was unsuccessful we will increment the number of attempts
-        // to login and redirect the user back to the login form. Of course, when this
-        // user surpasses their maximum number of attempts they will get locked out.
         $this->incrementLoginAttempts($request);
-
-
         return $this->sendFailedLoginResponse($request);
     }
 
@@ -104,10 +96,7 @@ class LoginController extends Controller
 
     public function logout()
     {
-//        $this->guard()->logout();
-//
-//        request()->session()->invalidate();
-//
+
         Auth::logout();
         request()->session()->invalidate();
         request()->session()->regenerateToken();
@@ -179,8 +168,6 @@ class LoginController extends Controller
         })->where('category_id',$product->category_id)->orderBy('id','desc')->where('id','!=',$product->id)->limit(5)->get();
 
         return view($this->activeTemplate . 'product_details', compact('pageTitle', 'product','relatedProducts'));
-
-
 
         return view('item-view', compact('title', 'icon', 'inst', 'description', 'item_id', 'stock', 'amount', 'user'));
     }
