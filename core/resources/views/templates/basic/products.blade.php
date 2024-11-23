@@ -31,6 +31,16 @@
             @endif
         </div>
 
+
+        <div class="row mb-2">
+            <div class="col-xxl-10 col-xl-11">
+                <div class="col d-flex justify-content-center">
+                    <p class="p-2"  style="color: #fb5a08; font-size: 20px" > Hi, {{ Auth::user()->username ?? "User"}}, </p>
+                </div>
+            </div>
+        </div>
+
+
         <div class="mb-5">
             <div class="swiper-btn-center-lr">
                 <div class="swiper-container demo-swiper">
@@ -62,13 +72,7 @@
         </div>
         <div class="page-content">
             <div class="dashboard-area mb-3">
-                <div class="row">
-                    <div class="col-xxl-10 col-xl-11">
-                        <div class="col d-flex justify-content-center">
-                            <h4 class="">Hi, {{ Auth::user()->username ?? "User"}}, </h4>
-                        </div>
-                    </div>
-                </div>
+
 
                 <div class="col-xxl-10 col-xl-11">
 
